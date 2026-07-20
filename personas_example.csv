@@ -1,0 +1,9 @@
+persona_id,Age 0.0,age_at_baseline,BMI 0.0,Sleep duration 0.0,Smoking status 0.0,Cholesterol 0.0,Glucose 0.0,HDL cholesterol 0.0,HbA1c 0.0,Past tobacco smoking 0.0,Triglycerides 0.0,Waist circumference 0.0
+healthy_F_45,45,45,23,7.5,Never,,,,,,,
+healthy_M_50,50,50,23,7.5,Never,,,,,,,
+diabetic_M_65,65,65,31,6.0,Previous,,9.0,,55.0,,,
+cardiac_F_70,70,70,28,6.5,Previous,6.8,,1.0,,,2.6,
+smoker_M_55,55,55,26,6.0,Current,,,,,Smoked on most or all days,,
+mental_F_35,35,35,24,5.0,Current,,,,,,,
+obese_M_48,48,48,31,6.0,Previous,,,,,,,118.0
+elderly_F_75,75,75,22,8.0,Previous,,,,,,,
