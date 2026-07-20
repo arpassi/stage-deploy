@@ -1,228 +1,228 @@
-ukbb_code,ukbb_name,input_column,category,type,allowed_values,generates_missing_flag,in_srdc_poc,in_abacus_poc,cap_lo,cap_hi,notes,selected_k50
-24014-0.0,Average 24h noise,Average 24h noise 0.0,environment,categorical,No | Yes,False,True,False,,,,False
-1448-0.0,Bread type,Bread type 0.0,diet,categorical,White | Brown | None | Other type of bread | Unknown | Wholemeal or wholegrain,False,True,True,,,,True
-1468-0.0,Cereal type,Cereal type 0.0,diet,categorical,"Other (e.g. Cornflakes, Frosties) | Biscuit cereal (e.g. Weetabix) | Bran cereal (e.g. All Bran, Branflakes) | Muesli | None | Oat cereal (e.g. Ready Brek, porridge) | Unknown",False,True,True,,,,False
-1508-0.0,Coffee type,Coffee type 0.0,diet,categorical,"Instant coffee | Decaffeinated coffee (any type) | Ground coffee (include espresso, filter etc) | None | Other type of coffee | Unknown",False,True,True,,,,False
-20117-0.0,Drinker status,Drinker status 0.0,substance_use,categorical,Never | Current | Previous | Unknown,False,True,True,,,,False
-2000-0.0,Embarrassment,Embarrassment 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-derived,Ethnic_recode,Ethnic_recode,demographics,categorical,White_British | Asian | Black | Mixed | Other | White_Other,False,True,True,,,Recoded from Ethnic background (21000). Values: White_British | Asian | Black | Mixed | Other | White_Other,True
-1960-0.0,Fed-up feelings,Fed-up feelings 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-2463-0.0,Fractured bones,Fractured bones 0.0,health_status,categorical,No | Unknown | Yes,False,True,True,,,,True
-2030-0.0,Guilty feelings,Guilty feelings 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-2247-0.0,Hearing difficulty,Hearing difficulty 0.0,health_status,categorical,No | Unknown | Yes,False,True,True,,,,True
-22032-0.0,IPAQ Activity Category,IPAQ Activity Category,physical_activity,categorical,Low | High | Moderate,False,True,True,,,,False
-1940-0.0,Irritability,Irritability 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,False
-2020-0.0,Loneliness,Loneliness 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,False
-1787-0.0,Maternal smoking around birth,Maternal smoking around birth 0.0,early_life,categorical,No | Unknown | Yes,True,True,True,,,,True
-1418-0.0,Milk type,Milk type 0.0,diet,categorical,Low-fat | Full-fat | None/Other | Plant-based | Unknown,False,True,True,,,,False
-1930-0.0,Miserableness,Miserableness 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-1920-0.0,Mood swings,Mood swings 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-2010-0.0,Nerves,Nerves 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-1970-0.0,Nervous feelings,Nervous feelings 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,False
-1249-0.0,Past tobacco smoking,Past tobacco smoking 0.0,substance_use,categorical,I have never smoked | Just tried once or twice | Smoked occasionally | Smoked on most or all days | Unknown,False,True,True,,,,True
-2040-0.0,Risk taking,Risk taking 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-1950-0.0,Sensitivity,Sensitivity 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-31-0.0,Sex,Sex 0.0,demographics,categorical,Female | Male,False,True,True,,,,False
-1717-0.0,Skin colour,Skin colour 0.0,early_life,categorical,Fair | Black | Brown | Dark olive | Light olive | Unknown | Very fair,False,True,True,,,,False
-20116-0.0,Smoking status,Smoking status 0.0,substance_use,categorical,Never | Current | Previous | Unknown,False,True,True,,,,True
-1210-0.0,Snoring,Snoring 0.0,sleep,categorical,No | Unknown | Yes,True,True,True,,,,True
-1428-0.0,Spread type,Spread type 0.0,diet,categorical,Butter | None | Other/Margarine | Unknown,False,True,True,,,,True
-924-0.0,Usual walking pace,Usual walking pace 0.0,physical_activity,categorical,Steady average pace | Brisk pace | Slow pace | Unknown,False,True,True,,,,True
-1980-0.0,Worrier feelings,Worrier feelings 0.0,mental_health,categorical,No | Unknown | Yes,True,True,True,,,,True
-2110-0.0,Able to confide,Able to confide 0.0,social,continuous,,False,True,True,0.0,7.0,,True
-680-0.0,Accommodation own/rent,Accommodation own/rent 0.0,socioeconomic,continuous,,False,True,True,,,,False
-670-0.0,Accommodation type,Accommodation type 0.0,socioeconomic,continuous,,False,True,True,,,,False
-1767-0.0,Adopted as child,Adopted as child 0.0,early_life,continuous,,False,True,True,,,,False
-21003-0.0,Age,Age 0.0,demographics,continuous,,False,True,True,,,,True
-845-0.0,Age completed education,Age completed education 0.0,socioeconomic,continuous,,False,True,True,,,,False
-3436-0.0,Age started smoking current,Age started smoking current 0.0,substance_use,continuous,,False,True,True,,,,False
-2867-0.0,Age started smoking former,Age started smoking former 0.0,substance_use,continuous,,False,True,True,,,,False
-30620-0.0,Alanine aminotransferase,Alanine aminotransferase 0.0,blood_marker,continuous,,False,True,False,4.7159,137.9353,,True
-30600-0.0,Albumin,Albumin 0.0,blood_marker,continuous,,False,True,False,35.7864,53.97,,True
-1558-0.0,Alcohol intake frequency,Alcohol intake frequency_num,substance_use,continuous,,False,True,True,0.0,7.0,,True
-30610-0.0,Alkaline phosphatase,Alkaline phosphatase 0.0,blood_marker,continuous,,False,True,False,27.0,251.699,,True
-30630-0.0,Apolipoprotein A,Apolipoprotein A 0.0,blood_marker,continuous,,False,True,False,,,,True
-30640-0.0,Apolipoprotein B,Apolipoprotein B 0.0,blood_marker,continuous,,False,True,False,,,,False
-30650-0.0,Aspartate aminotransferase,Aspartate aminotransferase 0.0,blood_marker,continuous,,False,True,False,11.1,117.4415,,True
-24012-0.0,Average daytime noise,Average daytime noise 0.0,environment,continuous,,False,True,False,0.0002,0.13,,True
-21001-0.0,BMI,BMI 0.0,anthropometry,continuous,,False,True,True,16.8364,53.2678,,True
-23104-0.0,BMI impedance,BMI impedance 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-23105-0.0,Basal metabolic rate,Basal metabolic rate 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-30160-0.0,Basophil count,Basophil count 0.0,blood_marker,continuous,,False,True,False,0.0,0.71,,True
-30220-0.0,Basophil percentage,Basophil percentage 0.0,blood_marker,continuous,,False,True,False,0.0,10.0,,True
-1369-0.0,Beef intake,Beef intake_num,diet,continuous,,False,True,True,0.0,4.0,,True
-23099-0.0,Body fat %,Body fat % 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-23101-0.0,Body fat-free mass,Body fat-free mass 0.0,clinical_measurement,continuous,,False,True,False,32.7,69.5,,True
-1438-0.0,Bread intake,Bread intake 0.0,diet,continuous,,False,True,True,0.0,42.0,,True
-1677-0.0,Breastfed as baby,Breastfed as baby 0.0,early_life,continuous,,False,True,True,,,,False
-30710-0.0,C-reactive protein,C-reactive protein 0.0,blood_marker,continuous,,False,True,False,0.09,45.5691,,True
-30680-0.0,Calcium,Calcium 0.0,blood_marker,continuous,,False,True,False,2.068,2.8124,,True
-1458-0.0,Cereal intake,Cereal intake 0.0,diet,continuous,,False,True,True,0.0,14.0,,True
-1408-0.0,Cheese intake,Cheese intake_num,diet,continuous,,False,True,True,0.0,5.0,,True
-30690-0.0,Cholesterol,Cholesterol 0.0,blood_marker,continuous,,False,True,False,2.8626,9.9734,,True
-1180-0.0,Chronotype,Chronotype_num,sleep,continuous,,True,True,True,-2.0,2.0,,True
-24015-0.0,Close to major road,Close to major road 0.0,environment,continuous,,False,True,False,0.0,562.3172,,False
-1498-0.0,Coffee intake,Coffee intake 0.0,diet,continuous,,False,True,True,0.0,14.0,,True
-1289-0.0,Cooked vegetable intake,Cooked vegetable intake 0.0,diet,continuous,,False,True,True,0.0,20.0,,True
-30700-0.0,Creatinine,Creatinine 0.0,blood_marker,continuous,,False,True,False,37.4,131.179,,True
-30510-0.0,Creatinine in urine,Creatinine in urine 0.0,urinalysis,continuous,,False,True,False,890.828,35022.408,,True
-30720-0.0,Cystatin C,Cystatin C 0.0,blood_marker,continuous,,False,True,False,0.518,1.8059,,True
-1190-0.0,Day nap,Day nap_num,sleep,continuous,,False,True,True,0.0,3.0,,True
-864-0.0,Days moderate activity,Days moderate activity 0.0,physical_activity,continuous,,False,True,True,0.0,7.0,,True
-884-0.0,Days vigorous activity,Days vigorous activity 0.0,physical_activity,continuous,,False,True,True,0.0,7.0,,True
-904-0.0,Days walking,Days walking 0.0,physical_activity,continuous,,False,True,True,0.0,7.0,,True
-1220-0.0,Daytime dozing,Daytime dozing_num,sleep,continuous,,False,True,True,0.0,4.0,,True
-6149-0.0,Dental problems,Dental problems 0.0,health_status,continuous,,False,True,True,,,,False
-4620-0.0,Depression episodes,Depression episodes 0.0,mental_health,continuous,,False,True,True,,,,False
-4079-0.0,Diastolic BP automated,Diastolic BP automated 0.0,vital_signs,continuous,,False,True,False,,,,False
-94-0.0,Diastolic BP manual,Diastolic BP manual 0.0,vital_signs,continuous,,False,True,False,,,,False
-1140-0.0,Difference phone use,Difference phone use_num,screen_time,continuous,,False,True,True,-1.0,1.0,,True
-30660-0.0,Direct bilirubin,Direct bilirubin 0.0,blood_marker,continuous,,False,True,False,,,,True
-24019-0.0,Domestic garden pct 1000m,Domestic garden pct 1000m 0.0,environment,continuous,,False,True,False,15.5585,32.0229,,True
-1319-0.0,Dried fruit intake,Dried fruit intake 0.0,diet,continuous,,False,True,True,0.0,20.0,,True
-894-0.0,Duration moderate activity,Duration moderate activity 0.0,physical_activity,continuous,,False,True,True,0.0,600.0,,True
-914-0.0,Duration vigorous activity,Duration vigorous activity 0.0,physical_activity,continuous,,False,True,True,0.0,360.0,,True
-874-0.0,Duration walking,Duration walking 0.0,physical_activity,continuous,,False,True,True,0.0,700.0,,True
-6142-0.0,Employment status,Employment status 0.0,socioeconomic,continuous,,False,True,True,,,,False
-30150-0.0,Eosinophil count,Eosinophil count 0.0,blood_marker,continuous,,False,True,False,0.0,1.2,,True
-30210-0.0,Eosinophil percentage,Eosinophil percentage 0.0,blood_marker,continuous,,False,True,False,0.0,15.7038,,True
-21000-0.0,Ethnic background,Ethnic background 0.0,demographics,continuous,,False,True,True,,,,False
-4598-0.0,Ever depressed whole week,Ever depressed whole week 0.0,mental_health,continuous,,False,True,True,,,,False
-3063-0.0,FEV1,FEV1 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-3062-0.0,FVC,FVC 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-74-0.0,Fasting time,Fasting time 0.0,clinical_measurement,continuous,,False,True,False,0.0,20.0,,True
-20107-0.0,Father illnesses,Father illnesses 0.0,family_history,continuous,,False,True,True,,,,False
-20016-0.0,Fluid intelligence score,Fluid intelligence score 0.0,cognitive_test,continuous,,False,True,False,1.0,12.0,,False
-2070-0.0,Frequency of tenseness,Frequency of tenseness_num,mental_health,continuous,,False,True,True,0.0,7.0,,True
-2080-0.0,Frequency of tiredness,Frequency of tiredness_num,mental_health,continuous,,False,True,True,0.0,7.0,,True
-2060-0.0,Frequency of unenthusiasm,Frequency of unenthusiasm_num,mental_health,continuous,,False,True,True,0.0,7.0,,True
-1309-0.0,Fresh fruit intake,Fresh fruit intake 0.0,diet,continuous,,False,True,True,0.0,12.0,,True
-1031-0.0,Friend/family visits,Friend/family visits_num,social,continuous,,False,True,True,0.0,7.0,,True
-30730-0.0,GGT,GGT 0.0,blood_marker,continuous,,False,True,False,,,,False
-1170-0.0,Getting up,Getting up_num,sleep,continuous,,False,True,True,0.0,3.0,,True
-30740-0.0,Glucose,Glucose 0.0,blood_marker,continuous,,False,True,False,2.8442,17.1393,,True
-24020-0.0,Greenspace pct 1000m,Greenspace pct 1000m 0.0,environment,continuous,,False,True,False,50.94,74.8492,,True
-24016-0.0,Greenspace pct 300m,Greenspace pct 300m 0.0,environment,continuous,,False,True,False,11.1508,77.7797,,True
-30760-0.0,HDL cholesterol,HDL cholesterol 0.0,blood_marker,continuous,,False,True,False,0.7123,3.1647,,True
-30030-0.0,Haematocrit percentage,Haematocrit percentage 0.0,blood_marker,continuous,,False,True,False,,,,True
-30020-0.0,Haemoglobin concentration,Haemoglobin concentration 0.0,blood_marker,continuous,,False,True,False,8.4,16.42,,True
-46-0.0,Hand grip strength left,Hand grip strength left 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-47-0.0,Hand grip strength right,Hand grip strength right 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-30750-0.0,HbA1c,HbA1c 0.0,blood_marker,continuous,,False,True,False,21.2698,94.1208,,True
-30300-0.0,High light scatter reticulocyte count,High light scatter reticulocyte count 0.0,blood_marker,continuous,,False,True,False,0.002,0.066,,False
-30290-0.0,High light scatter reticulocyte pct,High light scatter reticulocyte pct 0.0,blood_marker,continuous,,False,True,False,0.041,1.5616,,True
-49-0.0,Hip circumference,Hip circumference 0.0,anthropometry,continuous,,False,True,True,79.0,155.0,,True
-738-0.0,Household income,Household income 0.0,socioeconomic,continuous,,False,True,True,,,,False
-30770-0.0,IGF-1,IGF-1 0.0,blood_marker,continuous,,False,True,False,6.7821,46.8405,,True
-26416-0.0,IMD Crime,IMD Crime 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26414-0.0,IMD Education,IMD Education 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26412-0.0,IMD Employment,IMD Employment 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26410-0.0,IMD England,IMD England 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26413-0.0,IMD Health,IMD Health 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26415-0.0,IMD Housing,IMD Housing 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26411-0.0,IMD Income,IMD Income 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26417-0.0,IMD Living environment,IMD Living environment 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26426-0.0,IMD Scotland,IMD Scotland 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-26427-0.0,IMD Wales,IMD Wales 0.0,socioeconomic_index,continuous,,False,True,False,,,,False
-30280-0.0,Immature reticulocyte fraction,Immature reticulocyte fraction 0.0,blood_marker,continuous,,False,True,False,0.03,0.4936,,True
-24009-0.0,Inverse distance to road,Inverse distance to road 0.0,environment,continuous,,False,True,False,500.0,52430.392,,False
-30780-0.0,LDL direct,LDL direct 0.0,blood_marker,continuous,,False,True,False,,,,False
-1379-0.0,Lamb intake,Lamb intake_num,diet,continuous,,False,True,True,0.0,3.332,,True
-4728-0.0,Leg pain on walking,Leg pain on walking 0.0,health_status,continuous,,False,True,True,,,,False
-6160-0.0,Leisure/social activities,Leisure/social activities 0.0,social,continuous,,False,True,True,,,,False
-1110-0.0,Length phone use,Length phone use_num,screen_time,continuous,,False,True,True,0.0,10.0,,True
-30790-0.0,Lipoprotein A,Lipoprotein A 0.0,blood_marker,continuous,,False,True,False,3.8,188.33,,True
-4609-0.0,Longest depression,Longest depression 0.0,mental_health,continuous,,False,True,True,,,,False
-30120-0.0,Lymphocyte count,Lymphocyte count 0.0,blood_marker,continuous,,False,True,False,0.52,5.08,,True
-30180-0.0,Lymphocyte percentage,Lymphocyte percentage 0.0,blood_marker,continuous,,False,True,False,8.0862,60.4,,True
-30060-0.0,MCH concentration,MCH concentration 0.0,blood_marker,continuous,,False,True,False,30.5203,38.499,,True
-30050-0.0,Mean corpuscular haemoglobin,Mean corpuscular haemoglobin 0.0,blood_marker,continuous,,False,True,False,19.9103,38.9097,,True
-30040-0.0,Mean corpuscular volume,Mean corpuscular volume 0.0,blood_marker,continuous,,False,True,False,63.4011,107.6,,True
-30100-0.0,Mean platelet volume,Mean platelet volume 0.0,blood_marker,continuous,,False,True,False,6.87,14.0,,True
-30260-0.0,Mean reticulocyte volume,Mean reticulocyte volume 0.0,blood_marker,continuous,,False,True,False,68.1243,136.2913,,True
-30270-0.0,Mean sphered cell volume,Mean sphered cell volume 0.0,blood_marker,continuous,,False,True,False,63.36,104.1108,,True
-20023-0.0,Mean time to identify matches,Mean time to identify matches 0.0,cognitive_test,continuous,,False,True,False,,,,False
-30500-0.0,Microalbumin in urine,Microalbumin in urine 0.0,urinalysis,continuous,,False,True,False,6.7,1435.7346,,False
-30130-0.0,Monocyte count,Monocyte count 0.0,blood_marker,continuous,,False,True,False,0.03,1.9039,,True
-30190-0.0,Monocyte percentage,Monocyte percentage 0.0,blood_marker,continuous,,False,True,False,0.5081,26.2384,,True
-20110-0.0,Mother illnesses,Mother illnesses 0.0,family_history,continuous,,False,True,True,,,,False
-24004-0.0,NO2,NO2 0.0,environment,continuous,,False,True,False,,,,False
-24005-0.0,NOx,NOx 0.0,environment,continuous,,False,True,False,,,,False
-30140-0.0,Neutrophil count,Neutrophil count 0.0,blood_marker,continuous,,False,True,False,0.6081,11.372,,True
-30200-0.0,Neutrophil percentage,Neutrophil percentage 0.0,blood_marker,continuous,,False,True,False,,,,False
-1339-0.0,Non-oily fish intake,Non-oily fish intake_num,diet,continuous,,False,True,True,0.0,5.0,,True
-3456-0.0,Number cigs currently daily,Number cigs currently daily 0.0,substance_use,continuous,,False,True,True,,,,False
-2887-0.0,Number cigs previously daily,Number cigs previously daily 0.0,substance_use,continuous,,False,True,True,,,,False
-30800-0.0,Oestradiol,Oestradiol 0.0,blood_marker,continuous,,False,True,False,175.5,4368.2889,,False
-1329-0.0,Oily fish intake,Oily fish intake_num,diet,continuous,,False,True,True,0.0,5.0,,True
-2178-0.0,Overall health rating,Overall health rating_num,health_status,continuous,,False,True,True,1.0,4.0,,True
-24008-0.0,PM coarse fraction,PM coarse fraction 0.0,environment,continuous,,False,True,False,5.57,9.7201,,True
-24006-0.0,PM10,PM10 0.0,environment,continuous,,False,True,False,,,,False
-24003-0.0,PM2.5,PM2.5 0.0,environment,continuous,,False,True,False,,,,False
-24007-0.0,PM2.5 absorbance,PM2.5 absorbance 0.0,environment,continuous,,False,True,False,0.83,2.57,,True
-6159-0.0,Pain types,Pain types 0.0,health_status,continuous,,False,True,True,,,,False
-30810-0.0,Phosphate,Phosphate 0.0,blood_marker,continuous,,False,True,False,0.6901,1.709,,True
-30080-0.0,Platelet count,Platelet count 0.0,blood_marker,continuous,,False,True,False,65.0081,553.0,,True
-30090-0.0,Platelet crit,Platelet crit 0.0,blood_marker,continuous,,False,True,False,0.063,0.475,,True
-30110-0.0,Platelet distribution width,Platelet distribution width 0.0,blood_marker,continuous,,False,True,False,15.21,18.7498,,True
-2237-0.0,Plays computer games,Plays computer games_num,screen_time,continuous,,False,True,True,0.0,2.0,,True
-1389-0.0,Pork intake,Pork intake_num,diet,continuous,,False,True,True,0.0,4.0,,True
-30520-0.0,Potassium in urine,Potassium in urine 0.0,urinalysis,continuous,,False,True,False,6.4,191.7,,True
-1359-0.0,Poultry intake,Poultry intake_num,diet,continuous,,False,True,True,0.0,5.0,,True
-1349-0.0,Processed meat intake,Processed meat intake_num,diet,continuous,,False,True,True,0.0,5.0,,True
-4631-0.0,Prolonged sadness,Prolonged sadness 0.0,mental_health,continuous,,False,True,True,,,,False
-102-0.0,Pulse rate automated,Pulse rate automated 0.0,vital_signs,continuous,,False,True,False,,,,False
-95-0.0,Pulse rate during BP,Pulse rate during BP 0.0,vital_signs,continuous,,False,True,False,,,,False
-21021-0.0,Pulse wave ASI,Pulse wave ASI 0.0,vital_signs,continuous,,False,True,False,,,,False
-6138-0.0,Qualifications,Qualifications 0.0,socioeconomic,continuous,,False,True,True,,,,False
-1299-0.0,Raw vegetable intake,Raw vegetable intake 0.0,diet,continuous,,False,True,True,0.0,20.0,,True
-30010-0.0,Red blood cell count,Red blood cell count 0.0,blood_marker,continuous,,False,True,False,3.06,5.621,,True
-30070-0.0,Red blood cell distribution width,Red blood cell distribution width 0.0,blood_marker,continuous,,False,True,False,11.59,22.7289,,True
-30250-0.0,Reticulocyte count,Reticulocyte count 0.0,blood_marker,continuous,,False,True,False,,,,True
-30240-0.0,Reticulocyte percentage,Reticulocyte percentage 0.0,blood_marker,continuous,,False,True,False,0.2384,8.1258,,True
-30820-0.0,Rheumatoid factor,Rheumatoid factor 0.0,blood_marker,continuous,,False,True,False,10.0,118.6,,False
-30830-0.0,SHBG,SHBG 0.0,blood_marker,continuous,,False,True,False,8.5884,224.7955,,True
-1478-0.0,Salt added to food,Salt added to food_num,diet,continuous,,False,True,True,0.0,3.0,,True
-20111-0.0,Sibling illnesses,Sibling illnesses 0.0,family_history,continuous,,False,True,True,,,,False
-20015-0.0,Sitting height,Sitting height 0.0,anthropometry,continuous,,False,True,False,71.0,101.0,,True
-1160-0.0,Sleep duration,Sleep duration 0.0,sleep,continuous,,False,True,True,3.0,12.0,,True
-1200-0.0,Sleeplessness,Sleeplessness_num,sleep,continuous,,False,True,True,0.0,3.0,,True
-30530-0.0,Sodium in urine,Sodium in urine 0.0,urinalysis,continuous,,False,True,False,10.4,250.6,,True
-50-0.0,Standing height,Standing height 0.0,anthropometry,continuous,,False,True,True,143.0,184.0,,True
-24011-0.0,Sum road lengths near home,Sum road lengths near home 0.0,environment,continuous,,False,True,False,5088.0,158848.0,,True
-22040-0.0,Summed MET minutes per week,Summed MET minutes per week 0.0,physical_activity,continuous,,False,True,True,,,,False
-1050-0.0,Summer time outdoors,Summer time outdoors 0.0,lifestyle,continuous,,False,True,True,0.0,12.0,,True
-2267-0.0,Sun protection,Sun protection_num,lifestyle,continuous,,False,True,True,0.0,5.0,,True
-2277-0.0,Sunlamp use,Sunlamp use 0.0,lifestyle,continuous,,False,True,True,0.0,60.0,,True
-4080-0.0,Systolic BP automated,Systolic BP automated 0.0,vital_signs,continuous,,False,True,False,,,,False
-93-0.0,Systolic BP manual,Systolic BP manual 0.0,vital_signs,continuous,,False,True,False,,,,False
-1488-0.0,Tea intake,Tea intake 0.0,diet,continuous,,False,True,True,0.0,20.0,,True
-30850-0.0,Testosterone,Testosterone 0.0,blood_marker,continuous,,False,True,False,0.354,6.1077,,True
-1090-0.0,Time spent driving,Time spent driving 0.0,screen_time,continuous,,False,True,True,0.0,8.0,,True
-1080-0.0,Time spent using computer,Time spent using computer 0.0,screen_time,continuous,,False,True,True,0.0,10.0,,True
-1070-0.0,Time spent watching TV,Time spent watching TV 0.0,screen_time,continuous,,False,True,True,,,,False
-1239-0.0,Tobacco smoking current,Tobacco smoking current 0.0,substance_use,continuous,,False,True,True,,,,False
-30840-0.0,Total bilirubin,Total bilirubin 0.0,blood_marker,continuous,,False,True,False,2.96,36.4195,,True
-30860-0.0,Total protein,Total protein 0.0,blood_marker,continuous,,False,True,False,60.17,89.1159,,True
-189-0.0,Townsend deprivation index,Townsend deprivation index 0.0,socioeconomic_index,continuous,,False,True,False,-6.1805,8.2832,,True
-24010-0.0,Traffic intensity nearest road,Traffic intensity nearest road 0.0,environment,continuous,,False,True,False,0.0022,1.0,,False
-30870-0.0,Triglycerides,Triglycerides 0.0,blood_marker,continuous,,False,True,False,0.383,6.986,,True
-23127-0.0,Trunk fat percentage,Trunk fat percentage 0.0,clinical_measurement,continuous,,False,True,False,,,,True
-30880-0.0,Urate,Urate 0.0,blood_marker,continuous,,False,True,False,108.9425,537.345,,True
-30670-0.0,Urea,Urea 0.0,blood_marker,continuous,,False,True,False,2.0,11.35,,True
-1548-0.0,Variation in diet,Variation in diet_num,diet,continuous,,False,True,True,0.0,2.0,,True
-30890-0.0,Vitamin D,Vitamin D 0.0,blood_marker,continuous,,False,True,False,10.2968,137.0,,True
-48-0.0,Waist circumference,Waist circumference 0.0,anthropometry,continuous,,False,True,True,58.0,138.0,,True
-1528-0.0,Water intake,Water intake 0.0,diet,continuous,,False,True,True,0.0,15.404,,True
-1588-0.0,Weekly beer/cider,Weekly beer/cider 0.0,diet,continuous,,False,True,True,,,,False
-1578-0.0,Weekly champagne/white wine,Weekly champagne/white wine 0.0,diet,continuous,,False,True,True,,,,False
-1608-0.0,Weekly fortified wine,Weekly fortified wine 0.0,diet,continuous,,False,True,True,,,,False
-1120-0.0,Weekly phone use,Weekly phone use_num,screen_time,continuous,,False,True,True,2.0,480.0,,True
-1568-0.0,Weekly red wine,Weekly red wine 0.0,diet,continuous,,False,True,True,,,,False
-1598-0.0,Weekly spirits,Weekly spirits 0.0,diet,continuous,,False,True,True,,,,False
-21002-0.0,Weight,Weight 0.0,anthropometry,continuous,,False,True,True,,,,True
-30000-0.0,White blood cell count,White blood cell count 0.0,blood_marker,continuous,,False,True,False,2.6203,15.3795,,True
-23100-0.0,Whole body fat mass,Whole body fat mass 0.0,clinical_measurement,continuous,,False,True,False,,,,False
-1060-0.0,Winter time outdoors,Winter time outdoors 0.0,lifestyle,continuous,,False,True,True,0.0,10.0,,True
-derived,age_at_baseline,age_at_baseline,demographics,continuous,,False,True,True,,,Duplicate of Age 0.0 (UKB 21003). Both required — models trained with both. To be deduplicated.,True
-derived,imd_standardized,imd_standardized,socioeconomic_index,continuous,,False,True,False,,,Composite z-score of 7 country-specific IMD fields,False
+ukbb_code,ukbb_name,input_column,category,type,unit,allowed_values,generates_missing_flag,in_srdc_poc,in_abacus_poc,cap_lo,cap_hi,notes,selected_k50
+24014-0.0,Average 24h noise,Average 24h noise 0.0,environment,categorical,,No | Yes,False,True,False,,,,False
+1448-0.0,Bread type,Bread type 0.0,diet,categorical,,White | Brown | None | Other type of bread | Unknown | Wholemeal or wholegrain,False,True,True,,,,True
+1468-0.0,Cereal type,Cereal type 0.0,diet,categorical,,"Other (e.g. Cornflakes, Frosties) | Biscuit cereal (e.g. Weetabix) | Bran cereal (e.g. All Bran, Branflakes) | Muesli | None | Oat cereal (e.g. Ready Brek, porridge) | Unknown",False,True,True,,,,False
+1508-0.0,Coffee type,Coffee type 0.0,diet,categorical,,"Instant coffee | Decaffeinated coffee (any type) | Ground coffee (include espresso, filter etc) | None | Other type of coffee | Unknown",False,True,True,,,,False
+20117-0.0,Drinker status,Drinker status 0.0,substance_use,categorical,,Never | Current | Previous | Unknown,False,True,True,,,,False
+2000-0.0,Embarrassment,Embarrassment 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+derived,Ethnic_recode,Ethnic_recode,demographics,categorical,z-score,White_British | Asian | Black | Mixed | Other | White_Other,False,True,True,,,Recoded from Ethnic background (21000). Values: White_British | Asian | Black | Mixed | Other | White_Other,True
+1960-0.0,Fed-up feelings,Fed-up feelings 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+2463-0.0,Fractured bones,Fractured bones 0.0,health_status,categorical,,No | Unknown | Yes,False,True,True,,,,True
+2030-0.0,Guilty feelings,Guilty feelings 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+2247-0.0,Hearing difficulty,Hearing difficulty 0.0,health_status,categorical,,No | Unknown | Yes,False,True,True,,,,True
+22032-0.0,IPAQ Activity Category,IPAQ Activity Category,physical_activity,categorical,,Low | High | Moderate,False,True,True,,,,False
+1940-0.0,Irritability,Irritability 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,False
+2020-0.0,Loneliness,Loneliness 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,False
+1787-0.0,Maternal smoking around birth,Maternal smoking around birth 0.0,early_life,categorical,,No | Unknown | Yes,True,True,True,,,,True
+1418-0.0,Milk type,Milk type 0.0,diet,categorical,,Low-fat | Full-fat | None/Other | Plant-based | Unknown,False,True,True,,,,False
+1930-0.0,Miserableness,Miserableness 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+1920-0.0,Mood swings,Mood swings 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+2010-0.0,Nerves,Nerves 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+1970-0.0,Nervous feelings,Nervous feelings 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,False
+1249-0.0,Past tobacco smoking,Past tobacco smoking 0.0,substance_use,categorical,,I have never smoked | Just tried once or twice | Smoked occasionally | Smoked on most or all days | Unknown,False,True,True,,,,True
+2040-0.0,Risk taking,Risk taking 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+1950-0.0,Sensitivity,Sensitivity 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+31-0.0,Sex,Sex 0.0,demographics,categorical,,Female | Male,False,True,True,,,,False
+1717-0.0,Skin colour,Skin colour 0.0,early_life,categorical,,Fair | Black | Brown | Dark olive | Light olive | Unknown | Very fair,False,True,True,,,,False
+20116-0.0,Smoking status,Smoking status 0.0,substance_use,categorical,,Never | Current | Previous | Unknown,False,True,True,,,,True
+1210-0.0,Snoring,Snoring 0.0,sleep,categorical,,No | Unknown | Yes,True,True,True,,,,True
+1428-0.0,Spread type,Spread type 0.0,diet,categorical,,Butter | None | Other/Margarine | Unknown,False,True,True,,,,True
+924-0.0,Usual walking pace,Usual walking pace 0.0,physical_activity,categorical,,Steady average pace | Brisk pace | Slow pace | Unknown,False,True,True,,,,True
+1980-0.0,Worrier feelings,Worrier feelings 0.0,mental_health,categorical,,No | Unknown | Yes,True,True,True,,,,True
+2110-0.0,Able to confide,Able to confide 0.0,social,continuous,ordinal 1-5,,False,True,True,0.0,7.0,,True
+680-0.0,Accommodation own/rent,Accommodation own/rent 0.0,socioeconomic,continuous,coded integer,,False,True,True,,,,False
+670-0.0,Accommodation type,Accommodation type 0.0,socioeconomic,continuous,coded integer,,False,True,True,,,,False
+1767-0.0,Adopted as child,Adopted as child 0.0,early_life,continuous,binary 0/1,,False,True,True,,,,False
+21003-0.0,Age,Age 0.0,demographics,continuous,years,,False,True,True,,,,True
+845-0.0,Age completed education,Age completed education 0.0,socioeconomic,continuous,years,,False,True,True,,,,False
+3436-0.0,Age started smoking current,Age started smoking current 0.0,substance_use,continuous,years,,False,True,True,,,,False
+2867-0.0,Age started smoking former,Age started smoking former 0.0,substance_use,continuous,years,,False,True,True,,,,False
+30620-0.0,Alanine aminotransferase,Alanine aminotransferase 0.0,blood_marker,continuous,U/L,,False,True,False,4.7159,137.9353,,True
+30600-0.0,Albumin,Albumin 0.0,blood_marker,continuous,g/L,,False,True,False,35.7864,53.97,,True
+1558-0.0,Alcohol intake frequency,Alcohol intake frequency_num,substance_use,continuous,ordinal 1-6,,False,True,True,0.0,7.0,,True
+30610-0.0,Alkaline phosphatase,Alkaline phosphatase 0.0,blood_marker,continuous,U/L,,False,True,False,27.0,251.699,,True
+30630-0.0,Apolipoprotein A,Apolipoprotein A 0.0,blood_marker,continuous,g/L,,False,True,False,,,,True
+30640-0.0,Apolipoprotein B,Apolipoprotein B 0.0,blood_marker,continuous,g/L,,False,True,False,,,,False
+30650-0.0,Aspartate aminotransferase,Aspartate aminotransferase 0.0,blood_marker,continuous,U/L,,False,True,False,11.1,117.4415,,True
+24012-0.0,Average daytime noise,Average daytime noise 0.0,environment,continuous,dB,,False,True,False,0.0002,0.13,,True
+21001-0.0,BMI,BMI 0.0,anthropometry,continuous,kg/m2,,False,True,True,16.8364,53.2678,,True
+23104-0.0,BMI impedance,BMI impedance 0.0,clinical_measurement,continuous,kg/m2,,False,True,False,,,,False
+23105-0.0,Basal metabolic rate,Basal metabolic rate 0.0,clinical_measurement,continuous,kJ,,False,True,False,,,,False
+30160-0.0,Basophil count,Basophil count 0.0,blood_marker,continuous,10^9/L,,False,True,False,0.0,0.71,,True
+30220-0.0,Basophil percentage,Basophil percentage 0.0,blood_marker,continuous,%,,False,True,False,0.0,10.0,,True
+1369-0.0,Beef intake,Beef intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,4.0,,True
+23099-0.0,Body fat %,Body fat % 0.0,clinical_measurement,continuous,%,,False,True,False,,,,False
+23101-0.0,Body fat-free mass,Body fat-free mass 0.0,clinical_measurement,continuous,kg,,False,True,False,32.7,69.5,,True
+1438-0.0,Bread intake,Bread intake 0.0,diet,continuous,slices/week,,False,True,True,0.0,42.0,,True
+1677-0.0,Breastfed as baby,Breastfed as baby 0.0,early_life,continuous,binary 0/1,,False,True,True,,,,False
+30710-0.0,C-reactive protein,C-reactive protein 0.0,blood_marker,continuous,mg/L,,False,True,False,0.09,45.5691,,True
+30680-0.0,Calcium,Calcium 0.0,blood_marker,continuous,mmol/L,,False,True,False,2.068,2.8124,,True
+1458-0.0,Cereal intake,Cereal intake 0.0,diet,continuous,bowls/week,,False,True,True,0.0,14.0,,True
+1408-0.0,Cheese intake,Cheese intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,5.0,,True
+30690-0.0,Cholesterol,Cholesterol 0.0,blood_marker,continuous,mmol/L,,False,True,False,2.8626,9.9734,,True
+1180-0.0,Chronotype,Chronotype_num,sleep,continuous,ordinal 1-6,,True,True,True,-2.0,2.0,,True
+24015-0.0,Close to major road,Close to major road 0.0,environment,continuous,m,,False,True,False,0.0,562.3172,,False
+1498-0.0,Coffee intake,Coffee intake 0.0,diet,continuous,cups/day,,False,True,True,0.0,14.0,,True
+1289-0.0,Cooked vegetable intake,Cooked vegetable intake 0.0,diet,continuous,tablespoons/day,,False,True,True,0.0,20.0,,True
+30700-0.0,Creatinine,Creatinine 0.0,blood_marker,continuous,umol/L,,False,True,False,37.4,131.179,,True
+30510-0.0,Creatinine in urine,Creatinine in urine 0.0,urinalysis,continuous,umol/L,,False,True,False,890.828,35022.408,,True
+30720-0.0,Cystatin C,Cystatin C 0.0,blood_marker,continuous,mg/L,,False,True,False,0.518,1.8059,,True
+1190-0.0,Day nap,Day nap_num,sleep,continuous,ordinal 1-3,,False,True,True,0.0,3.0,,True
+864-0.0,Days moderate activity,Days moderate activity 0.0,physical_activity,continuous,days/week,,False,True,True,0.0,7.0,,True
+884-0.0,Days vigorous activity,Days vigorous activity 0.0,physical_activity,continuous,days/week,,False,True,True,0.0,7.0,,True
+904-0.0,Days walking,Days walking 0.0,physical_activity,continuous,days/week,,False,True,True,0.0,7.0,,True
+1220-0.0,Daytime dozing,Daytime dozing_num,sleep,continuous,ordinal 0-4,,False,True,True,0.0,4.0,,True
+6149-0.0,Dental problems,Dental problems 0.0,health_status,continuous,count,,False,True,True,,,,False
+4620-0.0,Depression episodes,Depression episodes 0.0,mental_health,continuous,count,,False,True,True,,,,False
+4079-0.0,Diastolic BP automated,Diastolic BP automated 0.0,vital_signs,continuous,mmHg,,False,True,False,,,,False
+94-0.0,Diastolic BP manual,Diastolic BP manual 0.0,vital_signs,continuous,mmHg,,False,True,False,,,,False
+1140-0.0,Difference phone use,Difference phone use_num,screen_time,continuous,ordinal 1-5,,False,True,True,-1.0,1.0,,True
+30660-0.0,Direct bilirubin,Direct bilirubin 0.0,blood_marker,continuous,umol/L,,False,True,False,,,,True
+24019-0.0,Domestic garden pct 1000m,Domestic garden pct 1000m 0.0,environment,continuous,%,,False,True,False,15.5585,32.0229,,True
+1319-0.0,Dried fruit intake,Dried fruit intake 0.0,diet,continuous,pieces/day,,False,True,True,0.0,20.0,,True
+894-0.0,Duration moderate activity,Duration moderate activity 0.0,physical_activity,continuous,min/day,,False,True,True,0.0,600.0,,True
+914-0.0,Duration vigorous activity,Duration vigorous activity 0.0,physical_activity,continuous,min/day,,False,True,True,0.0,360.0,,True
+874-0.0,Duration walking,Duration walking 0.0,physical_activity,continuous,min/day,,False,True,True,0.0,700.0,,True
+6142-0.0,Employment status,Employment status 0.0,socioeconomic,continuous,coded integer,,False,True,True,,,,False
+30150-0.0,Eosinophil count,Eosinophil count 0.0,blood_marker,continuous,10^9/L,,False,True,False,0.0,1.2,,True
+30210-0.0,Eosinophil percentage,Eosinophil percentage 0.0,blood_marker,continuous,%,,False,True,False,0.0,15.7038,,True
+21000-0.0,Ethnic background,Ethnic background 0.0,demographics,continuous,coded integer,,False,True,True,,,,False
+4598-0.0,Ever depressed whole week,Ever depressed whole week 0.0,mental_health,continuous,binary 0/1,,False,True,True,,,,False
+3063-0.0,FEV1,FEV1 0.0,clinical_measurement,continuous,L,,False,True,False,,,,False
+3062-0.0,FVC,FVC 0.0,clinical_measurement,continuous,L,,False,True,False,,,,False
+74-0.0,Fasting time,Fasting time 0.0,clinical_measurement,continuous,hours,,False,True,False,0.0,20.0,,True
+20107-0.0,Father illnesses,Father illnesses 0.0,family_history,continuous,count,,False,True,True,,,,False
+20016-0.0,Fluid intelligence score,Fluid intelligence score 0.0,cognitive_test,continuous,score,,False,True,False,1.0,12.0,,False
+2070-0.0,Frequency of tenseness,Frequency of tenseness_num,mental_health,continuous,ordinal 1-4,,False,True,True,0.0,7.0,,True
+2080-0.0,Frequency of tiredness,Frequency of tiredness_num,mental_health,continuous,ordinal 1-4,,False,True,True,0.0,7.0,,True
+2060-0.0,Frequency of unenthusiasm,Frequency of unenthusiasm_num,mental_health,continuous,ordinal 1-4,,False,True,True,0.0,7.0,,True
+1309-0.0,Fresh fruit intake,Fresh fruit intake 0.0,diet,continuous,pieces/day,,False,True,True,0.0,12.0,,True
+1031-0.0,Friend/family visits,Friend/family visits_num,social,continuous,ordinal 1-7,,False,True,True,0.0,7.0,,True
+30730-0.0,GGT,GGT 0.0,blood_marker,continuous,U/L,,False,True,False,,,,False
+1170-0.0,Getting up,Getting up_num,sleep,continuous,ordinal 1-4,,False,True,True,0.0,3.0,,True
+30740-0.0,Glucose,Glucose 0.0,blood_marker,continuous,mmol/L,,False,True,False,2.8442,17.1393,,True
+24020-0.0,Greenspace pct 1000m,Greenspace pct 1000m 0.0,environment,continuous,%,,False,True,False,50.94,74.8492,,True
+24016-0.0,Greenspace pct 300m,Greenspace pct 300m 0.0,environment,continuous,%,,False,True,False,11.1508,77.7797,,True
+30760-0.0,HDL cholesterol,HDL cholesterol 0.0,blood_marker,continuous,mmol/L,,False,True,False,0.7123,3.1647,,True
+30030-0.0,Haematocrit percentage,Haematocrit percentage 0.0,blood_marker,continuous,%,,False,True,False,,,,True
+30020-0.0,Haemoglobin concentration,Haemoglobin concentration 0.0,blood_marker,continuous,g/dL,,False,True,False,8.4,16.42,,True
+46-0.0,Hand grip strength left,Hand grip strength left 0.0,clinical_measurement,continuous,kg,,False,True,False,,,,False
+47-0.0,Hand grip strength right,Hand grip strength right 0.0,clinical_measurement,continuous,kg,,False,True,False,,,,False
+30750-0.0,HbA1c,HbA1c 0.0,blood_marker,continuous,mmol/mol,,False,True,False,21.2698,94.1208,,True
+30300-0.0,High light scatter reticulocyte count,High light scatter reticulocyte count 0.0,blood_marker,continuous,10^12/L,,False,True,False,0.002,0.066,,False
+30290-0.0,High light scatter reticulocyte pct,High light scatter reticulocyte pct 0.0,blood_marker,continuous,%,,False,True,False,0.041,1.5616,,True
+49-0.0,Hip circumference,Hip circumference 0.0,anthropometry,continuous,cm,,False,True,True,79.0,155.0,,True
+738-0.0,Household income,Household income 0.0,socioeconomic,continuous,coded integer,,False,True,True,,,,False
+30770-0.0,IGF-1,IGF-1 0.0,blood_marker,continuous,nmol/L,,False,True,False,6.7821,46.8405,,True
+26416-0.0,IMD Crime,IMD Crime 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26414-0.0,IMD Education,IMD Education 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26412-0.0,IMD Employment,IMD Employment 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26410-0.0,IMD England,IMD England 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26413-0.0,IMD Health,IMD Health 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26415-0.0,IMD Housing,IMD Housing 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26411-0.0,IMD Income,IMD Income 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26417-0.0,IMD Living environment,IMD Living environment 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26426-0.0,IMD Scotland,IMD Scotland 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+26427-0.0,IMD Wales,IMD Wales 0.0,socioeconomic_index,continuous,index,,False,True,False,,,,False
+30280-0.0,Immature reticulocyte fraction,Immature reticulocyte fraction 0.0,blood_marker,continuous,fraction,,False,True,False,0.03,0.4936,,True
+24009-0.0,Inverse distance to road,Inverse distance to road 0.0,environment,continuous,1/m,,False,True,False,500.0,52430.392,,False
+30780-0.0,LDL direct,LDL direct 0.0,blood_marker,continuous,mmol/L,,False,True,False,,,,False
+1379-0.0,Lamb intake,Lamb intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,3.332,,True
+4728-0.0,Leg pain on walking,Leg pain on walking 0.0,health_status,continuous,binary 0/1,,False,True,True,,,,False
+6160-0.0,Leisure/social activities,Leisure/social activities 0.0,social,continuous,count,,False,True,True,,,,False
+1110-0.0,Length phone use,Length phone use_num,screen_time,continuous,ordinal 1-5,,False,True,True,0.0,10.0,,True
+30790-0.0,Lipoprotein A,Lipoprotein A 0.0,blood_marker,continuous,nmol/L,,False,True,False,3.8,188.33,,True
+4609-0.0,Longest depression,Longest depression 0.0,mental_health,continuous,coded integer,,False,True,True,,,,False
+30120-0.0,Lymphocyte count,Lymphocyte count 0.0,blood_marker,continuous,10^9/L,,False,True,False,0.52,5.08,,True
+30180-0.0,Lymphocyte percentage,Lymphocyte percentage 0.0,blood_marker,continuous,%,,False,True,False,8.0862,60.4,,True
+30060-0.0,MCH concentration,MCH concentration 0.0,blood_marker,continuous,g/dL,,False,True,False,30.5203,38.499,,True
+30050-0.0,Mean corpuscular haemoglobin,Mean corpuscular haemoglobin 0.0,blood_marker,continuous,pg,,False,True,False,19.9103,38.9097,,True
+30040-0.0,Mean corpuscular volume,Mean corpuscular volume 0.0,blood_marker,continuous,fL,,False,True,False,63.4011,107.6,,True
+30100-0.0,Mean platelet volume,Mean platelet volume 0.0,blood_marker,continuous,fL,,False,True,False,6.87,14.0,,True
+30260-0.0,Mean reticulocyte volume,Mean reticulocyte volume 0.0,blood_marker,continuous,fL,,False,True,False,68.1243,136.2913,,True
+30270-0.0,Mean sphered cell volume,Mean sphered cell volume 0.0,blood_marker,continuous,fL,,False,True,False,63.36,104.1108,,True
+20023-0.0,Mean time to identify matches,Mean time to identify matches 0.0,cognitive_test,continuous,ms,,False,True,False,,,,False
+30500-0.0,Microalbumin in urine,Microalbumin in urine 0.0,urinalysis,continuous,mg/L,,False,True,False,6.7,1435.7346,,False
+30130-0.0,Monocyte count,Monocyte count 0.0,blood_marker,continuous,10^9/L,,False,True,False,0.03,1.9039,,True
+30190-0.0,Monocyte percentage,Monocyte percentage 0.0,blood_marker,continuous,%,,False,True,False,0.5081,26.2384,,True
+20110-0.0,Mother illnesses,Mother illnesses 0.0,family_history,continuous,count,,False,True,True,,,,False
+24004-0.0,NO2,NO2 0.0,environment,continuous,ug/m3,,False,True,False,,,,False
+24005-0.0,NOx,NOx 0.0,environment,continuous,ug/m3,,False,True,False,,,,False
+30140-0.0,Neutrophil count,Neutrophil count 0.0,blood_marker,continuous,10^9/L,,False,True,False,0.6081,11.372,,True
+30200-0.0,Neutrophil percentage,Neutrophil percentage 0.0,blood_marker,continuous,%,,False,True,False,,,,False
+1339-0.0,Non-oily fish intake,Non-oily fish intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,5.0,,True
+3456-0.0,Number cigs currently daily,Number cigs currently daily 0.0,substance_use,continuous,cigs/day,,False,True,True,,,,False
+2887-0.0,Number cigs previously daily,Number cigs previously daily 0.0,substance_use,continuous,cigs/day,,False,True,True,,,,False
+30800-0.0,Oestradiol,Oestradiol 0.0,blood_marker,continuous,pmol/L,,False,True,False,175.5,4368.2889,,False
+1329-0.0,Oily fish intake,Oily fish intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,5.0,,True
+2178-0.0,Overall health rating,Overall health rating_num,health_status,continuous,ordinal 1-4,,False,True,True,1.0,4.0,,True
+24008-0.0,PM coarse fraction,PM coarse fraction 0.0,environment,continuous,ug/m3,,False,True,False,5.57,9.7201,,True
+24006-0.0,PM10,PM10 0.0,environment,continuous,ug/m3,,False,True,False,,,,False
+24003-0.0,PM2.5,PM2.5 0.0,environment,continuous,ug/m3,,False,True,False,,,,False
+24007-0.0,PM2.5 absorbance,PM2.5 absorbance 0.0,environment,continuous,10^-5/m,,False,True,False,0.83,2.57,,True
+6159-0.0,Pain types,Pain types 0.0,health_status,continuous,count,,False,True,True,,,,False
+30810-0.0,Phosphate,Phosphate 0.0,blood_marker,continuous,mmol/L,,False,True,False,0.6901,1.709,,True
+30080-0.0,Platelet count,Platelet count 0.0,blood_marker,continuous,10^9/L,,False,True,False,65.0081,553.0,,True
+30090-0.0,Platelet crit,Platelet crit 0.0,blood_marker,continuous,%,,False,True,False,0.063,0.475,,True
+30110-0.0,Platelet distribution width,Platelet distribution width 0.0,blood_marker,continuous,%,,False,True,False,15.21,18.7498,,True
+2237-0.0,Plays computer games,Plays computer games_num,screen_time,continuous,ordinal 0-2,,False,True,True,0.0,2.0,,True
+1389-0.0,Pork intake,Pork intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,4.0,,True
+30520-0.0,Potassium in urine,Potassium in urine 0.0,urinalysis,continuous,mmol/L,,False,True,False,6.4,191.7,,True
+1359-0.0,Poultry intake,Poultry intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,5.0,,True
+1349-0.0,Processed meat intake,Processed meat intake_num,diet,continuous,ordinal 0-5,,False,True,True,0.0,5.0,,True
+4631-0.0,Prolonged sadness,Prolonged sadness 0.0,mental_health,continuous,binary 0/1,,False,True,True,,,,False
+102-0.0,Pulse rate automated,Pulse rate automated 0.0,vital_signs,continuous,bpm,,False,True,False,,,,False
+95-0.0,Pulse rate during BP,Pulse rate during BP 0.0,vital_signs,continuous,bpm,,False,True,False,,,,False
+21021-0.0,Pulse wave ASI,Pulse wave ASI 0.0,vital_signs,continuous,m/s,,False,True,False,,,,False
+6138-0.0,Qualifications,Qualifications 0.0,socioeconomic,continuous,coded integer,,False,True,True,,,,False
+1299-0.0,Raw vegetable intake,Raw vegetable intake 0.0,diet,continuous,tablespoons/day,,False,True,True,0.0,20.0,,True
+30010-0.0,Red blood cell count,Red blood cell count 0.0,blood_marker,continuous,10^12/L,,False,True,False,3.06,5.621,,True
+30070-0.0,Red blood cell distribution width,Red blood cell distribution width 0.0,blood_marker,continuous,%,,False,True,False,11.59,22.7289,,True
+30250-0.0,Reticulocyte count,Reticulocyte count 0.0,blood_marker,continuous,10^12/L,,False,True,False,,,,True
+30240-0.0,Reticulocyte percentage,Reticulocyte percentage 0.0,blood_marker,continuous,%,,False,True,False,0.2384,8.1258,,True
+30820-0.0,Rheumatoid factor,Rheumatoid factor 0.0,blood_marker,continuous,IU/mL,,False,True,False,10.0,118.6,,False
+30830-0.0,SHBG,SHBG 0.0,blood_marker,continuous,nmol/L,,False,True,False,8.5884,224.7955,,True
+1478-0.0,Salt added to food,Salt added to food_num,diet,continuous,ordinal 1-4,,False,True,True,0.0,3.0,,True
+20111-0.0,Sibling illnesses,Sibling illnesses 0.0,family_history,continuous,count,,False,True,True,,,,False
+20015-0.0,Sitting height,Sitting height 0.0,anthropometry,continuous,cm,,False,True,False,71.0,101.0,,True
+1160-0.0,Sleep duration,Sleep duration 0.0,sleep,continuous,hours,,False,True,True,3.0,12.0,,True
+1200-0.0,Sleeplessness,Sleeplessness_num,sleep,continuous,ordinal 1-3,,False,True,True,0.0,3.0,,True
+30530-0.0,Sodium in urine,Sodium in urine 0.0,urinalysis,continuous,mmol/L,,False,True,False,10.4,250.6,,True
+50-0.0,Standing height,Standing height 0.0,anthropometry,continuous,cm,,False,True,True,143.0,184.0,,True
+24011-0.0,Sum road lengths near home,Sum road lengths near home 0.0,environment,continuous,m,,False,True,False,5088.0,158848.0,,True
+22040-0.0,Summed MET minutes per week,Summed MET minutes per week 0.0,physical_activity,continuous,MET-min/week,,False,True,True,,,,False
+1050-0.0,Summer time outdoors,Summer time outdoors 0.0,lifestyle,continuous,hours/day,,False,True,True,0.0,12.0,,True
+2267-0.0,Sun protection,Sun protection_num,lifestyle,continuous,ordinal 1-6,,False,True,True,0.0,5.0,,True
+2277-0.0,Sunlamp use,Sunlamp use 0.0,lifestyle,continuous,ordinal 0-4,,False,True,True,0.0,60.0,,True
+4080-0.0,Systolic BP automated,Systolic BP automated 0.0,vital_signs,continuous,mmHg,,False,True,False,,,,False
+93-0.0,Systolic BP manual,Systolic BP manual 0.0,vital_signs,continuous,mmHg,,False,True,False,,,,False
+1488-0.0,Tea intake,Tea intake 0.0,diet,continuous,cups/day,,False,True,True,0.0,20.0,,True
+30850-0.0,Testosterone,Testosterone 0.0,blood_marker,continuous,nmol/L,,False,True,False,0.354,6.1077,,True
+1090-0.0,Time spent driving,Time spent driving 0.0,screen_time,continuous,hours/day,,False,True,True,0.0,8.0,,True
+1080-0.0,Time spent using computer,Time spent using computer 0.0,screen_time,continuous,hours/day,,False,True,True,0.0,10.0,,True
+1070-0.0,Time spent watching TV,Time spent watching TV 0.0,screen_time,continuous,hours/day,,False,True,True,,,,False
+1239-0.0,Tobacco smoking current,Tobacco smoking current 0.0,substance_use,continuous,coded integer,,False,True,True,,,,False
+30840-0.0,Total bilirubin,Total bilirubin 0.0,blood_marker,continuous,umol/L,,False,True,False,2.96,36.4195,,True
+30860-0.0,Total protein,Total protein 0.0,blood_marker,continuous,g/L,,False,True,False,60.17,89.1159,,True
+189-0.0,Townsend deprivation index,Townsend deprivation index 0.0,socioeconomic_index,continuous,index,,False,True,False,-6.1805,8.2832,,True
+24010-0.0,Traffic intensity nearest road,Traffic intensity nearest road 0.0,environment,continuous,vehicles/day,,False,True,False,0.0022,1.0,,False
+30870-0.0,Triglycerides,Triglycerides 0.0,blood_marker,continuous,mmol/L,,False,True,False,0.383,6.986,,True
+23127-0.0,Trunk fat percentage,Trunk fat percentage 0.0,clinical_measurement,continuous,%,,False,True,False,,,,True
+30880-0.0,Urate,Urate 0.0,blood_marker,continuous,umol/L,,False,True,False,108.9425,537.345,,True
+30670-0.0,Urea,Urea 0.0,blood_marker,continuous,mmol/L,,False,True,False,2.0,11.35,,True
+1548-0.0,Variation in diet,Variation in diet_num,diet,continuous,ordinal 1-5,,False,True,True,0.0,2.0,,True
+30890-0.0,Vitamin D,Vitamin D 0.0,blood_marker,continuous,nmol/L,,False,True,False,10.2968,137.0,,True
+48-0.0,Waist circumference,Waist circumference 0.0,anthropometry,continuous,cm,,False,True,True,58.0,138.0,,True
+1528-0.0,Water intake,Water intake 0.0,diet,continuous,glasses/day,,False,True,True,0.0,15.404,,True
+1588-0.0,Weekly beer/cider,Weekly beer/cider 0.0,diet,continuous,pints/week,,False,True,True,,,,False
+1578-0.0,Weekly champagne/white wine,Weekly champagne/white wine 0.0,diet,continuous,glasses/week,,False,True,True,,,,False
+1608-0.0,Weekly fortified wine,Weekly fortified wine 0.0,diet,continuous,glasses/week,,False,True,True,,,,False
+1120-0.0,Weekly phone use,Weekly phone use_num,screen_time,continuous,ordinal 0-7,,False,True,True,2.0,480.0,,True
+1568-0.0,Weekly red wine,Weekly red wine 0.0,diet,continuous,glasses/week,,False,True,True,,,,False
+1598-0.0,Weekly spirits,Weekly spirits 0.0,diet,continuous,measures/week,,False,True,True,,,,False
+21002-0.0,Weight,Weight 0.0,anthropometry,continuous,kg,,False,True,True,,,,True
+30000-0.0,White blood cell count,White blood cell count 0.0,blood_marker,continuous,10^9/L,,False,True,False,2.6203,15.3795,,True
+23100-0.0,Whole body fat mass,Whole body fat mass 0.0,clinical_measurement,continuous,kg,,False,True,False,,,,False
+1060-0.0,Winter time outdoors,Winter time outdoors 0.0,lifestyle,continuous,hours/day,,False,True,True,0.0,10.0,,True
+derived,age_at_baseline,age_at_baseline,demographics,continuous,years,,False,True,True,,,Duplicate of Age 0.0 (UKB 21003). Both required — models trained with both. To be deduplicated.,True
+derived,imd_standardized,imd_standardized,socioeconomic_index,continuous,z-score,,False,True,False,,,Composite z-score of 7 country-specific IMD fields,False
