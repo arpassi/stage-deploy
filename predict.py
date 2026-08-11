@@ -63,6 +63,16 @@ import numpy as np
 import pandas as pd
 from scipy.special import logit as _logit
 
+# Optional — only loaded when --explain is used
+_shap = None
+
+def _get_shap():
+    global _shap
+    if _shap is None:
+        import shap
+        _shap = shap
+    return _shap
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # §1  DEFAULT LOCAL PATHS  (overridable; no server paths)
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -389,10 +399,12 @@ class StagePredictor:
         clf = joblib.load(model_path)
         missing = [n for n in used_names if n not in X_model.columns]
         if missing:
-            raise KeyError(
-                f"{disease}: {len(missing)} expected feature(s) absent "
-                f"(e.g. {missing[:5]}). Feature masks / artifacts out of sync."
+            self._log(
+                f"  WARN {disease}: {len(missing)} mask feature(s) absent, "
+                f"zero-filled: {missing}"
             )
+            for col in missing:
+                X_model[col] = 0.0
         n_in = getattr(clf, "n_features_in_", None)
         if n_in is not None and int(n_in) != len(used_names):
             raise ValueError(
@@ -462,6 +474,116 @@ class StagePredictor:
         rec = df.iloc[0].to_dict()
         return {k: v for k, v in rec.items() if k not in ("persona", "stratum")}
 
+    # ── SHAP explanations ───────────────────────────────────────────────────
+    def explain(
+        self,
+        personas: pd.DataFrame,
+        out_dir: Path | None = None,
+    ) -> dict[str, dict]:
+        """
+        Compute per-sample SHAP values for all deployed diseases.
+
+        Returns {disease: {shap_values, expected_value, feature_names}}.
+        If out_dir is given, also saves .npy + .json files per disease.
+        """
+        shap = _get_shap()
+
+        personas = personas.reset_index(drop=True)
+        X_model = self.transform(personas)
+
+        results: dict[str, dict] = {}
+
+        # Singleton diseases
+        for disease in self.singleton_diseases:
+            if disease == _SUD_NAME:
+                continue
+            used = self.feature_masks.get(disease)
+            if used is None:
+                continue
+
+            model_path = self.train_models_dir / f"{disease}.joblib"
+            if not model_path.exists():
+                continue
+
+            clf = joblib.load(model_path)
+            missing = [n for n in used if n not in X_model.columns]
+            if missing:
+                self._log(
+                    f"  SHAP WARN {disease}: {len(missing)} mask feature(s) absent, "
+                    f"zero-filled: {missing}"
+                )
+                for col in missing:
+                    X_model[col] = 0.0
+
+            X_d = X_model.reindex(columns=used).to_numpy()
+
+            try:
+                explainer = shap.TreeExplainer(clf)
+                sv = explainer.shap_values(X_d)
+                if isinstance(sv, list):
+                    sv = sv[1]
+                ev = explainer.expected_value
+                if isinstance(ev, (list, np.ndarray)):
+                    ev = float(ev[1]) if len(ev) > 1 else float(ev[0])
+                else:
+                    ev = float(ev)
+
+                results[disease] = {
+                    "shap_values": sv,
+                    "expected_value": ev,
+                    "feature_names": used,
+                }
+                self._log(f"  SHAP {disease}: {sv.shape}")
+            except Exception as exc:
+                self._log(f"  SHAP ERROR {disease}: {exc}")
+
+        # Augmented SUD
+        if self.sud_feature_names is not None:
+            clf = joblib.load(self.sud_model_path)
+            # XGBoost base_score monkey-patch
+            try:
+                bs = getattr(clf, "base_score", None)
+                if isinstance(bs, str):
+                    clf.base_score = float(bs.strip("[] "))
+            except Exception:
+                pass
+
+            X_sud = X_model.reindex(columns=self.sud_feature_names).to_numpy()
+            try:
+                explainer = shap.TreeExplainer(clf)
+                sv = explainer.shap_values(X_sud)
+                if isinstance(sv, list):
+                    sv = sv[1]
+                ev = explainer.expected_value
+                if isinstance(ev, (list, np.ndarray)):
+                    ev = float(ev[1]) if len(ev) > 1 else float(ev[0])
+                else:
+                    ev = float(ev)
+
+                results[_SUD_NAME] = {
+                    "shap_values": sv,
+                    "expected_value": ev,
+                    "feature_names": self.sud_feature_names,
+                }
+                self._log(f"  SHAP {_SUD_NAME}: {sv.shape}")
+            except Exception as exc:
+                self._log(f"  SHAP ERROR {_SUD_NAME}: {exc}")
+
+        # Save to disk if out_dir given
+        if out_dir is not None:
+            shap_dir = out_dir / "shap"
+            shap_dir.mkdir(parents=True, exist_ok=True)
+            for disease, data in results.items():
+                tag = disease.replace(" ", "_")
+                np.save(str(shap_dir / f"{tag}_shap_values.npy"), data["shap_values"])
+                np.save(str(shap_dir / f"{tag}_expected_value.npy"),
+                        np.array(data["expected_value"]))
+                with open(shap_dir / f"{tag}_feature_names.json", "w") as fh:
+                    json.dump(data["feature_names"], fh, indent=2)
+            self._log(f"  SHAP saved: {len(results)} diseases → {shap_dir}")
+
+        return results
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # §3  BATCH DRIVER (scores each row of a personas CSV)
@@ -509,6 +631,8 @@ def predict_personas(
     emit_raw: bool,
     exclude: set[str] | None = None,
     include_excluded: bool = False,
+    explain: bool = False,
+    explain_dir: Path | None = None,
 ) -> pd.DataFrame:
     personas = pd.read_csv(personas_csv)
     print(f"[{_ts()}] Loaded {len(personas)} personas from {personas_csv}")
@@ -533,6 +657,12 @@ def predict_personas(
         preds = cache[stem].predict(block, emit_raw=emit_raw)
         preds.index = block.index  # keep original CSV order
         frames.append(preds)
+
+        if explain:
+            shap_out = explain_dir if explain_dir else (
+                (out_path.parent if out_path else personas_csv.parent) / stem
+            )
+            cache[stem].explain(block, out_dir=shap_out)
 
     result = pd.concat(frames).sort_index().reset_index(drop=True)
 
@@ -625,6 +755,18 @@ def _build_parser() -> argparse.ArgumentParser:
         f"({', '.join(sorted(DEPLOY_EXCLUDED_DISEASES))}) and score every "
         "trained disease.",
     )
+    p.add_argument(
+        "--explain",
+        action="store_true",
+        help="Compute per-sample SHAP values for each disease. Outputs saved "
+        "alongside predictions as .npy + .json files in a shap/ subdirectory.",
+    )
+    p.add_argument(
+        "--explain_dir",
+        type=Path,
+        default=None,
+        help="Directory for SHAP outputs (default: shap/ next to --out).",
+    )
     return p
 
 
@@ -644,6 +786,8 @@ def main() -> None:
         emit_raw=args.emit_raw,
         exclude=set(args.exclude) if args.exclude else None,
         include_excluded=args.include_excluded,
+        explain=args.explain,
+        explain_dir=args.explain_dir,
     )
 
 

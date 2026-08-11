@@ -2,7 +2,7 @@
   "generator": "generate_synthetic_cohort.py",
   "data_source": "gaussian_copula_synthetic",
   "disclaimer": "This dataset contains NO real UK Biobank participants. All rows are synthetic, generated via Gaussian copula fitted on aggregate statistics of the training set. Predictions and SHAP values are computed on synthetic rows.",
-  "timestamp": "2026-08-11T13:03:07.978225",
+  "timestamp": "2026-08-11T15:56:50.233417",
   "seed": 42,
   "n_per_stratum": 250,
   "strata": [
@@ -15,29 +15,798 @@
   "ukb_application": 295277,
   "strata_results": {
     "Female_under60_srdc_poc": {
-      "shap_only": true,
+      "n_synthetic": 250,
+      "n_features": 384,
+      "n_ohe": 139,
+      "n_collapsed": 24,
+      "collapsed_columns": [
+        "Diastolic blood pressure_average",
+        "pain_unknown",
+        "Lymphocyte count 0.0",
+        "Breastfed as a baby 0.0_missing",
+        "Adopted as a child 0.0_missing",
+        "Mood swings 0.0_missing",
+        "Miserableness 0.0_missing",
+        "Irritability 0.0_missing",
+        "Sensitivity 0.0_missing",
+        "Fed-up feelings 0.0_missing",
+        "Nerves 0.0_missing",
+        "Guilty feelings 0.0_missing",
+        "Risk taking 0.0_missing",
+        "Snoring 0.0_missing",
+        "Smoking status 0.0__Unknown",
+        "Past tobacco smoking 0.0__Unknown",
+        "Drinker status 0.0__Unknown",
+        "Spread type 0.0__Unknown",
+        "Coffee type 0.0__Unknown",
+        "Fractured bones 0.0__Unknown",
+        "Accommodation type_recoded__Institutional",
+        "Accommodation type_recoded__Other",
+        "Accommodation type_recoded__Unknown",
+        "Employment_recoded__Student"
+      ],
+      "n_diseases_scored": 23,
+      "diseases_scored": [
+        "Atrial Fibrillation",
+        "COPD",
+        "Cancer Breast",
+        "Cancer Colorectal",
+        "Cancer Lung",
+        "Cancer Other",
+        "Chronic Kidney Disease",
+        "Chronic Liver Disease",
+        "Coronary Heart Disease",
+        "Depression",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Hypothyroidism",
+        "Obesity",
+        "Osteoarthritis",
+        "Osteoporosis",
+        "Peripheral Vascular Disease",
+        "Rheumatoid Arthritis",
+        "Sleep Apnea",
+        "Stroke Cerebrovascular",
+        "Substance Use Disorder"
+      ],
       "shap": {
         "n_diseases_explained": 23
+      },
+      "prediction_stats": {
+        "Atrial Fibrillation": {
+          "mean": 0.08440661576972903,
+          "std": 0.05189518904429957,
+          "min": 0.023633874861467147,
+          "max": 0.5331033979816068
+        },
+        "COPD": {
+          "mean": 0.012860557432641223,
+          "std": 0.019988029320821464,
+          "min": 0.0007107387957489095,
+          "max": 0.16639564125195586
+        },
+        "Cancer Breast": {
+          "mean": 0.024184975398890956,
+          "std": 0.0022847234846431375,
+          "min": 0.019279182977542532,
+          "max": 0.03175147252122225
+        },
+        "Cancer Colorectal": {
+          "mean": 0.006067803889112005,
+          "std": 0.0025085611590106175,
+          "min": 0.0028007738517535916,
+          "max": 0.024169703394187326
+        },
+        "Cancer Lung": {
+          "mean": 0.006719452805924778,
+          "std": 0.004055836065840785,
+          "min": 0.0025288057237205022,
+          "max": 0.03400921195571107
+        },
+        "Cancer Other": {
+          "mean": 0.06900685169581426,
+          "std": 0.02927835051964706,
+          "min": 0.03265754160043931,
+          "max": 0.25789117120296173
+        },
+        "Chronic Kidney Disease": {
+          "mean": 0.16067140143352154,
+          "std": 0.11468608673095783,
+          "min": 0.03000966342820965,
+          "max": 0.765677595008247
+        },
+        "Chronic Liver Disease": {
+          "mean": 0.015956473001268186,
+          "std": 0.02870327204485116,
+          "min": 0.0006461073628954324,
+          "max": 0.24182314803012947
+        },
+        "Coronary Heart Disease": {
+          "mean": 0.014347959662171315,
+          "std": 0.012324977998631624,
+          "min": 0.0016589379759816953,
+          "max": 0.0829327744490102
+        },
+        "Depression": {
+          "mean": 0.0769101054530607,
+          "std": 0.04363375680014454,
+          "min": 0.01983242523883852,
+          "max": 0.30792612184749485
+        },
+        "Diabetes Mellitus": {
+          "mean": 0.03810173460136602,
+          "std": 0.06611207897452555,
+          "min": 0.0008951104009389276,
+          "max": 0.47971866366610444
+        },
+        "Heart Failure": {
+          "mean": 0.00881857718151315,
+          "std": 0.011862852439414054,
+          "min": 0.0005977810389355889,
+          "max": 0.06575130735895315
+        },
+        "Hyperlipidemia": {
+          "mean": 0.03395578633331057,
+          "std": 0.034188810398281914,
+          "min": 0.003912256964687329,
+          "max": 0.18488327665245285
+        },
+        "Hypertension": {
+          "mean": 0.12780547872653802,
+          "std": 0.10879535180683639,
+          "min": 0.012874001058809145,
+          "max": 0.6309928135497684
+        },
+        "Hypothyroidism": {
+          "mean": 0.04312882403892337,
+          "std": 0.022592710933279043,
+          "min": 0.014207046962177798,
+          "max": 0.12166040639516906
+        },
+        "Obesity": {
+          "mean": 0.04931498852961836,
+          "std": 0.06737926339595464,
+          "min": 0.001109043970451367,
+          "max": 0.39714788726333883
+        },
+        "Osteoarthritis": {
+          "mean": 0.14927224028712294,
+          "std": 0.07773293802968566,
+          "min": 0.04416969840562511,
+          "max": 0.5603687647232837
+        },
+        "Osteoporosis": {
+          "mean": 0.006676965094032456,
+          "std": 0.005043300700122558,
+          "min": 0.0016294864747038087,
+          "max": 0.032225607472394294
+        },
+        "Peripheral Vascular Disease": {
+          "mean": 0.008923301270254397,
+          "std": 0.005083255623529274,
+          "min": 0.0033632133899230104,
+          "max": 0.039096414966006576
+        },
+        "Rheumatoid Arthritis": {
+          "mean": 0.009170560944677199,
+          "std": 0.005176174950285514,
+          "min": 0.002752978375508569,
+          "max": 0.032424044061384896
+        },
+        "Sleep Apnea": {
+          "mean": 0.01034462426549985,
+          "std": 0.01563611473161761,
+          "min": 0.0015884290647289502,
+          "max": 0.18624798937159828
+        },
+        "Stroke Cerebrovascular": {
+          "mean": 0.01083292496619288,
+          "std": 0.008059561486191568,
+          "min": 0.0031837824812282,
+          "max": 0.07014935373987136
+        },
+        "Substance Use Disorder": {
+          "mean": 0.006613500522940669,
+          "std": 0.003974393387024091,
+          "min": 0.0014595874484766953,
+          "max": 0.0276467033366497
+        }
       }
     },
     "Female_60plus_srdc_poc": {
-      "shap_only": true,
+      "n_synthetic": 250,
+      "n_features": 387,
+      "n_ohe": 139,
+      "n_collapsed": 23,
+      "collapsed_columns": [
+        "pain_unknown",
+        "Cholesterol 0.0",
+        "Adopted as a child 0.0_missing",
+        "Mood swings 0.0_missing",
+        "Irritability 0.0_missing",
+        "Sensitivity 0.0_missing",
+        "Fed-up feelings 0.0_missing",
+        "Nervous feelings 0.0_missing",
+        "Worrier feelings 0.0_missing",
+        "Embarrassment 0.0_missing",
+        "Nerves 0.0_missing",
+        "Risk taking 0.0_missing",
+        "Snoring 0.0_missing",
+        "Tobacco smoking 0.0__Unknown",
+        "Milk type 0.0__Unknown",
+        "Spread type 0.0__Unknown",
+        "Fractured bones 0.0__Unknown",
+        "Adopted as a child 0.0__Unknown",
+        "Skin colour 0.0__Black",
+        "Usual walking pace 0.0__Unknown",
+        "Accommodation type_recoded__Institutional",
+        "Accommodation type_recoded__Unknown",
+        "Employment_recoded__Unemployed"
+      ],
+      "n_diseases_scored": 23,
+      "diseases_scored": [
+        "Atrial Fibrillation",
+        "COPD",
+        "Cancer Breast",
+        "Cancer Colorectal",
+        "Cancer Lung",
+        "Cancer Other",
+        "Chronic Kidney Disease",
+        "Chronic Liver Disease",
+        "Coronary Heart Disease",
+        "Depression",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Hypothyroidism",
+        "Obesity",
+        "Osteoarthritis",
+        "Osteoporosis",
+        "Peripheral Vascular Disease",
+        "Rheumatoid Arthritis",
+        "Sleep Apnea",
+        "Stroke Cerebrovascular",
+        "Substance Use Disorder"
+      ],
       "shap": {
         "n_diseases_explained": 23
+      },
+      "prediction_stats": {
+        "Atrial Fibrillation": {
+          "mean": 0.024818891870178727,
+          "std": 0.014782065749521884,
+          "min": 0.006343491116137312,
+          "max": 0.09899246620314611
+        },
+        "COPD": {
+          "mean": 0.029983409142344528,
+          "std": 0.02450604637614283,
+          "min": 0.004128213921273381,
+          "max": 0.1832138791227648
+        },
+        "Cancer Breast": {
+          "mean": 0.03972375445646969,
+          "std": 0.004869451682601105,
+          "min": 0.027875527527457745,
+          "max": 0.0547258451883543
+        },
+        "Cancer Colorectal": {
+          "mean": 0.011349178080593911,
+          "std": 0.0017387790615275526,
+          "min": 0.008805701339525174,
+          "max": 0.02330092711333594
+        },
+        "Cancer Lung": {
+          "mean": 0.009852104355530302,
+          "std": 0.00318063088909162,
+          "min": 0.006983555984090202,
+          "max": 0.03031722210814417
+        },
+        "Cancer Other": {
+          "mean": 0.043214759545696146,
+          "std": 0.012536329597709199,
+          "min": 0.02892971895836843,
+          "max": 0.13796314897115008
+        },
+        "Chronic Kidney Disease": {
+          "mean": 0.02731714679424652,
+          "std": 0.03546987686189818,
+          "min": 0.0028956874265560766,
+          "max": 0.46169864475230665
+        },
+        "Chronic Liver Disease": {
+          "mean": 0.008108601031923523,
+          "std": 0.007197666585161136,
+          "min": 0.000993135143196918,
+          "max": 0.051814919113322894
+        },
+        "Coronary Heart Disease": {
+          "mean": 0.06352927934995548,
+          "std": 0.028978898524329173,
+          "min": 0.0209431082649273,
+          "max": 0.174964446994588
+        },
+        "Depression": {
+          "mean": 0.05638626046157893,
+          "std": 0.028596675271363215,
+          "min": 0.015776309555519587,
+          "max": 0.20275956523551622
+        },
+        "Diabetes Mellitus": {
+          "mean": 0.036657553666494085,
+          "std": 0.05348145039435859,
+          "min": 0.002884681627857701,
+          "max": 0.48786735679330384
+        },
+        "Heart Failure": {
+          "mean": 0.020786957127013707,
+          "std": 0.021322988168142872,
+          "min": 0.00474789695826843,
+          "max": 0.15475701892389496
+        },
+        "Hyperlipidemia": {
+          "mean": 0.08192233906821397,
+          "std": 0.05167566327472685,
+          "min": 0.01626403989159348,
+          "max": 0.34118774703647853
+        },
+        "Hypertension": {
+          "mean": 0.18197990957502466,
+          "std": 0.097459945031976,
+          "min": 0.04114486664583616,
+          "max": 0.6989710501471383
+        },
+        "Hypothyroidism": {
+          "mean": 0.07998966661040331,
+          "std": 0.032398476507229185,
+          "min": 0.03042433112537322,
+          "max": 0.1820566779956119
+        },
+        "Obesity": {
+          "mean": 0.20590745335910463,
+          "std": 0.1028431053110188,
+          "min": 0.057921566946451904,
+          "max": 0.5810387369241035
+        },
+        "Osteoarthritis": {
+          "mean": 0.13844526454688902,
+          "std": 0.06929622666462286,
+          "min": 0.04462604502190049,
+          "max": 0.46754141068173444
+        },
+        "Osteoporosis": {
+          "mean": 0.03595249609619718,
+          "std": 0.020037867342042923,
+          "min": 0.011300395565072556,
+          "max": 0.1271845681086574
+        },
+        "Peripheral Vascular Disease": {
+          "mean": 0.01331931974069551,
+          "std": 0.008680259109399863,
+          "min": 0.0040704125854320004,
+          "max": 0.07082810859643764
+        },
+        "Rheumatoid Arthritis": {
+          "mean": 0.020755129920844585,
+          "std": 0.017280900912862225,
+          "min": 0.0041038523221341066,
+          "max": 0.12076564391248136
+        },
+        "Sleep Apnea": {
+          "mean": 0.008937959898001892,
+          "std": 0.009909256544553834,
+          "min": 0.0016755179850476225,
+          "max": 0.059163328645859464
+        },
+        "Stroke Cerebrovascular": {
+          "mean": 0.02046573475517017,
+          "std": 0.008396499121137865,
+          "min": 0.008844767866430002,
+          "max": 0.05779900947405181
+        },
+        "Substance Use Disorder": {
+          "mean": 0.0052397020035385156,
+          "std": 0.004807588649915439,
+          "min": 0.000995454477078709,
+          "max": 0.03546636994918178
+        }
       }
     },
     "Male_under60_srdc_poc": {
-      "shap_only": true,
+      "n_synthetic": 250,
+      "n_features": 387,
+      "n_ohe": 139,
+      "n_collapsed": 18,
+      "collapsed_columns": [
+        "Breastfed as a baby 0.0_missing",
+        "Adopted as a child 0.0_missing",
+        "Mood swings 0.0_missing",
+        "Miserableness 0.0_missing",
+        "Sensitivity 0.0_missing",
+        "Nervous feelings 0.0_missing",
+        "Worrier feelings 0.0_missing",
+        "Embarrassment 0.0_missing",
+        "Nerves 0.0_missing",
+        "Risk taking 0.0_missing",
+        "Snoring 0.0_missing",
+        "Tobacco smoking 0.0__Unknown",
+        "Drinker status 0.0__Unknown",
+        "Fractured bones 0.0__Unknown",
+        "Skin colour 0.0__Black",
+        "Usual walking pace 0.0__Unknown",
+        "Accommodation type_recoded__Institutional",
+        "Accommodation type_recoded__Unknown"
+      ],
+      "n_diseases_scored": 23,
+      "diseases_scored": [
+        "Atrial Fibrillation",
+        "COPD",
+        "Cancer Colorectal",
+        "Cancer Lung",
+        "Cancer Other",
+        "Cancer Prostate",
+        "Chronic Kidney Disease",
+        "Chronic Liver Disease",
+        "Coronary Heart Disease",
+        "Depression",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Hypothyroidism",
+        "Obesity",
+        "Osteoarthritis",
+        "Osteoporosis",
+        "Peripheral Vascular Disease",
+        "Rheumatoid Arthritis",
+        "Sleep Apnea",
+        "Stroke Cerebrovascular",
+        "Substance Use Disorder"
+      ],
       "shap": {
         "n_diseases_explained": 23
+      },
+      "prediction_stats": {
+        "Atrial Fibrillation": {
+          "mean": 0.012944472917927715,
+          "std": 0.007347468920330953,
+          "min": 0.004891646238573345,
+          "max": 0.062073171593679345
+        },
+        "COPD": {
+          "mean": 0.011108437153288827,
+          "std": 0.010157371737006385,
+          "min": 0.0012423207719006446,
+          "max": 0.07395448662802843
+        },
+        "Cancer Colorectal": {
+          "mean": 0.00446653105135011,
+          "std": 0.00192048553907108,
+          "min": 0.002668162791194483,
+          "max": 0.019224635273435424
+        },
+        "Cancer Lung": {
+          "mean": 0.0010544194086241478,
+          "std": 0.0005140698446247478,
+          "min": 0.0004962951521558296,
+          "max": 0.0036508676507032213
+        },
+        "Cancer Other": {
+          "mean": 0.012201856506864282,
+          "std": 0.0031534306304898648,
+          "min": 0.007528977086147302,
+          "max": 0.04018097861033225
+        },
+        "Cancer Prostate": {
+          "mean": 0.003290675726330709,
+          "std": 0.001166606515280291,
+          "min": 0.001539534873515699,
+          "max": 0.012869278531940552
+        },
+        "Chronic Kidney Disease": {
+          "mean": 0.006304800175749047,
+          "std": 0.00977903510856829,
+          "min": 0.001437114260443576,
+          "max": 0.09940115451132163
+        },
+        "Chronic Liver Disease": {
+          "mean": 0.009868030855482133,
+          "std": 0.01687455926187388,
+          "min": 0.0012580714304388158,
+          "max": 0.23723165555214992
+        },
+        "Coronary Heart Disease": {
+          "mean": 0.022615399253484696,
+          "std": 0.012898536705412026,
+          "min": 0.005721524023701934,
+          "max": 0.10269186303143064
+        },
+        "Depression": {
+          "mean": 0.03368804202611909,
+          "std": 0.019782783511081058,
+          "min": 0.008613887399020925,
+          "max": 0.13819062768071935
+        },
+        "Diabetes Mellitus": {
+          "mean": 0.035385165747330805,
+          "std": 0.06266220254801907,
+          "min": 0.0014144111244625232,
+          "max": 0.4470048197851635
+        },
+        "Heart Failure": {
+          "mean": 0.006355146076272642,
+          "std": 0.005679896786495856,
+          "min": 0.0012461691791561926,
+          "max": 0.04659805766992486
+        },
+        "Hyperlipidemia": {
+          "mean": 0.04252728878709584,
+          "std": 0.04012501401915713,
+          "min": 0.00500848152598377,
+          "max": 0.32715679251617047
+        },
+        "Hypertension": {
+          "mean": 0.08112452703486164,
+          "std": 0.07253702243729282,
+          "min": 0.008456581695168462,
+          "max": 0.4530384263434669
+        },
+        "Hypothyroidism": {
+          "mean": 0.006776992243454815,
+          "std": 0.0043755413569160715,
+          "min": 0.0014290182637376506,
+          "max": 0.026684636756306487
+        },
+        "Obesity": {
+          "mean": 0.03412408789079095,
+          "std": 0.044112449897201964,
+          "min": 0.0003269399079668825,
+          "max": 0.1909900585062616
+        },
+        "Osteoarthritis": {
+          "mean": 0.03764314560699482,
+          "std": 0.018634484652225593,
+          "min": 0.012286056135410965,
+          "max": 0.12861492037335948
+        },
+        "Osteoporosis": {
+          "mean": 0.0030505253579777908,
+          "std": 0.0030421851992383066,
+          "min": 0.0008569651329288749,
+          "max": 0.031535819608125064
+        },
+        "Peripheral Vascular Disease": {
+          "mean": 0.0039007047248017642,
+          "std": 0.003808805007610166,
+          "min": 0.0005823341330772982,
+          "max": 0.02616175448712389
+        },
+        "Rheumatoid Arthritis": {
+          "mean": 0.004056664411351084,
+          "std": 0.003461287095185402,
+          "min": 0.0006632331191494557,
+          "max": 0.034648904343524224
+        },
+        "Sleep Apnea": {
+          "mean": 0.018100613183351436,
+          "std": 0.01968655334326441,
+          "min": 0.0033079511261567295,
+          "max": 0.13245153449919725
+        },
+        "Stroke Cerebrovascular": {
+          "mean": 0.01070891529947166,
+          "std": 0.00445036336757377,
+          "min": 0.006124412333121076,
+          "max": 0.040979049915592494
+        },
+        "Substance Use Disorder": {
+          "mean": 0.011869806505652608,
+          "std": 0.007055123163035106,
+          "min": 0.0028328155270401197,
+          "max": 0.04195014051900917
+        }
       }
     },
     "Male_60plus_srdc_poc": {
-      "shap_only": true,
+      "n_synthetic": 250,
+      "n_features": 385,
+      "n_ohe": 139,
+      "n_collapsed": 20,
+      "collapsed_columns": [
+        "BMI 0.0",
+        "pain_unknown",
+        "Domestic garden pct 1000m 0.0",
+        "Adopted as a child 0.0_missing",
+        "Miserableness 0.0_missing",
+        "Irritability 0.0_missing",
+        "Sensitivity 0.0_missing",
+        "Fed-up feelings 0.0_missing",
+        "Nervous feelings 0.0_missing",
+        "Nerves 0.0_missing",
+        "Loneliness 0.0_missing",
+        "Guilty feelings 0.0_missing",
+        "Snoring 0.0_missing",
+        "Ethnic_recode__Other",
+        "Tobacco smoking 0.0__Unknown",
+        "Drinker status 0.0__Unknown",
+        "Spread type 0.0__Unknown",
+        "Cereal type 0.0__Unknown",
+        "Usual walking pace 0.0__Unknown",
+        "Accommodation type_recoded__Other"
+      ],
+      "n_diseases_scored": 23,
+      "diseases_scored": [
+        "Atrial Fibrillation",
+        "COPD",
+        "Cancer Colorectal",
+        "Cancer Lung",
+        "Cancer Other",
+        "Cancer Prostate",
+        "Chronic Kidney Disease",
+        "Chronic Liver Disease",
+        "Coronary Heart Disease",
+        "Depression",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Hypothyroidism",
+        "Obesity",
+        "Osteoarthritis",
+        "Osteoporosis",
+        "Peripheral Vascular Disease",
+        "Rheumatoid Arthritis",
+        "Sleep Apnea",
+        "Stroke Cerebrovascular",
+        "Substance Use Disorder"
+      ],
       "shap": {
         "n_diseases_explained": 23
+      },
+      "prediction_stats": {
+        "Atrial Fibrillation": {
+          "mean": 0.12485128382005933,
+          "std": 0.05224924805728958,
+          "min": 0.04310847088497817,
+          "max": 0.4698660996332825
+        },
+        "COPD": {
+          "mean": 0.06543114941607259,
+          "std": 0.06831911088066665,
+          "min": 0.004829744506354297,
+          "max": 0.36066912782692095
+        },
+        "Cancer Colorectal": {
+          "mean": 0.01765054717822393,
+          "std": 0.0039319748339242434,
+          "min": 0.009737579596566051,
+          "max": 0.034380766781507775
+        },
+        "Cancer Lung": {
+          "mean": 0.01164281464005307,
+          "std": 0.006945821553749797,
+          "min": 0.002771518854018808,
+          "max": 0.05004345603411572
+        },
+        "Cancer Other": {
+          "mean": 0.06382212530081381,
+          "std": 0.015218343654859488,
+          "min": 0.040553290755199436,
+          "max": 0.16036240834781748
+        },
+        "Cancer Prostate": {
+          "mean": 0.04582470483750584,
+          "std": 0.011821484932978698,
+          "min": 0.022086363289815527,
+          "max": 0.08551219594612045
+        },
+        "Chronic Kidney Disease": {
+          "mean": 0.050825375299222236,
+          "std": 0.05391051199589919,
+          "min": 0.013835011918141798,
+          "max": 0.5287979412098852
+        },
+        "Chronic Liver Disease": {
+          "mean": 0.024060833194944457,
+          "std": 0.027473827098753074,
+          "min": 0.005996481449939242,
+          "max": 0.3765277899599668
+        },
+        "Coronary Heart Disease": {
+          "mean": 0.1061931589925936,
+          "std": 0.033598188157380825,
+          "min": 0.04872557867189377,
+          "max": 0.25097583661676426
+        },
+        "Depression": {
+          "mean": 0.04931113343338856,
+          "std": 0.02243318539141658,
+          "min": 0.018883470485962853,
+          "max": 0.14204100655821666
+        },
+        "Diabetes Mellitus": {
+          "mean": 0.18142494603291354,
+          "std": 0.14969331445432735,
+          "min": 0.02134079903247084,
+          "max": 0.7455707269813954
+        },
+        "Heart Failure": {
+          "mean": 0.06404494750796715,
+          "std": 0.04655815096322669,
+          "min": 0.013665798379513053,
+          "max": 0.3438017896989861
+        },
+        "Hyperlipidemia": {
+          "mean": 0.2045416027494454,
+          "std": 0.07797567209805936,
+          "min": 0.045562581975994616,
+          "max": 0.45046200468348796
+        },
+        "Hypertension": {
+          "mean": 0.4812775742508496,
+          "std": 0.16067472158657684,
+          "min": 0.16368706535364003,
+          "max": 0.8814442403672192
+        },
+        "Hypothyroidism": {
+          "mean": 0.018653271743201402,
+          "std": 0.008700027042500303,
+          "min": 0.005419347423111069,
+          "max": 0.06162432107821148
+        },
+        "Obesity": {
+          "mean": 0.07930785224325745,
+          "std": 0.09217543688135918,
+          "min": 0.002578885648818803,
+          "max": 0.40448049004693637
+        },
+        "Osteoarthritis": {
+          "mean": 0.18739967476626376,
+          "std": 0.02719184491350333,
+          "min": 0.12001235620167827,
+          "max": 0.28950465298859024
+        },
+        "Osteoporosis": {
+          "mean": 0.00831789253118528,
+          "std": 0.005695014002719198,
+          "min": 0.0021495367434680064,
+          "max": 0.05047351652591294
+        },
+        "Peripheral Vascular Disease": {
+          "mean": 0.020224379670494955,
+          "std": 0.012932846185605865,
+          "min": 0.005811827150494934,
+          "max": 0.10281588020182941
+        },
+        "Rheumatoid Arthritis": {
+          "mean": 0.012243034289472711,
+          "std": 0.007396963852946025,
+          "min": 0.0034668631168422717,
+          "max": 0.052509964890902996
+        },
+        "Sleep Apnea": {
+          "mean": 0.08992114378291793,
+          "std": 0.02268908360380977,
+          "min": 0.05123287181567405,
+          "max": 0.21706317746483078
+        },
+        "Stroke Cerebrovascular": {
+          "mean": 0.03441351600757562,
+          "std": 0.015555019370021099,
+          "min": 0.011367438679152193,
+          "max": 0.10500645511937866
+        },
+        "Substance Use Disorder": {
+          "mean": 0.013676032988434344,
+          "std": 0.00890608966573925,
+          "min": 0.0025446449379451347,
+          "max": 0.05640015420757806
+        }
       }
     }
   },
-  "total_elapsed_s": 15.3
+  "total_elapsed_s": 3032.4
 }
