@@ -1,11 +1,9 @@
 {
   "_meta": {
     "generator": "generate_model_card.py",
-    "generated_at": "2026-08-13T16:28:06.874533",
+    "generated_at": "2026-08-14T17:36:32.296610",
     "pipeline_version": "c4_production",
     "tuned": true,
-    "out_root": "/home/alvaro-passi/MEGA/STAGE/STAGE_CODE_2/outputs/c4_production_tuned",
-    "fallback_root": "/home/alvaro-passi/MEGA/STAGE/STAGE_CODE_2/outputs/c4_production",
     "n_strata": 12,
     "n_skipped": 0,
     "auc_report_threshold": 0.7,
@@ -16,7 +14,7 @@
       "Severe Mental Illness",
       "Sleep Disorders"
     ],
-    "description": "Auto-generated pipeline performance and architecture metadata. Complements model_card_metadata.json (manually curated transparency fields). Together they feed the SRDC CDS Hooks model card display."
+    "description": "Auto-generated pipeline performance and architecture metadata. Complements model_card_metadata.json (transparency fields). Together they populate the CDS Hooks model card display."
   },
   "strata": {
     "Female_all_srdc_poc": {
@@ -1810,7 +1808,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.088132,
-            "n_samples": 29626
+            "n_samples": 29626,
+            "positive_rate_difference": null
           },
           {
             "disease": "Diabetes Mellitus",
@@ -1828,7 +1827,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02341,
-            "n_samples": 30842
+            "n_samples": 30842,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -1846,7 +1846,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010078,
-            "n_samples": 31158
+            "n_samples": 31158,
+            "positive_rate_difference": null
           },
           {
             "disease": "COPD",
@@ -1864,7 +1865,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018611,
-            "n_samples": 31057
+            "n_samples": 31057,
+            "positive_rate_difference": null
           },
           {
             "disease": "Heart Failure",
@@ -1882,7 +1884,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007834,
-            "n_samples": 31145
+            "n_samples": 31145,
+            "positive_rate_difference": null
           },
           {
             "disease": "Atrial Fibrillation",
@@ -1900,7 +1903,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.021024,
-            "n_samples": 31012
+            "n_samples": 31012,
+            "positive_rate_difference": null
           },
           {
             "disease": "Coronary Heart Disease",
@@ -1918,7 +1922,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.028029,
-            "n_samples": 30504
+            "n_samples": 30504,
+            "positive_rate_difference": null
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -1936,7 +1941,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015716,
-            "n_samples": 31052
+            "n_samples": 31052,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoarthritis",
@@ -1954,7 +1960,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.077305,
-            "n_samples": 30218
+            "n_samples": 30218,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Liver Disease",
@@ -1972,7 +1979,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004365,
-            "n_samples": 31156
+            "n_samples": 31156,
+            "positive_rate_difference": null
           },
           {
             "disease": "Substance Use Disorder",
@@ -1990,7 +1998,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004081,
-            "n_samples": 31122
+            "n_samples": 31122,
+            "positive_rate_difference": null
           },
           {
             "disease": "Depression",
@@ -2008,7 +2017,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013734,
-            "n_samples": 30945
+            "n_samples": 30945,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoporosis",
@@ -2026,7 +2036,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017141,
-            "n_samples": 31095
+            "n_samples": 31095,
+            "positive_rate_difference": null
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -2044,7 +2055,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007905,
-            "n_samples": 30993
+            "n_samples": 30993,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hyperlipidemia",
@@ -2062,7 +2074,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031493,
-            "n_samples": 30673
+            "n_samples": 30673,
+            "positive_rate_difference": null
           },
           {
             "disease": "Obesity",
@@ -2080,7 +2093,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009596,
-            "n_samples": 31056
+            "n_samples": 31056,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hypothyroidism",
@@ -2098,7 +2112,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.023211,
-            "n_samples": 30805
+            "n_samples": 30805,
+            "positive_rate_difference": null
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -2116,7 +2131,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004561,
-            "n_samples": 31134
+            "n_samples": 31134,
+            "positive_rate_difference": null
           },
           {
             "disease": "Sleep Apnea",
@@ -2134,7 +2150,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003657,
-            "n_samples": 31169
+            "n_samples": 31169,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Breast",
@@ -2152,7 +2169,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02892,
-            "n_samples": 30394
+            "n_samples": 30394,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Lung",
@@ -2170,7 +2188,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007113,
-            "n_samples": 31212
+            "n_samples": 31212,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Colorectal",
@@ -2188,7 +2207,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007844,
-            "n_samples": 31108
+            "n_samples": 31108,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Other",
@@ -2206,7 +2226,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030042,
-            "n_samples": 30757
+            "n_samples": 30757,
+            "positive_rate_difference": null
           }
         ],
         "by_ethnicity": [
@@ -2235,7 +2256,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.088132,
-            "n_samples": 29626
+            "n_samples": 29626,
+            "positive_rate_difference": 0.005646
           },
           {
             "disease": "Diabetes Mellitus",
@@ -2262,7 +2284,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02341,
-            "n_samples": 30842
+            "n_samples": 30842,
+            "positive_rate_difference": 0.002
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -2289,7 +2312,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010078,
-            "n_samples": 31158
+            "n_samples": 31158,
+            "positive_rate_difference": 0.000691
           },
           {
             "disease": "COPD",
@@ -2316,7 +2340,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018611,
-            "n_samples": 31057
+            "n_samples": 31057,
+            "positive_rate_difference": 0.001847
           },
           {
             "disease": "Heart Failure",
@@ -2343,7 +2368,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007834,
-            "n_samples": 31145
+            "n_samples": 31145,
+            "positive_rate_difference": 0.001445
           },
           {
             "disease": "Atrial Fibrillation",
@@ -2370,7 +2396,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.021024,
-            "n_samples": 31012
+            "n_samples": 31012,
+            "positive_rate_difference": 0.002755
           },
           {
             "disease": "Coronary Heart Disease",
@@ -2397,7 +2424,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.028029,
-            "n_samples": 30504
+            "n_samples": 30504,
+            "positive_rate_difference": 8.6e-05
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -2424,7 +2452,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015716,
-            "n_samples": 31052
+            "n_samples": 31052,
+            "positive_rate_difference": 0.003467
           },
           {
             "disease": "Osteoarthritis",
@@ -2451,7 +2480,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.077305,
-            "n_samples": 30218
+            "n_samples": 30218,
+            "positive_rate_difference": 0.006473
           },
           {
             "disease": "Chronic Liver Disease",
@@ -2478,7 +2508,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004365,
-            "n_samples": 31156
+            "n_samples": 31156,
+            "positive_rate_difference": 0.001327
           },
           {
             "disease": "Substance Use Disorder",
@@ -2505,7 +2536,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004081,
-            "n_samples": 31122
+            "n_samples": 31122,
+            "positive_rate_difference": 0.00109
           },
           {
             "disease": "Depression",
@@ -2532,7 +2564,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013734,
-            "n_samples": 30945
+            "n_samples": 30945,
+            "positive_rate_difference": 0.000644
           },
           {
             "disease": "Osteoporosis",
@@ -2559,7 +2592,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017141,
-            "n_samples": 31095
+            "n_samples": 31095,
+            "positive_rate_difference": 0.00411
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -2586,7 +2620,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007905,
-            "n_samples": 30993
+            "n_samples": 30993,
+            "positive_rate_difference": 0.000294
           },
           {
             "disease": "Hyperlipidemia",
@@ -2613,7 +2648,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031493,
-            "n_samples": 30673
+            "n_samples": 30673,
+            "positive_rate_difference": 0.001638
           },
           {
             "disease": "Obesity",
@@ -2640,7 +2676,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009596,
-            "n_samples": 31056
+            "n_samples": 31056,
+            "positive_rate_difference": 0.002047
           },
           {
             "disease": "Hypothyroidism",
@@ -2667,7 +2704,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.023211,
-            "n_samples": 30805
+            "n_samples": 30805,
+            "positive_rate_difference": 0.0028
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -2694,7 +2732,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004561,
-            "n_samples": 31134
+            "n_samples": 31134,
+            "positive_rate_difference": 0.001116
           },
           {
             "disease": "Sleep Apnea",
@@ -2721,7 +2760,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003657,
-            "n_samples": 31169
+            "n_samples": 31169,
+            "positive_rate_difference": 0.001181
           },
           {
             "disease": "Cancer Breast",
@@ -2748,7 +2788,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02892,
-            "n_samples": 30394
+            "n_samples": 30394,
+            "positive_rate_difference": 0.002452
           },
           {
             "disease": "Cancer Lung",
@@ -2775,7 +2816,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007113,
-            "n_samples": 31212
+            "n_samples": 31212,
+            "positive_rate_difference": 1.6e-05
           },
           {
             "disease": "Cancer Colorectal",
@@ -2802,7 +2844,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007844,
-            "n_samples": 31108
+            "n_samples": 31108,
+            "positive_rate_difference": 0.002524
           },
           {
             "disease": "Cancer Other",
@@ -2829,7 +2872,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030042,
-            "n_samples": 30757
+            "n_samples": 30757,
+            "positive_rate_difference": 0.0034
           }
         ]
       },
@@ -2841,8 +2885,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:53:08.280504",
-        "n_diseases_evaluated": 28,
-        "mean_auc_test": 0.7637
+        "mean_auc_test": 0.7637,
+        "n_diseases_evaluated_total": 28,
+        "n_diseases_deployed": 23
       }
     },
     "Female_under60_srdc_poc": {
@@ -4645,7 +4690,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.05575,
-            "n_samples": 18314
+            "n_samples": 18314,
+            "positive_rate_difference": 0.010208
           },
           {
             "disease": "Diabetes Mellitus",
@@ -4672,7 +4718,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017731,
-            "n_samples": 18724
+            "n_samples": 18724,
+            "positive_rate_difference": 0.003595
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -4699,7 +4746,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004879,
-            "n_samples": 18856
+            "n_samples": 18856,
+            "positive_rate_difference": 0.00015
           },
           {
             "disease": "COPD",
@@ -4726,7 +4774,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010353,
-            "n_samples": 18836
+            "n_samples": 18836,
+            "positive_rate_difference": 0.001584
           },
           {
             "disease": "Heart Failure",
@@ -4753,7 +4802,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003128,
-            "n_samples": 18864
+            "n_samples": 18864,
+            "positive_rate_difference": 0.002574
           },
           {
             "disease": "Atrial Fibrillation",
@@ -4780,7 +4830,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008231,
-            "n_samples": 18831
+            "n_samples": 18831,
+            "positive_rate_difference": 0.003744
           },
           {
             "disease": "Coronary Heart Disease",
@@ -4807,7 +4858,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017248,
-            "n_samples": 18669
+            "n_samples": 18669,
+            "positive_rate_difference": 0.002865
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -4834,7 +4886,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007812,
-            "n_samples": 18818
+            "n_samples": 18818,
+            "positive_rate_difference": 0.000107
           },
           {
             "disease": "Osteoarthritis",
@@ -4861,7 +4914,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.052558,
-            "n_samples": 18570
+            "n_samples": 18570,
+            "positive_rate_difference": 0.000419
           },
           {
             "disease": "Chronic Liver Disease",
@@ -4888,7 +4942,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003661,
-            "n_samples": 18848
+            "n_samples": 18848,
+            "positive_rate_difference": 0.000306
           },
           {
             "disease": "Substance Use Disorder",
@@ -4915,7 +4970,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.00367,
-            "n_samples": 18801
+            "n_samples": 18801,
+            "positive_rate_difference": 0.00115
           },
           {
             "disease": "Depression",
@@ -4942,7 +4998,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013744,
-            "n_samples": 18699
+            "n_samples": 18699,
+            "positive_rate_difference": 0.002013
           },
           {
             "disease": "Osteoporosis",
@@ -4969,7 +5026,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007851,
-            "n_samples": 18852
+            "n_samples": 18852,
+            "positive_rate_difference": 0.003438
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -4996,7 +5054,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.005911,
-            "n_samples": 18780
+            "n_samples": 18780,
+            "positive_rate_difference": 0.00126
           },
           {
             "disease": "Hyperlipidemia",
@@ -5023,7 +5082,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.019784,
-            "n_samples": 18702
+            "n_samples": 18702,
+            "positive_rate_difference": 0.000895
           },
           {
             "disease": "Obesity",
@@ -5050,7 +5110,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010273,
-            "n_samples": 18788
+            "n_samples": 18788,
+            "positive_rate_difference": 0.000827
           },
           {
             "disease": "Hypothyroidism",
@@ -5077,7 +5138,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018492,
-            "n_samples": 18711
+            "n_samples": 18711,
+            "positive_rate_difference": 0.002781
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -5104,7 +5166,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.002599,
-            "n_samples": 18851
+            "n_samples": 18851,
+            "positive_rate_difference": 0.003127
           },
           {
             "disease": "Sleep Apnea",
@@ -5131,7 +5194,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004083,
-            "n_samples": 18858
+            "n_samples": 18858,
+            "positive_rate_difference": 0.000147
           },
           {
             "disease": "Cancer Breast",
@@ -5158,7 +5222,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025543,
-            "n_samples": 18518
+            "n_samples": 18518,
+            "positive_rate_difference": 0.000149
           },
           {
             "disease": "Cancer Lung",
@@ -5185,7 +5250,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004396,
-            "n_samples": 18881
+            "n_samples": 18881,
+            "positive_rate_difference": 0.001334
           },
           {
             "disease": "Cancer Colorectal",
@@ -5212,7 +5278,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.00531,
-            "n_samples": 18833
+            "n_samples": 18833,
+            "positive_rate_difference": 0.003623
           },
           {
             "disease": "Cancer Other",
@@ -5239,7 +5306,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.021364,
-            "n_samples": 18676
+            "n_samples": 18676,
+            "positive_rate_difference": 0.002865
           }
         ]
       },
@@ -5251,8 +5319,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:25:12.758165",
-        "n_diseases_evaluated": 25,
-        "mean_auc_test": 0.7499
+        "mean_auc_test": 0.7499,
+        "n_diseases_evaluated_total": 25,
+        "n_diseases_deployed": 23
       }
     },
     "Female_60plus_srdc_poc": {
@@ -7055,7 +7124,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.140559,
-            "n_samples": 11312
+            "n_samples": 11312,
+            "positive_rate_difference": 0.013826
           },
           {
             "disease": "Diabetes Mellitus",
@@ -7082,7 +7152,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.032184,
-            "n_samples": 12118
+            "n_samples": 12118,
+            "positive_rate_difference": 0.013787
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -7109,7 +7180,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018046,
-            "n_samples": 12302
+            "n_samples": 12302,
+            "positive_rate_difference": 0.003847
           },
           {
             "disease": "COPD",
@@ -7136,7 +7208,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031339,
-            "n_samples": 12221
+            "n_samples": 12221,
+            "positive_rate_difference": 0.005445
           },
           {
             "disease": "Heart Failure",
@@ -7163,7 +7236,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015064,
-            "n_samples": 12281
+            "n_samples": 12281,
+            "positive_rate_difference": 0.000857
           },
           {
             "disease": "Atrial Fibrillation",
@@ -7190,7 +7264,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.040801,
-            "n_samples": 12181
+            "n_samples": 12181,
+            "positive_rate_difference": 0.003106
           },
           {
             "disease": "Coronary Heart Disease",
@@ -7217,7 +7292,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.045036,
-            "n_samples": 11835
+            "n_samples": 11835,
+            "positive_rate_difference": 0.001581
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -7244,7 +7320,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.027873,
-            "n_samples": 12234
+            "n_samples": 12234,
+            "positive_rate_difference": 0.012108
           },
           {
             "disease": "Osteoarthritis",
@@ -7271,7 +7348,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.116758,
-            "n_samples": 11648
+            "n_samples": 11648,
+            "positive_rate_difference": 0.010253
           },
           {
             "disease": "Chronic Liver Disease",
@@ -7298,7 +7376,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.005444,
-            "n_samples": 12308
+            "n_samples": 12308,
+            "positive_rate_difference": 0.003394
           },
           {
             "disease": "Substance Use Disorder",
@@ -7325,7 +7404,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004707,
-            "n_samples": 12321
+            "n_samples": 12321,
+            "positive_rate_difference": 0.00111
           },
           {
             "disease": "Depression",
@@ -7352,7 +7432,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013719,
-            "n_samples": 12246
+            "n_samples": 12246,
+            "positive_rate_difference": 0.005456
           },
           {
             "disease": "Osteoporosis",
@@ -7379,7 +7460,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031447,
-            "n_samples": 12243
+            "n_samples": 12243,
+            "positive_rate_difference": 0.008321
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -7406,7 +7488,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010972,
-            "n_samples": 12213
+            "n_samples": 12213,
+            "positive_rate_difference": 0.003754
           },
           {
             "disease": "Hyperlipidemia",
@@ -7433,7 +7516,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.049787,
-            "n_samples": 11971
+            "n_samples": 11971,
+            "positive_rate_difference": 0.002522
           },
           {
             "disease": "Obesity",
@@ -7460,7 +7544,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008559,
-            "n_samples": 12268
+            "n_samples": 12268,
+            "positive_rate_difference": 0.004469
           },
           {
             "disease": "Hypothyroidism",
@@ -7487,7 +7572,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030511,
-            "n_samples": 12094
+            "n_samples": 12094,
+            "positive_rate_difference": 0.001393
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -7514,7 +7600,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007571,
-            "n_samples": 12283
+            "n_samples": 12283,
+            "positive_rate_difference": 0.001907
           },
           {
             "disease": "Sleep Apnea",
@@ -7541,7 +7628,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003005,
-            "n_samples": 12311
+            "n_samples": 12311,
+            "positive_rate_difference": 0.003185
           },
           {
             "disease": "Cancer Breast",
@@ -7568,7 +7656,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.034187,
-            "n_samples": 11876
+            "n_samples": 11876,
+            "positive_rate_difference": 0.00767
           },
           {
             "disease": "Cancer Lung",
@@ -7595,7 +7684,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011272,
-            "n_samples": 12331
+            "n_samples": 12331,
+            "positive_rate_difference": 0.003302
           },
           {
             "disease": "Cancer Colorectal",
@@ -7622,7 +7712,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011731,
-            "n_samples": 12275
+            "n_samples": 12275,
+            "positive_rate_difference": 0.001331
           },
           {
             "disease": "Cancer Other",
@@ -7649,7 +7740,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.043457,
-            "n_samples": 12081
+            "n_samples": 12081,
+            "positive_rate_difference": 0.007088
           }
         ]
       },
@@ -7661,8 +7753,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:18:15.762536",
-        "n_diseases_evaluated": 25,
-        "mean_auc_test": 0.7143
+        "mean_auc_test": 0.7143,
+        "n_diseases_evaluated_total": 25,
+        "n_diseases_deployed": 23
       }
     },
     "Male_all_srdc_poc": {
@@ -9456,7 +9549,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.126785,
-            "n_samples": 23599
+            "n_samples": 23599,
+            "positive_rate_difference": null
           },
           {
             "disease": "Diabetes Mellitus",
@@ -9474,7 +9568,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.044589,
-            "n_samples": 24782
+            "n_samples": 24782,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -9492,7 +9587,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.016128,
-            "n_samples": 25298
+            "n_samples": 25298,
+            "positive_rate_difference": null
           },
           {
             "disease": "COPD",
@@ -9510,7 +9606,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025163,
-            "n_samples": 25196
+            "n_samples": 25196,
+            "positive_rate_difference": null
           },
           {
             "disease": "Heart Failure",
@@ -9528,7 +9625,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018311,
-            "n_samples": 25176
+            "n_samples": 25176,
+            "positive_rate_difference": null
           },
           {
             "disease": "Atrial Fibrillation",
@@ -9546,7 +9644,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.043468,
-            "n_samples": 24961
+            "n_samples": 24961,
+            "positive_rate_difference": null
           },
           {
             "disease": "Coronary Heart Disease",
@@ -9564,7 +9663,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06778,
-            "n_samples": 23827
+            "n_samples": 23827,
+            "positive_rate_difference": null
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -9582,7 +9682,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025126,
-            "n_samples": 25113
+            "n_samples": 25113,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoarthritis",
@@ -9600,7 +9701,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06649,
-            "n_samples": 24575
+            "n_samples": 24575,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Liver Disease",
@@ -9618,7 +9720,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007266,
-            "n_samples": 25323
+            "n_samples": 25323,
+            "positive_rate_difference": null
           },
           {
             "disease": "Substance Use Disorder",
@@ -9636,7 +9739,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015217,
-            "n_samples": 25038
+            "n_samples": 25038,
+            "positive_rate_difference": null
           },
           {
             "disease": "Depression",
@@ -9654,7 +9758,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010689,
-            "n_samples": 25260
+            "n_samples": 25260,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoporosis",
@@ -9672,7 +9777,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004059,
-            "n_samples": 25373
+            "n_samples": 25373,
+            "positive_rate_difference": null
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -9690,7 +9796,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003947,
-            "n_samples": 25335
+            "n_samples": 25335,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hyperlipidemia",
@@ -9708,7 +9815,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.05341,
-            "n_samples": 24415
+            "n_samples": 24415,
+            "positive_rate_difference": null
           },
           {
             "disease": "Obesity",
@@ -9726,7 +9834,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011283,
-            "n_samples": 25259
+            "n_samples": 25259,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hypothyroidism",
@@ -9744,7 +9853,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006987,
-            "n_samples": 25332
+            "n_samples": 25332,
+            "positive_rate_difference": null
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -9762,7 +9872,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011166,
-            "n_samples": 25255
+            "n_samples": 25255,
+            "positive_rate_difference": null
           },
           {
             "disease": "Sleep Apnea",
@@ -9780,7 +9891,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009364,
-            "n_samples": 25204
+            "n_samples": 25204,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Lung",
@@ -9798,7 +9910,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009885,
-            "n_samples": 25392
+            "n_samples": 25392,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Colorectal",
@@ -9816,7 +9929,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012983,
-            "n_samples": 25263
+            "n_samples": 25263,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Prostate",
@@ -9834,7 +9948,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.027241,
-            "n_samples": 25146
+            "n_samples": 25146,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Other",
@@ -9852,7 +9967,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.036852,
-            "n_samples": 25046
+            "n_samples": 25046,
+            "positive_rate_difference": null
           }
         ],
         "by_ethnicity": [
@@ -9881,7 +9997,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.126785,
-            "n_samples": 23599
+            "n_samples": 23599,
+            "positive_rate_difference": 0.01744
           },
           {
             "disease": "Diabetes Mellitus",
@@ -9908,7 +10025,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.044589,
-            "n_samples": 24782
+            "n_samples": 24782,
+            "positive_rate_difference": 0.016027
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -9935,7 +10053,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.016128,
-            "n_samples": 25298
+            "n_samples": 25298,
+            "positive_rate_difference": 0.004818
           },
           {
             "disease": "COPD",
@@ -9962,7 +10081,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025163,
-            "n_samples": 25196
+            "n_samples": 25196,
+            "positive_rate_difference": 0.003301
           },
           {
             "disease": "Heart Failure",
@@ -9989,7 +10109,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018311,
-            "n_samples": 25176
+            "n_samples": 25176,
+            "positive_rate_difference": 0.002959
           },
           {
             "disease": "Atrial Fibrillation",
@@ -10016,7 +10137,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.043468,
-            "n_samples": 24961
+            "n_samples": 24961,
+            "positive_rate_difference": 0.005388
           },
           {
             "disease": "Coronary Heart Disease",
@@ -10043,7 +10165,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06778,
-            "n_samples": 23827
+            "n_samples": 23827,
+            "positive_rate_difference": 0.005181
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -10070,7 +10193,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025126,
-            "n_samples": 25113
+            "n_samples": 25113,
+            "positive_rate_difference": 0.00085
           },
           {
             "disease": "Osteoarthritis",
@@ -10097,7 +10221,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06649,
-            "n_samples": 24575
+            "n_samples": 24575,
+            "positive_rate_difference": 0.019369
           },
           {
             "disease": "Chronic Liver Disease",
@@ -10124,7 +10249,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007266,
-            "n_samples": 25323
+            "n_samples": 25323,
+            "positive_rate_difference": 0.002568
           },
           {
             "disease": "Substance Use Disorder",
@@ -10151,7 +10277,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015217,
-            "n_samples": 25038
+            "n_samples": 25038,
+            "positive_rate_difference": 0.003436
           },
           {
             "disease": "Depression",
@@ -10178,7 +10305,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010689,
-            "n_samples": 25260
+            "n_samples": 25260,
+            "positive_rate_difference": 0.003129
           },
           {
             "disease": "Osteoporosis",
@@ -10205,7 +10333,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004059,
-            "n_samples": 25373
+            "n_samples": 25373,
+            "positive_rate_difference": 0.003217
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -10232,7 +10361,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003947,
-            "n_samples": 25335
+            "n_samples": 25335,
+            "positive_rate_difference": 0.001459
           },
           {
             "disease": "Hyperlipidemia",
@@ -10259,7 +10389,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.05341,
-            "n_samples": 24415
+            "n_samples": 24415,
+            "positive_rate_difference": 0.014015
           },
           {
             "disease": "Obesity",
@@ -10286,7 +10417,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011283,
-            "n_samples": 25259
+            "n_samples": 25259,
+            "positive_rate_difference": 0.000399
           },
           {
             "disease": "Hypothyroidism",
@@ -10313,7 +10445,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006987,
-            "n_samples": 25332
+            "n_samples": 25332,
+            "positive_rate_difference": 0.001956
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -10340,7 +10473,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011166,
-            "n_samples": 25255
+            "n_samples": 25255,
+            "positive_rate_difference": 0.000884
           },
           {
             "disease": "Sleep Apnea",
@@ -10367,7 +10501,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009364,
-            "n_samples": 25204
+            "n_samples": 25204,
+            "positive_rate_difference": 0.002436
           },
           {
             "disease": "Cancer Lung",
@@ -10394,7 +10529,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009885,
-            "n_samples": 25392
+            "n_samples": 25392,
+            "positive_rate_difference": 0.000438
           },
           {
             "disease": "Cancer Colorectal",
@@ -10421,7 +10557,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012983,
-            "n_samples": 25263
+            "n_samples": 25263,
+            "positive_rate_difference": 0.004061
           },
           {
             "disease": "Cancer Prostate",
@@ -10448,7 +10585,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.027241,
-            "n_samples": 25146
+            "n_samples": 25146,
+            "positive_rate_difference": 0.002852
           },
           {
             "disease": "Cancer Other",
@@ -10475,7 +10613,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.036852,
-            "n_samples": 25046
+            "n_samples": 25046,
+            "positive_rate_difference": 0.004467
           }
         ]
       },
@@ -10487,8 +10626,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:48:43.822845",
-        "n_diseases_evaluated": 27,
-        "mean_auc_test": 0.7655
+        "mean_auc_test": 0.7655,
+        "n_diseases_evaluated_total": 27,
+        "n_diseases_deployed": 23
       }
     },
     "Male_under60_srdc_poc": {
@@ -12291,7 +12431,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.085278,
-            "n_samples": 14095
+            "n_samples": 14095,
+            "positive_rate_difference": 0.003184
           },
           {
             "disease": "Diabetes Mellitus",
@@ -12318,7 +12459,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030619,
-            "n_samples": 14468
+            "n_samples": 14468,
+            "positive_rate_difference": 0.009186
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -12345,7 +12487,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007371,
-            "n_samples": 14652
+            "n_samples": 14652,
+            "positive_rate_difference": 0.001562
           },
           {
             "disease": "COPD",
@@ -12372,7 +12515,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012146,
-            "n_samples": 14655
+            "n_samples": 14655,
+            "positive_rate_difference": 0.000725
           },
           {
             "disease": "Heart Failure",
@@ -12399,7 +12543,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009366,
-            "n_samples": 14628
+            "n_samples": 14628,
+            "positive_rate_difference": 0.001594
           },
           {
             "disease": "Atrial Fibrillation",
@@ -12426,7 +12571,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.022199,
-            "n_samples": 14595
+            "n_samples": 14595,
+            "positive_rate_difference": 0.003779
           },
           {
             "disease": "Coronary Heart Disease",
@@ -12453,7 +12599,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.044104,
-            "n_samples": 14239
+            "n_samples": 14239,
+            "positive_rate_difference": 0.004064
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -12480,7 +12627,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013976,
-            "n_samples": 14596
+            "n_samples": 14596,
+            "positive_rate_difference": 0.000138
           },
           {
             "disease": "Osteoarthritis",
@@ -12507,7 +12655,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.045436,
-            "n_samples": 14394
+            "n_samples": 14394,
+            "positive_rate_difference": 0.013291
           },
           {
             "disease": "Chronic Liver Disease",
@@ -12534,7 +12683,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006346,
-            "n_samples": 14654
+            "n_samples": 14654,
+            "positive_rate_difference": 0.002736
           },
           {
             "disease": "Substance Use Disorder",
@@ -12561,7 +12711,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012719,
-            "n_samples": 14467
+            "n_samples": 14467,
+            "positive_rate_difference": 0.004853
           },
           {
             "disease": "Depression",
@@ -12588,7 +12739,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010952,
-            "n_samples": 14609
+            "n_samples": 14609,
+            "positive_rate_difference": 0.002193
           },
           {
             "disease": "Osteoporosis",
@@ -12615,7 +12767,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.002315,
-            "n_samples": 14687
+            "n_samples": 14687,
+            "positive_rate_difference": 0.000374
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -12642,7 +12795,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.00327,
-            "n_samples": 14678
+            "n_samples": 14678,
+            "positive_rate_difference": 0.000712
           },
           {
             "disease": "Hyperlipidemia",
@@ -12669,7 +12823,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.03704,
-            "n_samples": 14363
+            "n_samples": 14363,
+            "positive_rate_difference": 0.014149
           },
           {
             "disease": "Obesity",
@@ -12696,7 +12851,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010388,
-            "n_samples": 14632
+            "n_samples": 14632,
+            "positive_rate_difference": 0.001577
           },
           {
             "disease": "Hypothyroidism",
@@ -12723,7 +12879,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004566,
-            "n_samples": 14673
+            "n_samples": 14673,
+            "positive_rate_difference": 0.001733
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -12750,7 +12907,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006348,
-            "n_samples": 14650
+            "n_samples": 14650,
+            "positive_rate_difference": 0.005894
           },
           {
             "disease": "Sleep Apnea",
@@ -12777,7 +12935,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009655,
-            "n_samples": 14604
+            "n_samples": 14604,
+            "positive_rate_difference": 0.000286
           },
           {
             "disease": "Cancer Lung",
@@ -12804,7 +12963,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004014,
-            "n_samples": 14698
+            "n_samples": 14698,
+            "positive_rate_difference": 0.003082
           },
           {
             "disease": "Cancer Colorectal",
@@ -12831,7 +12991,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008456,
-            "n_samples": 14664
+            "n_samples": 14664,
+            "positive_rate_difference": 0.004676
           },
           {
             "disease": "Cancer Prostate",
@@ -12858,7 +13019,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012684,
-            "n_samples": 14664
+            "n_samples": 14664,
+            "positive_rate_difference": 0.00225
           },
           {
             "disease": "Cancer Other",
@@ -12885,7 +13047,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.022799,
-            "n_samples": 14562
+            "n_samples": 14562,
+            "positive_rate_difference": 0.001187
           }
         ]
       },
@@ -12897,8 +13060,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:22:32.101119",
-        "n_diseases_evaluated": 25,
-        "mean_auc_test": 0.7541
+        "mean_auc_test": 0.7541,
+        "n_diseases_evaluated_total": 25,
+        "n_diseases_deployed": 23
       }
     },
     "Male_60plus_srdc_poc": {
@@ -14701,7 +14865,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.188342,
-            "n_samples": 9504
+            "n_samples": 9504,
+            "positive_rate_difference": 0.021745
           },
           {
             "disease": "Diabetes Mellitus",
@@ -14728,7 +14893,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.064185,
-            "n_samples": 10314
+            "n_samples": 10314,
+            "positive_rate_difference": 0.021558
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -14755,7 +14921,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02818,
-            "n_samples": 10646
+            "n_samples": 10646,
+            "positive_rate_difference": 0.006143
           },
           {
             "disease": "COPD",
@@ -14782,7 +14949,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.04326,
-            "n_samples": 10541
+            "n_samples": 10541,
+            "positive_rate_difference": 0.003591
           },
           {
             "disease": "Heart Failure",
@@ -14809,7 +14977,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030717,
-            "n_samples": 10548
+            "n_samples": 10548,
+            "positive_rate_difference": 0.000556
           },
           {
             "disease": "Atrial Fibrillation",
@@ -14836,7 +15005,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.073413,
-            "n_samples": 10366
+            "n_samples": 10366,
+            "positive_rate_difference": 0.011119
           },
           {
             "disease": "Coronary Heart Disease",
@@ -14863,7 +15033,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.102941,
-            "n_samples": 9588
+            "n_samples": 9588,
+            "positive_rate_difference": 0.038272
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -14890,7 +15061,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.040601,
-            "n_samples": 10517
+            "n_samples": 10517,
+            "positive_rate_difference": 0.008712
           },
           {
             "disease": "Osteoarthritis",
@@ -14917,7 +15089,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.096258,
-            "n_samples": 10181
+            "n_samples": 10181,
+            "positive_rate_difference": 0.019255
           },
           {
             "disease": "Chronic Liver Disease",
@@ -14944,7 +15117,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008529,
-            "n_samples": 10669
+            "n_samples": 10669,
+            "positive_rate_difference": 0.002762
           },
           {
             "disease": "Substance Use Disorder",
@@ -14971,7 +15145,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018636,
-            "n_samples": 10571
+            "n_samples": 10571,
+            "positive_rate_difference": 0.002149
           },
           {
             "disease": "Depression",
@@ -14998,7 +15173,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010328,
-            "n_samples": 10651
+            "n_samples": 10651,
+            "positive_rate_difference": 0.005004
           },
           {
             "disease": "Osteoporosis",
@@ -15025,7 +15201,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006457,
-            "n_samples": 10686
+            "n_samples": 10686,
+            "positive_rate_difference": 0.010848
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -15052,7 +15229,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004879,
-            "n_samples": 10657
+            "n_samples": 10657,
+            "positive_rate_difference": 0.005137
           },
           {
             "disease": "Hyperlipidemia",
@@ -15079,7 +15257,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.076801,
-            "n_samples": 10052
+            "n_samples": 10052,
+            "positive_rate_difference": 0.004479
           },
           {
             "disease": "Obesity",
@@ -15106,7 +15285,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012515,
-            "n_samples": 10627
+            "n_samples": 10627,
+            "positive_rate_difference": 0.004535
           },
           {
             "disease": "Hypothyroidism",
@@ -15133,7 +15313,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.01032,
-            "n_samples": 10659
+            "n_samples": 10659,
+            "positive_rate_difference": 0.001062
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -15160,7 +15341,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017822,
-            "n_samples": 10605
+            "n_samples": 10605,
+            "positive_rate_difference": 0.010879
           },
           {
             "disease": "Sleep Apnea",
@@ -15187,7 +15369,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008962,
-            "n_samples": 10600
+            "n_samples": 10600,
+            "positive_rate_difference": 0.006252
           },
           {
             "disease": "Cancer Lung",
@@ -15214,7 +15397,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017954,
-            "n_samples": 10694
+            "n_samples": 10694,
+            "positive_rate_difference": 0.001257
           },
           {
             "disease": "Cancer Colorectal",
@@ -15241,7 +15425,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.019247,
-            "n_samples": 10599
+            "n_samples": 10599,
+            "positive_rate_difference": 0.005415
           },
           {
             "disease": "Cancer Prostate",
@@ -15268,7 +15453,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.047605,
-            "n_samples": 10482
+            "n_samples": 10482,
+            "positive_rate_difference": 0.004606
           },
           {
             "disease": "Cancer Other",
@@ -15295,7 +15481,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.056372,
-            "n_samples": 10484
+            "n_samples": 10484,
+            "positive_rate_difference": 0.007408
           }
         ]
       },
@@ -15307,8 +15494,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:20:29.316537",
-        "n_diseases_evaluated": 27,
-        "mean_auc_test": 0.6991
+        "mean_auc_test": 0.6991,
+        "n_diseases_evaluated_total": 27,
+        "n_diseases_deployed": 23
       }
     },
     "Female_all_abacus_poc": {
@@ -17125,7 +17313,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.088132,
-            "n_samples": 29626
+            "n_samples": 29626,
+            "positive_rate_difference": null
           },
           {
             "disease": "Diabetes Mellitus",
@@ -17143,7 +17332,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02341,
-            "n_samples": 30842
+            "n_samples": 30842,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -17161,7 +17351,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010078,
-            "n_samples": 31158
+            "n_samples": 31158,
+            "positive_rate_difference": null
           },
           {
             "disease": "COPD",
@@ -17179,7 +17370,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018611,
-            "n_samples": 31057
+            "n_samples": 31057,
+            "positive_rate_difference": null
           },
           {
             "disease": "Heart Failure",
@@ -17197,7 +17389,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007834,
-            "n_samples": 31145
+            "n_samples": 31145,
+            "positive_rate_difference": null
           },
           {
             "disease": "Atrial Fibrillation",
@@ -17215,7 +17408,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.021024,
-            "n_samples": 31012
+            "n_samples": 31012,
+            "positive_rate_difference": null
           },
           {
             "disease": "Coronary Heart Disease",
@@ -17233,7 +17427,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.028029,
-            "n_samples": 30504
+            "n_samples": 30504,
+            "positive_rate_difference": null
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -17251,7 +17446,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015716,
-            "n_samples": 31052
+            "n_samples": 31052,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoarthritis",
@@ -17269,7 +17465,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.077305,
-            "n_samples": 30218
+            "n_samples": 30218,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Liver Disease",
@@ -17287,7 +17484,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004365,
-            "n_samples": 31156
+            "n_samples": 31156,
+            "positive_rate_difference": null
           },
           {
             "disease": "Substance Use Disorder",
@@ -17305,7 +17503,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004081,
-            "n_samples": 31122
+            "n_samples": 31122,
+            "positive_rate_difference": null
           },
           {
             "disease": "Depression",
@@ -17323,7 +17522,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013734,
-            "n_samples": 30945
+            "n_samples": 30945,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoporosis",
@@ -17341,7 +17541,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017141,
-            "n_samples": 31095
+            "n_samples": 31095,
+            "positive_rate_difference": null
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -17359,7 +17560,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007905,
-            "n_samples": 30993
+            "n_samples": 30993,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hyperlipidemia",
@@ -17377,7 +17579,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031493,
-            "n_samples": 30673
+            "n_samples": 30673,
+            "positive_rate_difference": null
           },
           {
             "disease": "Obesity",
@@ -17395,7 +17598,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009596,
-            "n_samples": 31056
+            "n_samples": 31056,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hypothyroidism",
@@ -17413,7 +17617,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.023211,
-            "n_samples": 30805
+            "n_samples": 30805,
+            "positive_rate_difference": null
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -17431,7 +17636,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004561,
-            "n_samples": 31134
+            "n_samples": 31134,
+            "positive_rate_difference": null
           },
           {
             "disease": "Sleep Apnea",
@@ -17449,7 +17655,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003657,
-            "n_samples": 31169
+            "n_samples": 31169,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Breast",
@@ -17467,7 +17674,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02892,
-            "n_samples": 30394
+            "n_samples": 30394,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Lung",
@@ -17485,7 +17693,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007113,
-            "n_samples": 31212
+            "n_samples": 31212,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Colorectal",
@@ -17503,7 +17712,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007844,
-            "n_samples": 31108
+            "n_samples": 31108,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Other",
@@ -17521,7 +17731,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030042,
-            "n_samples": 30757
+            "n_samples": 30757,
+            "positive_rate_difference": null
           }
         ],
         "by_ethnicity": [
@@ -17550,7 +17761,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.088132,
-            "n_samples": 29626
+            "n_samples": 29626,
+            "positive_rate_difference": 0.005646
           },
           {
             "disease": "Diabetes Mellitus",
@@ -17577,7 +17789,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02341,
-            "n_samples": 30842
+            "n_samples": 30842,
+            "positive_rate_difference": 0.002
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -17604,7 +17817,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010078,
-            "n_samples": 31158
+            "n_samples": 31158,
+            "positive_rate_difference": 0.000691
           },
           {
             "disease": "COPD",
@@ -17631,7 +17845,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018611,
-            "n_samples": 31057
+            "n_samples": 31057,
+            "positive_rate_difference": 0.001847
           },
           {
             "disease": "Heart Failure",
@@ -17658,7 +17873,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007834,
-            "n_samples": 31145
+            "n_samples": 31145,
+            "positive_rate_difference": 0.001445
           },
           {
             "disease": "Atrial Fibrillation",
@@ -17685,7 +17901,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.021024,
-            "n_samples": 31012
+            "n_samples": 31012,
+            "positive_rate_difference": 0.002755
           },
           {
             "disease": "Coronary Heart Disease",
@@ -17712,7 +17929,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.028029,
-            "n_samples": 30504
+            "n_samples": 30504,
+            "positive_rate_difference": 8.6e-05
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -17739,7 +17957,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015716,
-            "n_samples": 31052
+            "n_samples": 31052,
+            "positive_rate_difference": 0.003467
           },
           {
             "disease": "Osteoarthritis",
@@ -17766,7 +17985,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.077305,
-            "n_samples": 30218
+            "n_samples": 30218,
+            "positive_rate_difference": 0.006473
           },
           {
             "disease": "Chronic Liver Disease",
@@ -17793,7 +18013,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004365,
-            "n_samples": 31156
+            "n_samples": 31156,
+            "positive_rate_difference": 0.001327
           },
           {
             "disease": "Substance Use Disorder",
@@ -17820,7 +18041,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004081,
-            "n_samples": 31122
+            "n_samples": 31122,
+            "positive_rate_difference": 0.00109
           },
           {
             "disease": "Depression",
@@ -17847,7 +18069,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013734,
-            "n_samples": 30945
+            "n_samples": 30945,
+            "positive_rate_difference": 0.000644
           },
           {
             "disease": "Osteoporosis",
@@ -17874,7 +18097,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017141,
-            "n_samples": 31095
+            "n_samples": 31095,
+            "positive_rate_difference": 0.00411
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -17901,7 +18125,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007905,
-            "n_samples": 30993
+            "n_samples": 30993,
+            "positive_rate_difference": 0.000294
           },
           {
             "disease": "Hyperlipidemia",
@@ -17928,7 +18153,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031493,
-            "n_samples": 30673
+            "n_samples": 30673,
+            "positive_rate_difference": 0.001638
           },
           {
             "disease": "Obesity",
@@ -17955,7 +18181,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009596,
-            "n_samples": 31056
+            "n_samples": 31056,
+            "positive_rate_difference": 0.002047
           },
           {
             "disease": "Hypothyroidism",
@@ -17982,7 +18209,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.023211,
-            "n_samples": 30805
+            "n_samples": 30805,
+            "positive_rate_difference": 0.0028
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -18009,7 +18237,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004561,
-            "n_samples": 31134
+            "n_samples": 31134,
+            "positive_rate_difference": 0.001116
           },
           {
             "disease": "Sleep Apnea",
@@ -18036,7 +18265,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003657,
-            "n_samples": 31169
+            "n_samples": 31169,
+            "positive_rate_difference": 0.001181
           },
           {
             "disease": "Cancer Breast",
@@ -18063,7 +18293,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02892,
-            "n_samples": 30394
+            "n_samples": 30394,
+            "positive_rate_difference": 0.002452
           },
           {
             "disease": "Cancer Lung",
@@ -18090,7 +18321,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007113,
-            "n_samples": 31212
+            "n_samples": 31212,
+            "positive_rate_difference": 1.6e-05
           },
           {
             "disease": "Cancer Colorectal",
@@ -18117,7 +18349,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007844,
-            "n_samples": 31108
+            "n_samples": 31108,
+            "positive_rate_difference": 0.002524
           },
           {
             "disease": "Cancer Other",
@@ -18144,7 +18377,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030042,
-            "n_samples": 30757
+            "n_samples": 30757,
+            "positive_rate_difference": 0.0034
           }
         ]
       },
@@ -18156,8 +18390,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:48:21.411316",
-        "n_diseases_evaluated": 28,
-        "mean_auc_test": 0.7682
+        "mean_auc_test": 0.7682,
+        "n_diseases_evaluated_total": 28,
+        "n_diseases_deployed": 23
       }
     },
     "Female_under60_abacus_poc": {
@@ -19983,7 +20218,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.05575,
-            "n_samples": 18314
+            "n_samples": 18314,
+            "positive_rate_difference": 0.010208
           },
           {
             "disease": "Diabetes Mellitus",
@@ -20010,7 +20246,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017731,
-            "n_samples": 18724
+            "n_samples": 18724,
+            "positive_rate_difference": 0.003595
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -20037,7 +20274,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004879,
-            "n_samples": 18856
+            "n_samples": 18856,
+            "positive_rate_difference": 0.00015
           },
           {
             "disease": "COPD",
@@ -20064,7 +20302,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010353,
-            "n_samples": 18836
+            "n_samples": 18836,
+            "positive_rate_difference": 0.001584
           },
           {
             "disease": "Heart Failure",
@@ -20091,7 +20330,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003128,
-            "n_samples": 18864
+            "n_samples": 18864,
+            "positive_rate_difference": 0.002574
           },
           {
             "disease": "Atrial Fibrillation",
@@ -20118,7 +20358,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008231,
-            "n_samples": 18831
+            "n_samples": 18831,
+            "positive_rate_difference": 0.003744
           },
           {
             "disease": "Coronary Heart Disease",
@@ -20145,7 +20386,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017248,
-            "n_samples": 18669
+            "n_samples": 18669,
+            "positive_rate_difference": 0.002865
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -20172,7 +20414,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007812,
-            "n_samples": 18818
+            "n_samples": 18818,
+            "positive_rate_difference": 0.000107
           },
           {
             "disease": "Osteoarthritis",
@@ -20199,7 +20442,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.052558,
-            "n_samples": 18570
+            "n_samples": 18570,
+            "positive_rate_difference": 0.000419
           },
           {
             "disease": "Chronic Liver Disease",
@@ -20226,7 +20470,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003661,
-            "n_samples": 18848
+            "n_samples": 18848,
+            "positive_rate_difference": 0.000306
           },
           {
             "disease": "Substance Use Disorder",
@@ -20253,7 +20498,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.00367,
-            "n_samples": 18801
+            "n_samples": 18801,
+            "positive_rate_difference": 0.00115
           },
           {
             "disease": "Depression",
@@ -20280,7 +20526,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013744,
-            "n_samples": 18699
+            "n_samples": 18699,
+            "positive_rate_difference": 0.002013
           },
           {
             "disease": "Osteoporosis",
@@ -20307,7 +20554,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007851,
-            "n_samples": 18852
+            "n_samples": 18852,
+            "positive_rate_difference": 0.003438
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -20334,7 +20582,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.005911,
-            "n_samples": 18780
+            "n_samples": 18780,
+            "positive_rate_difference": 0.00126
           },
           {
             "disease": "Hyperlipidemia",
@@ -20361,7 +20610,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.019784,
-            "n_samples": 18702
+            "n_samples": 18702,
+            "positive_rate_difference": 0.000895
           },
           {
             "disease": "Obesity",
@@ -20388,7 +20638,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010273,
-            "n_samples": 18788
+            "n_samples": 18788,
+            "positive_rate_difference": 0.000827
           },
           {
             "disease": "Hypothyroidism",
@@ -20415,7 +20666,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018492,
-            "n_samples": 18711
+            "n_samples": 18711,
+            "positive_rate_difference": 0.002781
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -20442,7 +20694,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.002599,
-            "n_samples": 18851
+            "n_samples": 18851,
+            "positive_rate_difference": 0.003127
           },
           {
             "disease": "Sleep Apnea",
@@ -20469,7 +20722,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004083,
-            "n_samples": 18858
+            "n_samples": 18858,
+            "positive_rate_difference": 0.000147
           },
           {
             "disease": "Cancer Breast",
@@ -20496,7 +20750,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025543,
-            "n_samples": 18518
+            "n_samples": 18518,
+            "positive_rate_difference": 0.000149
           },
           {
             "disease": "Cancer Lung",
@@ -20523,7 +20778,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004396,
-            "n_samples": 18881
+            "n_samples": 18881,
+            "positive_rate_difference": 0.001334
           },
           {
             "disease": "Cancer Colorectal",
@@ -20550,7 +20806,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.00531,
-            "n_samples": 18833
+            "n_samples": 18833,
+            "positive_rate_difference": 0.003623
           },
           {
             "disease": "Cancer Other",
@@ -20577,7 +20834,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.021364,
-            "n_samples": 18676
+            "n_samples": 18676,
+            "positive_rate_difference": 0.002865
           }
         ]
       },
@@ -20589,8 +20847,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:22:06.380245",
-        "n_diseases_evaluated": 25,
-        "mean_auc_test": 0.7568
+        "mean_auc_test": 0.7568,
+        "n_diseases_evaluated_total": 25,
+        "n_diseases_deployed": 23
       }
     },
     "Female_60plus_abacus_poc": {
@@ -22416,7 +22675,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.140559,
-            "n_samples": 11312
+            "n_samples": 11312,
+            "positive_rate_difference": 0.013826
           },
           {
             "disease": "Diabetes Mellitus",
@@ -22443,7 +22703,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.032184,
-            "n_samples": 12118
+            "n_samples": 12118,
+            "positive_rate_difference": 0.013787
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -22470,7 +22731,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018046,
-            "n_samples": 12302
+            "n_samples": 12302,
+            "positive_rate_difference": 0.003847
           },
           {
             "disease": "COPD",
@@ -22497,7 +22759,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031339,
-            "n_samples": 12221
+            "n_samples": 12221,
+            "positive_rate_difference": 0.005445
           },
           {
             "disease": "Heart Failure",
@@ -22524,7 +22787,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015064,
-            "n_samples": 12281
+            "n_samples": 12281,
+            "positive_rate_difference": 0.000857
           },
           {
             "disease": "Atrial Fibrillation",
@@ -22551,7 +22815,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.040801,
-            "n_samples": 12181
+            "n_samples": 12181,
+            "positive_rate_difference": 0.003106
           },
           {
             "disease": "Coronary Heart Disease",
@@ -22578,7 +22843,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.045036,
-            "n_samples": 11835
+            "n_samples": 11835,
+            "positive_rate_difference": 0.001581
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -22605,7 +22871,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.027873,
-            "n_samples": 12234
+            "n_samples": 12234,
+            "positive_rate_difference": 0.012108
           },
           {
             "disease": "Osteoarthritis",
@@ -22632,7 +22899,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.116758,
-            "n_samples": 11648
+            "n_samples": 11648,
+            "positive_rate_difference": 0.010253
           },
           {
             "disease": "Chronic Liver Disease",
@@ -22659,7 +22927,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.005444,
-            "n_samples": 12308
+            "n_samples": 12308,
+            "positive_rate_difference": 0.003394
           },
           {
             "disease": "Substance Use Disorder",
@@ -22686,7 +22955,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004707,
-            "n_samples": 12321
+            "n_samples": 12321,
+            "positive_rate_difference": 0.00111
           },
           {
             "disease": "Depression",
@@ -22713,7 +22983,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013719,
-            "n_samples": 12246
+            "n_samples": 12246,
+            "positive_rate_difference": 0.005456
           },
           {
             "disease": "Osteoporosis",
@@ -22740,7 +23011,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.031447,
-            "n_samples": 12243
+            "n_samples": 12243,
+            "positive_rate_difference": 0.008321
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -22767,7 +23039,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010972,
-            "n_samples": 12213
+            "n_samples": 12213,
+            "positive_rate_difference": 0.003754
           },
           {
             "disease": "Hyperlipidemia",
@@ -22794,7 +23067,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.049787,
-            "n_samples": 11971
+            "n_samples": 11971,
+            "positive_rate_difference": 0.002522
           },
           {
             "disease": "Obesity",
@@ -22821,7 +23095,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008559,
-            "n_samples": 12268
+            "n_samples": 12268,
+            "positive_rate_difference": 0.004469
           },
           {
             "disease": "Hypothyroidism",
@@ -22848,7 +23123,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030511,
-            "n_samples": 12094
+            "n_samples": 12094,
+            "positive_rate_difference": 0.001393
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -22875,7 +23151,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007571,
-            "n_samples": 12283
+            "n_samples": 12283,
+            "positive_rate_difference": 0.001907
           },
           {
             "disease": "Sleep Apnea",
@@ -22902,7 +23179,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003005,
-            "n_samples": 12311
+            "n_samples": 12311,
+            "positive_rate_difference": 0.003185
           },
           {
             "disease": "Cancer Breast",
@@ -22929,7 +23207,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.034187,
-            "n_samples": 11876
+            "n_samples": 11876,
+            "positive_rate_difference": 0.00767
           },
           {
             "disease": "Cancer Lung",
@@ -22956,7 +23235,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011272,
-            "n_samples": 12331
+            "n_samples": 12331,
+            "positive_rate_difference": 0.003302
           },
           {
             "disease": "Cancer Colorectal",
@@ -22983,7 +23263,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011731,
-            "n_samples": 12275
+            "n_samples": 12275,
+            "positive_rate_difference": 0.001331
           },
           {
             "disease": "Cancer Other",
@@ -23010,7 +23291,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.043457,
-            "n_samples": 12081
+            "n_samples": 12081,
+            "positive_rate_difference": 0.007088
           }
         ]
       },
@@ -23022,8 +23304,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:15:13.719585",
-        "n_diseases_evaluated": 25,
-        "mean_auc_test": 0.7087
+        "mean_auc_test": 0.7087,
+        "n_diseases_evaluated_total": 25,
+        "n_diseases_deployed": 23
       }
     },
     "Male_all_abacus_poc": {
@@ -24840,7 +25123,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.126785,
-            "n_samples": 23599
+            "n_samples": 23599,
+            "positive_rate_difference": null
           },
           {
             "disease": "Diabetes Mellitus",
@@ -24858,7 +25142,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.044589,
-            "n_samples": 24782
+            "n_samples": 24782,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -24876,7 +25161,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.016128,
-            "n_samples": 25298
+            "n_samples": 25298,
+            "positive_rate_difference": null
           },
           {
             "disease": "COPD",
@@ -24894,7 +25180,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025163,
-            "n_samples": 25196
+            "n_samples": 25196,
+            "positive_rate_difference": null
           },
           {
             "disease": "Heart Failure",
@@ -24912,7 +25199,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018311,
-            "n_samples": 25176
+            "n_samples": 25176,
+            "positive_rate_difference": null
           },
           {
             "disease": "Atrial Fibrillation",
@@ -24930,7 +25218,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.043468,
-            "n_samples": 24961
+            "n_samples": 24961,
+            "positive_rate_difference": null
           },
           {
             "disease": "Coronary Heart Disease",
@@ -24948,7 +25237,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06778,
-            "n_samples": 23827
+            "n_samples": 23827,
+            "positive_rate_difference": null
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -24966,7 +25256,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025126,
-            "n_samples": 25113
+            "n_samples": 25113,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoarthritis",
@@ -24984,7 +25275,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06649,
-            "n_samples": 24575
+            "n_samples": 24575,
+            "positive_rate_difference": null
           },
           {
             "disease": "Chronic Liver Disease",
@@ -25002,7 +25294,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007266,
-            "n_samples": 25323
+            "n_samples": 25323,
+            "positive_rate_difference": null
           },
           {
             "disease": "Substance Use Disorder",
@@ -25020,7 +25313,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015217,
-            "n_samples": 25038
+            "n_samples": 25038,
+            "positive_rate_difference": null
           },
           {
             "disease": "Depression",
@@ -25038,7 +25332,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010689,
-            "n_samples": 25260
+            "n_samples": 25260,
+            "positive_rate_difference": null
           },
           {
             "disease": "Osteoporosis",
@@ -25056,7 +25351,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004059,
-            "n_samples": 25373
+            "n_samples": 25373,
+            "positive_rate_difference": null
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -25074,7 +25370,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003947,
-            "n_samples": 25335
+            "n_samples": 25335,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hyperlipidemia",
@@ -25092,7 +25389,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.05341,
-            "n_samples": 24415
+            "n_samples": 24415,
+            "positive_rate_difference": null
           },
           {
             "disease": "Obesity",
@@ -25110,7 +25408,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011283,
-            "n_samples": 25259
+            "n_samples": 25259,
+            "positive_rate_difference": null
           },
           {
             "disease": "Hypothyroidism",
@@ -25128,7 +25427,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006987,
-            "n_samples": 25332
+            "n_samples": 25332,
+            "positive_rate_difference": null
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -25146,7 +25446,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011166,
-            "n_samples": 25255
+            "n_samples": 25255,
+            "positive_rate_difference": null
           },
           {
             "disease": "Sleep Apnea",
@@ -25164,7 +25465,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009364,
-            "n_samples": 25204
+            "n_samples": 25204,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Lung",
@@ -25182,7 +25484,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009885,
-            "n_samples": 25392
+            "n_samples": 25392,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Colorectal",
@@ -25200,7 +25503,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012983,
-            "n_samples": 25263
+            "n_samples": 25263,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Prostate",
@@ -25218,7 +25522,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.027241,
-            "n_samples": 25146
+            "n_samples": 25146,
+            "positive_rate_difference": null
           },
           {
             "disease": "Cancer Other",
@@ -25236,7 +25541,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.036852,
-            "n_samples": 25046
+            "n_samples": 25046,
+            "positive_rate_difference": null
           }
         ],
         "by_ethnicity": [
@@ -25265,7 +25571,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.126785,
-            "n_samples": 23599
+            "n_samples": 23599,
+            "positive_rate_difference": 0.01744
           },
           {
             "disease": "Diabetes Mellitus",
@@ -25292,7 +25599,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.044589,
-            "n_samples": 24782
+            "n_samples": 24782,
+            "positive_rate_difference": 0.016027
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -25319,7 +25627,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.016128,
-            "n_samples": 25298
+            "n_samples": 25298,
+            "positive_rate_difference": 0.004818
           },
           {
             "disease": "COPD",
@@ -25346,7 +25655,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025163,
-            "n_samples": 25196
+            "n_samples": 25196,
+            "positive_rate_difference": 0.003301
           },
           {
             "disease": "Heart Failure",
@@ -25373,7 +25683,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018311,
-            "n_samples": 25176
+            "n_samples": 25176,
+            "positive_rate_difference": 0.002959
           },
           {
             "disease": "Atrial Fibrillation",
@@ -25400,7 +25711,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.043468,
-            "n_samples": 24961
+            "n_samples": 24961,
+            "positive_rate_difference": 0.005388
           },
           {
             "disease": "Coronary Heart Disease",
@@ -25427,7 +25739,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06778,
-            "n_samples": 23827
+            "n_samples": 23827,
+            "positive_rate_difference": 0.005181
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -25454,7 +25767,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.025126,
-            "n_samples": 25113
+            "n_samples": 25113,
+            "positive_rate_difference": 0.00085
           },
           {
             "disease": "Osteoarthritis",
@@ -25481,7 +25795,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.06649,
-            "n_samples": 24575
+            "n_samples": 24575,
+            "positive_rate_difference": 0.019369
           },
           {
             "disease": "Chronic Liver Disease",
@@ -25508,7 +25823,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007266,
-            "n_samples": 25323
+            "n_samples": 25323,
+            "positive_rate_difference": 0.002568
           },
           {
             "disease": "Substance Use Disorder",
@@ -25535,7 +25851,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.015217,
-            "n_samples": 25038
+            "n_samples": 25038,
+            "positive_rate_difference": 0.003436
           },
           {
             "disease": "Depression",
@@ -25562,7 +25879,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010689,
-            "n_samples": 25260
+            "n_samples": 25260,
+            "positive_rate_difference": 0.003129
           },
           {
             "disease": "Osteoporosis",
@@ -25589,7 +25907,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004059,
-            "n_samples": 25373
+            "n_samples": 25373,
+            "positive_rate_difference": 0.003217
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -25616,7 +25935,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.003947,
-            "n_samples": 25335
+            "n_samples": 25335,
+            "positive_rate_difference": 0.001459
           },
           {
             "disease": "Hyperlipidemia",
@@ -25643,7 +25963,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.05341,
-            "n_samples": 24415
+            "n_samples": 24415,
+            "positive_rate_difference": 0.014015
           },
           {
             "disease": "Obesity",
@@ -25670,7 +25991,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011283,
-            "n_samples": 25259
+            "n_samples": 25259,
+            "positive_rate_difference": 0.000399
           },
           {
             "disease": "Hypothyroidism",
@@ -25697,7 +26019,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006987,
-            "n_samples": 25332
+            "n_samples": 25332,
+            "positive_rate_difference": 0.001956
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -25724,7 +26047,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.011166,
-            "n_samples": 25255
+            "n_samples": 25255,
+            "positive_rate_difference": 0.000884
           },
           {
             "disease": "Sleep Apnea",
@@ -25751,7 +26075,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009364,
-            "n_samples": 25204
+            "n_samples": 25204,
+            "positive_rate_difference": 0.002436
           },
           {
             "disease": "Cancer Lung",
@@ -25778,7 +26103,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009885,
-            "n_samples": 25392
+            "n_samples": 25392,
+            "positive_rate_difference": 0.000438
           },
           {
             "disease": "Cancer Colorectal",
@@ -25805,7 +26131,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012983,
-            "n_samples": 25263
+            "n_samples": 25263,
+            "positive_rate_difference": 0.004061
           },
           {
             "disease": "Cancer Prostate",
@@ -25832,7 +26159,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.027241,
-            "n_samples": 25146
+            "n_samples": 25146,
+            "positive_rate_difference": 0.002852
           },
           {
             "disease": "Cancer Other",
@@ -25859,7 +26187,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.036852,
-            "n_samples": 25046
+            "n_samples": 25046,
+            "positive_rate_difference": 0.004467
           }
         ]
       },
@@ -25871,8 +26200,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:40:41.902250",
-        "n_diseases_evaluated": 27,
-        "mean_auc_test": 0.762
+        "mean_auc_test": 0.762,
+        "n_diseases_evaluated_total": 27,
+        "n_diseases_deployed": 23
       }
     },
     "Male_under60_abacus_poc": {
@@ -27698,7 +28028,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.085278,
-            "n_samples": 14095
+            "n_samples": 14095,
+            "positive_rate_difference": 0.003184
           },
           {
             "disease": "Diabetes Mellitus",
@@ -27725,7 +28056,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030619,
-            "n_samples": 14468
+            "n_samples": 14468,
+            "positive_rate_difference": 0.009186
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -27752,7 +28084,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.007371,
-            "n_samples": 14652
+            "n_samples": 14652,
+            "positive_rate_difference": 0.001562
           },
           {
             "disease": "COPD",
@@ -27779,7 +28112,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012146,
-            "n_samples": 14655
+            "n_samples": 14655,
+            "positive_rate_difference": 0.000725
           },
           {
             "disease": "Heart Failure",
@@ -27806,7 +28140,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009366,
-            "n_samples": 14628
+            "n_samples": 14628,
+            "positive_rate_difference": 0.001594
           },
           {
             "disease": "Atrial Fibrillation",
@@ -27833,7 +28168,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.022199,
-            "n_samples": 14595
+            "n_samples": 14595,
+            "positive_rate_difference": 0.003779
           },
           {
             "disease": "Coronary Heart Disease",
@@ -27860,7 +28196,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.044104,
-            "n_samples": 14239
+            "n_samples": 14239,
+            "positive_rate_difference": 0.004064
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -27887,7 +28224,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.013976,
-            "n_samples": 14596
+            "n_samples": 14596,
+            "positive_rate_difference": 0.000138
           },
           {
             "disease": "Osteoarthritis",
@@ -27914,7 +28252,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.045436,
-            "n_samples": 14394
+            "n_samples": 14394,
+            "positive_rate_difference": 0.013291
           },
           {
             "disease": "Chronic Liver Disease",
@@ -27941,7 +28280,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006346,
-            "n_samples": 14654
+            "n_samples": 14654,
+            "positive_rate_difference": 0.002736
           },
           {
             "disease": "Substance Use Disorder",
@@ -27968,7 +28308,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012719,
-            "n_samples": 14467
+            "n_samples": 14467,
+            "positive_rate_difference": 0.004853
           },
           {
             "disease": "Depression",
@@ -27995,7 +28336,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010952,
-            "n_samples": 14609
+            "n_samples": 14609,
+            "positive_rate_difference": 0.002193
           },
           {
             "disease": "Osteoporosis",
@@ -28022,7 +28364,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.002315,
-            "n_samples": 14687
+            "n_samples": 14687,
+            "positive_rate_difference": 0.000374
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -28049,7 +28392,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.00327,
-            "n_samples": 14678
+            "n_samples": 14678,
+            "positive_rate_difference": 0.000712
           },
           {
             "disease": "Hyperlipidemia",
@@ -28076,7 +28420,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.03704,
-            "n_samples": 14363
+            "n_samples": 14363,
+            "positive_rate_difference": 0.014149
           },
           {
             "disease": "Obesity",
@@ -28103,7 +28448,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010388,
-            "n_samples": 14632
+            "n_samples": 14632,
+            "positive_rate_difference": 0.001577
           },
           {
             "disease": "Hypothyroidism",
@@ -28130,7 +28476,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004566,
-            "n_samples": 14673
+            "n_samples": 14673,
+            "positive_rate_difference": 0.001733
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -28157,7 +28504,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006348,
-            "n_samples": 14650
+            "n_samples": 14650,
+            "positive_rate_difference": 0.005894
           },
           {
             "disease": "Sleep Apnea",
@@ -28184,7 +28532,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.009655,
-            "n_samples": 14604
+            "n_samples": 14604,
+            "positive_rate_difference": 0.000286
           },
           {
             "disease": "Cancer Lung",
@@ -28211,7 +28560,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004014,
-            "n_samples": 14698
+            "n_samples": 14698,
+            "positive_rate_difference": 0.003082
           },
           {
             "disease": "Cancer Colorectal",
@@ -28238,7 +28588,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008456,
-            "n_samples": 14664
+            "n_samples": 14664,
+            "positive_rate_difference": 0.004676
           },
           {
             "disease": "Cancer Prostate",
@@ -28265,7 +28616,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012684,
-            "n_samples": 14664
+            "n_samples": 14664,
+            "positive_rate_difference": 0.00225
           },
           {
             "disease": "Cancer Other",
@@ -28292,7 +28644,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.022799,
-            "n_samples": 14562
+            "n_samples": 14562,
+            "positive_rate_difference": 0.001187
           }
         ]
       },
@@ -28304,8 +28657,9 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:17:12.233847",
-        "n_diseases_evaluated": 25,
-        "mean_auc_test": 0.7532
+        "mean_auc_test": 0.7532,
+        "n_diseases_evaluated_total": 25,
+        "n_diseases_deployed": 23
       }
     },
     "Male_60plus_abacus_poc": {
@@ -30131,7 +30485,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.188342,
-            "n_samples": 9504
+            "n_samples": 9504,
+            "positive_rate_difference": 0.021745
           },
           {
             "disease": "Diabetes Mellitus",
@@ -30158,7 +30513,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.064185,
-            "n_samples": 10314
+            "n_samples": 10314,
+            "positive_rate_difference": 0.021558
           },
           {
             "disease": "Chronic Kidney Disease",
@@ -30185,7 +30541,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.02818,
-            "n_samples": 10646
+            "n_samples": 10646,
+            "positive_rate_difference": 0.006143
           },
           {
             "disease": "COPD",
@@ -30212,7 +30569,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.04326,
-            "n_samples": 10541
+            "n_samples": 10541,
+            "positive_rate_difference": 0.003591
           },
           {
             "disease": "Heart Failure",
@@ -30239,7 +30597,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.030717,
-            "n_samples": 10548
+            "n_samples": 10548,
+            "positive_rate_difference": 0.000556
           },
           {
             "disease": "Atrial Fibrillation",
@@ -30266,7 +30625,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.073413,
-            "n_samples": 10366
+            "n_samples": 10366,
+            "positive_rate_difference": 0.011119
           },
           {
             "disease": "Coronary Heart Disease",
@@ -30293,7 +30653,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.102941,
-            "n_samples": 9588
+            "n_samples": 9588,
+            "positive_rate_difference": 0.038272
           },
           {
             "disease": "Stroke Cerebrovascular",
@@ -30320,7 +30681,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.040601,
-            "n_samples": 10517
+            "n_samples": 10517,
+            "positive_rate_difference": 0.008712
           },
           {
             "disease": "Osteoarthritis",
@@ -30347,7 +30709,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.096258,
-            "n_samples": 10181
+            "n_samples": 10181,
+            "positive_rate_difference": 0.019255
           },
           {
             "disease": "Chronic Liver Disease",
@@ -30374,7 +30737,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008529,
-            "n_samples": 10669
+            "n_samples": 10669,
+            "positive_rate_difference": 0.002762
           },
           {
             "disease": "Substance Use Disorder",
@@ -30401,7 +30765,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.018636,
-            "n_samples": 10571
+            "n_samples": 10571,
+            "positive_rate_difference": 0.002149
           },
           {
             "disease": "Depression",
@@ -30428,7 +30793,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.010328,
-            "n_samples": 10651
+            "n_samples": 10651,
+            "positive_rate_difference": 0.005004
           },
           {
             "disease": "Osteoporosis",
@@ -30455,7 +30821,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.006457,
-            "n_samples": 10686
+            "n_samples": 10686,
+            "positive_rate_difference": 0.010848
           },
           {
             "disease": "Rheumatoid Arthritis",
@@ -30482,7 +30849,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.004879,
-            "n_samples": 10657
+            "n_samples": 10657,
+            "positive_rate_difference": 0.005137
           },
           {
             "disease": "Hyperlipidemia",
@@ -30509,7 +30877,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.076801,
-            "n_samples": 10052
+            "n_samples": 10052,
+            "positive_rate_difference": 0.004479
           },
           {
             "disease": "Obesity",
@@ -30536,7 +30905,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.012515,
-            "n_samples": 10627
+            "n_samples": 10627,
+            "positive_rate_difference": 0.004535
           },
           {
             "disease": "Hypothyroidism",
@@ -30563,7 +30933,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.01032,
-            "n_samples": 10659
+            "n_samples": 10659,
+            "positive_rate_difference": 0.001062
           },
           {
             "disease": "Peripheral Vascular Disease",
@@ -30590,7 +30961,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017822,
-            "n_samples": 10605
+            "n_samples": 10605,
+            "positive_rate_difference": 0.010879
           },
           {
             "disease": "Sleep Apnea",
@@ -30617,7 +30989,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.008962,
-            "n_samples": 10600
+            "n_samples": 10600,
+            "positive_rate_difference": 0.006252
           },
           {
             "disease": "Cancer Lung",
@@ -30644,7 +31017,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.017954,
-            "n_samples": 10694
+            "n_samples": 10694,
+            "positive_rate_difference": 0.001257
           },
           {
             "disease": "Cancer Colorectal",
@@ -30671,7 +31045,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.019247,
-            "n_samples": 10599
+            "n_samples": 10599,
+            "positive_rate_difference": 0.005415
           },
           {
             "disease": "Cancer Prostate",
@@ -30698,7 +31073,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.047605,
-            "n_samples": 10482
+            "n_samples": 10482,
+            "positive_rate_difference": 0.004606
           },
           {
             "disease": "Cancer Other",
@@ -30725,7 +31101,8 @@
             "tpr_at_fpr10": null,
             "calibration_slope": null,
             "positive_rate": 0.056372,
-            "n_samples": 10484
+            "n_samples": 10484,
+            "positive_rate_difference": 0.007408
           }
         ]
       },
@@ -30737,8 +31114,36 @@
       "evaluation": {
         "seed": 42,
         "timestamp": "2026-07-15T14:15:08.696184",
-        "n_diseases_evaluated": 27,
-        "mean_auc_test": 0.7055
+        "mean_auc_test": 0.7055,
+        "n_diseases_evaluated_total": 27,
+        "n_diseases_deployed": 23
+      }
+    }
+  },
+  "environmental_impact": {
+    "total_energy_kwh": 3.3267,
+    "total_emissions_kg_co2eq": 0.041372,
+    "total_duration_s": 25496.2,
+    "per_phase": {
+      "fairness_audit": {
+        "energy_kwh": 0.0329,
+        "emissions_kg_co2eq": 0.002002,
+        "duration_s": 250.5
+      },
+      "posteval": {
+        "energy_kwh": 0.4237,
+        "emissions_kg_co2eq": 0.028069,
+        "duration_s": 3116.3
+      },
+      "shap_explain": {
+        "energy_kwh": 0.3471,
+        "emissions_kg_co2eq": 0.001367,
+        "duration_s": 3306.5
+      },
+      "train": {
+        "energy_kwh": 2.523,
+        "emissions_kg_co2eq": 0.009934,
+        "duration_s": 18822.9
       }
     }
   }
