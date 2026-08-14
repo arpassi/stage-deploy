@@ -1,74 +1,115 @@
 {
   "_meta": {
-    "description": "Manually curated CHAI-aligned transparency metadata. Complements model_card_pipeline.json (auto-generated performance data). Together they feed the SRDC CDS Hooks model card display.",
+    "description": "Transparency metadata for the STAGE WP6 multimorbidity prediction pipeline, structured following the CHAI Applied Model Card v0.2 with FUTURE-AI extensions. Complements model_card_pipeline.json (auto-generated performance data). Together they populate the CDS Hooks model card display.",
     "template_version": "0.2",
-    "last_updated": "2026-08-13",
-    "updated_by": "alvaro.passi@ub.edu"
+    "last_updated": "2026-08-14",
+    "updated_by": "alvaro_passisolar@ub.edu",
+    "chai_sections_covered": [
+      "header", "summary", "intended_use", "cautioned_out_of_scope_uses",
+      "imdrf_risk_classification", "training_data", "known_limitations",
+      "validation_status", "bias_mitigation", "fairness", "explainability",
+      "model_architecture", "ongoing_maintenance", "security_compliance",
+      "environmental_impact", "data_governance", "co_creation",
+      "standards_interoperability", "robustness", "regulatory_landscape",
+      "references", "funding", "tier_display_mapping"
+    ]
   },
 
   "header": {
     "name": "STAGE WP6 — 10-Year Incident Multimorbidity Prediction Pipeline",
     "developer": "BCN-AIM Research Lab, Universitat de Barcelona (UB)",
-    "consortium": "STAGE (EU Horizon Europe GAP-101137146)",
+    "consortium": "STAGE (EU Horizon Europe, Grant Agreement No. 101137146)",
     "contact": {
       "pi": "karim.lekadir@ub.edu",
-      "wp6_lead": "alvaro.passi@ub.edu"
+      "wp6_lead": "alvaro_passisolar@ub.edu"
     },
-    "release_stage": "research_prototype",
+    "release_stage": "proof_of_concept",
     "version": "1.0",
     "version_date": "2026-08-01",
-    "global_availability": "Not publicly deployed. Research-use within STAGE consortium; downstream integration via SRDC (CDS) and ABACUS (health monitoring app).",
-    "regulatory_status": "Not applicable at current stage. Designed with EU AI Act (Articles 9, 13) and FUTURE-AI guideline alignment for potential future high-risk AI classification."
+    "global_availability": "Research use within the STAGE consortium. Not publicly deployed. Planned proof-of-concept integration with CDS and health monitoring platforms.",
+    "regulatory_status": "Not applicable at current stage. Designed with EU AI Act (Articles 9, 13) and FUTURE-AI guideline alignment."
   },
 
-  "summary": "The STAGE WP6 pipeline predicts 10-year incident risk for 27 chronic conditions using UK Biobank data (N≈502,462; Application 295277). The architecture consists of 26 independent LightGBM classifiers plus 1 XGBoost for Substance Use Disorder (with Depression out-of-fold probability augmentation), each trained on disease-specific top-50 features. The pipeline incorporates a trustworthy AI stack: fairness auditing, Platt scaling calibration, SHAP explainability, and co-creation with clinicians, researchers, and citizens.",
+  "summary": "The STAGE WP6 pipeline predicts 10-year incident risk for 24 chronic conditions (23 per sex) using UK Biobank data (N≈502,462; Application 295277). The architecture uses 22 independent LightGBM classifiers plus 1 XGBoost for Substance Use Disorder (with Depression out-of-fold augmentation), each trained on disease-specific top-50 features selected by gain importance. The pipeline includes Platt scaling calibration, SHAP explainability, per-subgroup fairness auditing, and was shaped by multi-stakeholder co-creation with clinicians, researchers, ethicists, and citizens.",
+
+  "model_architecture": {
+    "default_estimator": "LightGBM (gradient boosted decision trees)",
+    "n_diseases_deployed": 23,
+    "exception": {
+      "disease": "Substance Use Disorder",
+      "estimator": "XGBoost",
+      "augmentation": "Depression out-of-fold probability as additional feature",
+      "rationale": "Only confirmed genuine within-estimator multi-label signal across all strata"
+    },
+    "feature_selection": "LightGBM gain-based importance, top-50 per disease",
+    "calibration": "Platt scaling (5-fold cross-validation on training data)",
+    "feature_sets": {
+      "srdc_poc": {
+        "description": "Clinical decision support feature set — includes EHR-available data (blood markers, clinical measurements) plus self-reported data",
+        "n_candidate_features": 224
+      },
+      "abacus_poc": {
+        "description": "Health monitoring feature set — self-reported features only, collectible without clinical infrastructure",
+        "n_candidate_features": 114
+      }
+    },
+    "strata": "2 sexes × 3 age groups (all, under60, 60plus) × 2 feature sets = 12 production strata"
+  },
 
   "intended_use": {
     "primary": "Clinical decision support — inform clinicians of 10-year incident risk for chronic conditions to support proactive, preventive care planning.",
     "intended_purpose_imdrf": "inform",
-    "target_population": "Adults aged 40–69 at UK Biobank baseline (2006–2010 recruitment), with external validation planned on NFBC1966 (Finnish birth cohort, born 1966).",
+    "target_population": "Adults aged 40–69 at UK Biobank baseline (2006–2010 recruitment), with external validation planned on NFBC1966 (Northern Finland Birth Cohort 1966).",
     "intended_settings": [
-      "Primary care (via SRDC CDS Hooks integration)",
-      "Health monitoring (via ABACUS mobile app)",
-      "Personalized coaching (via LIVA Health, KORA study)"
+      "Primary care clinical decision support (planned proof-of-concept via CDS Hooks / HL7 FHIR)",
+      "Health monitoring app (planned proof-of-concept via ABACUS platform, self-reported features only)",
+      "Personalised coaching (planned proof-of-concept via LIVA Healthcare)"
     ],
     "human_oversight_required": true,
-    "human_oversight_description": "All predictions are clinician-mediated. The pipeline is designed as a decision-support tool, not an autonomous diagnostic system. Predictions should be interpreted alongside clinical judgment and patient context."
+    "human_oversight_description": "All predictions are clinician-mediated. The pipeline is a decision-support tool, not an autonomous diagnostic system. Predictions should be interpreted alongside clinical judgement and patient context."
   },
 
   "cautioned_out_of_scope_uses": [
-    "Not for acute clinical decisions or emergency triage.",
-    "Not validated outside UKB-equivalent populations (predominantly White British, UK-resident, age 40–69 at baseline).",
-    "Not intended for individual diagnostic confirmation — risk scores are population-level estimates.",
-    "Not validated for populations under 40 or over 70 at time of prediction.",
+    "This is a research proof-of-concept. It has not been validated for clinical deployment and must not be used for real patient care decisions.",
+    "Risk scores are population-level estimates and must not be used for individual diagnostic confirmation.",
+    "Not validated for populations outside UK Biobank demographics (predominantly White British, UK-resident, aged 40–69 at recruitment).",
     "Not intended for use without clinician interpretation."
   ],
 
   "imdrf_risk_classification": {
-    "description": "IMDRF SaMD risk classification varies per disease. All predictions are 'inform' purpose. Condition significance varies.",
-    "per_disease_examples": {
+    "description": "IMDRF SaMD risk classification. All predictions serve an 'inform' purpose. Condition significance varies per disease.",
+    "intended_purpose": "inform",
+    "per_disease": {
       "category_I_non_serious_inform": [
         "Obesity",
         "Osteoarthritis",
-        "Sleep_Disorders"
+        "Hyperlipidemia",
+        "Hypothyroidism",
+        "Sleep Apnea",
+        "Rheumatoid Arthritis",
+        "Cancer Other"
       ],
       "category_II_serious_inform": [
-        "Heart_Failure",
-        "Coronary_Heart_Disease",
-        "Stroke",
-        "Atrial_Fibrillation",
-        "Chronic_Kidney_Disease",
-        "Type_2_Diabetes",
+        "Hypertension",
+        "Diabetes Mellitus",
+        "Chronic Kidney Disease",
         "COPD",
-        "Dementia",
+        "Heart Failure",
+        "Atrial Fibrillation",
+        "Coronary Heart Disease",
+        "Stroke Cerebrovascular",
+        "Chronic Liver Disease",
+        "Substance Use Disorder",
         "Depression",
-        "Cancer_Breast",
-        "Cancer_Colorectal",
-        "Cancer_Lung",
-        "Cancer_Prostate"
+        "Osteoporosis",
+        "Peripheral Vascular Disease",
+        "Cancer Breast",
+        "Cancer Lung",
+        "Cancer Colorectal",
+        "Cancer Prostate"
       ]
     },
-    "note": "Full per-disease IMDRF classification to be finalized with WP2 embedded ethics team (TUM)."
+    "note": "Classification covers all 24 deployed diseases (7 Category I + 17 Category II). Each sex has 23 diseases: Cancer Breast is female-only, Cancer Prostate is male-only. Five conditions excluded from deployment due to insufficient discriminative performance: Dementia (ICD10), Parkinsons, Multiple Sclerosis, Severe Mental Illness, Sleep Disorders. Final IMDRF classification to be reviewed with the STAGE embedded ethics team."
   },
 
   "training_data": {
@@ -78,9 +119,9 @@
     "age_range_at_recruitment": "40–69",
     "geographic_scope": "22 assessment centres across England, Scotland, and Wales",
     "follow_up_horizon": "10 years from baseline assessment",
-    "outcome_ascertainment": "Hospital Episode Statistics (HES) ICD-10 codes; three-tier prevalent exclusion (ICD, medication, survey-based)",
-    "split_strategy": "Geographic hold-out (training: non-London centres; test: London centres)",
-    "healthy_volunteer_bias": "UK Biobank participants are healthier, wealthier, and more educated than the UK general population. This is a known, documented selection bias that affects generalizability.",
+    "outcome_ascertainment": "Hospital Episode Statistics (HES) ICD-10 codes; three-tier prevalent exclusion (ICD-10, medication-based, survey-based)",
+    "split_strategy": "Geographic hold-out (training: England assessment centres; test: Scotland and Wales assessment centres)",
+    "healthy_volunteer_bias": "UK Biobank participants are healthier, wealthier, and more educated than the UK general population. This is a known selection bias that affects generalisability.",
     "ethnic_composition": "Approximately 94% White British. Non-White subgroups have smaller sample sizes, which may reduce model reliability for these populations."
   },
 
@@ -89,60 +130,136 @@
     "Temporal context: baseline features collected 2006–2010; clinical practice and population health profiles have evolved.",
     "Healthy volunteer bias: UKB participants are not representative of the UK general population.",
     "Ethnic composition: ~94% White British — model performance for non-White subgroups requires careful interpretation.",
-    "GP-linkage-based incident outcomes deferred to after UKB-RAP restoration (September 2026).",
-    "Five diseases excluded from deployment: Dementia, Parkinson's Disease, Multiple Sclerosis, Sleep Disorders, Severe Mental Illness."
+    "GP-linkage outcome validation is planned but not yet completed.",
+    "Five diseases excluded from deployment due to AUC below reporting threshold: Dementia (ICD10), Parkinsons, Multiple Sclerosis, Severe Mental Illness, Sleep Disorders."
   ],
 
   "validation_status": {
     "internal": {
-      "method": "Geographic hold-out (London vs non-London assessment centres)",
+      "method": "Geographic hold-out (England train / Scotland+Wales test)",
       "status": "complete",
       "bootstrap_resamples": 2000,
       "confidence_level": 0.95
     },
     "external_nfbc1966": {
       "cohort": "Northern Finland Birth Cohort 1966",
-      "n_participants": 6000,
+      "n_participants_at_clinical_exam": 6000,
       "status": "pending",
-      "blocker": "Findata permit transition; workaround via Iiro (UOULU) running validation inside Kapseli secure environment",
       "expected_completion": "Q4 2026"
     },
-    "external_ukb_rap": {
-      "status": "blocked",
-      "blocker": "UKB-RAP (DNAnexus) platform suspended since April 2026; restoration expected September 2026",
-      "planned": "GP-linkage outcome validation, additional sensitivity analyses"
+    "gp_linkage_validation": {
+      "description": "Sensitivity analysis using GP-linked primary care outcomes",
+      "status": "planned"
+    }
+  },
+
+  "fairness": {
+    "audit_design": {
+      "protected_attributes": ["sex", "age_group", "ethnicity"],
+      "metrics": [
+        {"name": "AUC", "description": "Area under the ROC curve — overall discriminative ability per subgroup"},
+        {"name": "TPR at FPR 0.10", "description": "True positive rate when the false positive rate is fixed at 10% — sensitivity at a clinically relevant specificity threshold"},
+        {"name": "Calibration slope", "description": "Slope of predicted vs observed probabilities — values near 1.0 indicate well-calibrated predictions"},
+        {"name": "Positive rate difference", "description": "Difference in disease prevalence across subgroups — contextualises performance disparities"}
+      ],
+      "approach": "Per-disease × per-subgroup evaluation on geographic hold-out test set. Results available in model_card_pipeline.json under each stratum's fairness block."
+    },
+    "attributes_considered": {
+      "sex": "Addressed by architecture — separate models trained per sex eliminate within-stratum sex disparity by construction.",
+      "ethnicity": "Disaggregated evaluation by White/non-White subgroups. Ethnicity grouping variable programmatically excluded from model features to prevent direct discrimination; retained for post-hoc fairness auditing.",
+      "age_group": "Evaluated in all-ages strata (fairness_by_age). Age-stratified models (under60/60plus) also trained separately."
+    },
+    "attributes_not_considered": {
+      "language": "Not available in UK Biobank baseline data.",
+      "sexual_orientation": "Not available in UK Biobank baseline data.",
+      "gender_identity": "Not available in UK Biobank baseline data. UKB records biological sex only.",
+      "disability": "Not available in UK Biobank baseline data.",
+      "note": "These are data limitations, not design choices. The inability to evaluate fairness along these dimensions is documented as a limitation."
     }
   },
 
   "bias_mitigation": {
-    "fairness_audit": {
-      "protected_attributes": ["age_group", "ethnicity"],
-      "metrics": ["AUC", "TPR_at_FPR_0.10", "calibration_slope", "positive_rate_difference"],
-      "approach": "Per-disease × per-subgroup evaluation on geographic hold-out test set"
-    },
-    "tautological_feature_exclusion": "Disease-specific biomarker features that could create circular predictions are excluded before feature selection (e.g., HbA1c excluded from Diabetes model).",
-    "prevalent_case_exclusion": "Three-tier exclusion (ICD, medication, survey-based) removes participants with prevalent conditions from training to prevent information leakage.",
-    "co_creation_provenance": "Pipeline design informed by multi-stakeholder co-creation (STAGE WP2/WP3): clinicians, researchers, ethicists, and citizens. Requirements include SHAP explainability, life-stage-specific models, clinician-mediated predictions, and fairness auditing."
+    "tautological_feature_exclusion": "For diseases where near-diagnostic biomarkers are available, those features are excluded before feature selection to prevent circular predictions (e.g., HbA1c excluded from Diabetes Mellitus, SBP/DBP from Hypertension, BMI from Obesity). Not all diseases require tautological exclusions.",
+    "prevalent_case_exclusion": "Three-tier exclusion (ICD-10, medication, survey-based) removes participants with prevalent conditions from training to prevent information leakage. Exclusion is label-specific, not union-based.",
+    "co_creation_provenance": "Pipeline design informed by multi-stakeholder co-creation within the STAGE project: clinicians, researchers, ethicists, and citizens requested SHAP explainability, life-stage-specific models, clinician-mediated predictions, fairness auditing, and EHR integration."
   },
 
   "explainability": {
-    "method": "SHAP (SHapley Additive exPlanations)",
+    "method": "SHAP (SHapley Additive exPlanations) via TreeExplainer",
     "scope": "Per-prediction waterfall plots showing top feature attributions with directional contributions",
     "global_importance": "LightGBM gain-based feature importance used for top-k selection (k=50 per disease)",
-    "modifiable_risk_factors": "Identified per disease; flagged for counterfactual scenario generation ('what if you stop smoking?')"
+    "modifiable_risk_factors": "Identified per disease; flagged for counterfactual scenario generation",
+    "design_rationale": "SHAP was selected through co-creation with clinical stakeholders who preferred feature-importance explanations over counterfactual explanations. LIME was considered but is less theoretically grounded for tree-based models."
+  },
+
+  "ongoing_maintenance": {
+    "monitoring_validity": "No current real-world deployment. Research-phase validation uses geographic hold-out and planned NFBC1966 external validation.",
+    "monitoring_fairness": "Per-subgroup AUC and calibration evaluation built into the pipeline's fairness audit phase, computed at each model update cycle.",
+    "update_triggers": [
+      "New cohort data availability",
+      "Identified performance drift",
+      "Updated disease definitions"
+    ],
+    "auc_exclusion_threshold": 0.70,
+    "auc_exclusion_rationale": "Standard reporting threshold per Hosmer-Lemeshow discrimination framework and TRIPOD guidelines (Collins et al. 2015). Diseases below threshold excluded from deployment."
+  },
+
+  "robustness": {
+    "variation_sources_tested": [
+      "Regional variation (geographic train/test split: England vs Scotland+Wales)",
+      "Metric stability (bootstrap resampling, n=2000)",
+      "Cross-national variation (NFBC1966 external validation, planned)"
+    ],
+    "variation_sources_not_tested": [
+      "Temporal validation (would require longitudinal UKB follow-up waves, not available)",
+      "Synthetic data perturbation / stress tests (not conducted)",
+      "Adversarial evaluation (not applicable for tabular clinical data in current context)"
+    ]
+  },
+
+  "standards_interoperability": [
+    {"standard": "ICD-10", "application": "Disease outcome coding from Hospital Episode Statistics and death registry"},
+    {"standard": "HL7 FHIR R4", "application": "Data exchange format for clinical integration (CDS Hooks)"},
+    {"standard": "CDS Hooks", "application": "Clinical decision support triggering within EHR workflow"},
+    {"standard": "TRIPOD+AI", "application": "Reporting standard for prediction model studies"},
+    {"standard": "FUTURE-AI", "application": "Trustworthy AI guideline (6 principles, 30 recommendations)"},
+    {"standard": "CHAI Applied Model Card", "application": "Documentation template (this card)"},
+    {"standard": "CodeCarbon", "application": "CO₂e estimation for environmental impact tracking"}
+  ],
+
+  "security_compliance": {
+    "data_processing": "All model training and evaluation conducted on institutional on-premise infrastructure. No cloud computing used for model training.",
+    "access_control": "Data access restricted to authorised researchers under UK Biobank and NFBC1966 data agreements.",
+    "patient_data": "No patient-identifiable data leaves controlled research environments. CDS integration uses synthetic data for proof-of-concept.",
+    "gdpr": "GDPR-compliant data handling per institutional policies and UK Biobank Material Transfer Agreement. UB is independent data controller."
+  },
+
+  "regulatory_landscape": {
+    "eu_ai_act": {
+      "status": "Pre-deployment. Pipeline designed with Articles 9 (risk management) and 13 (transparency) alignment.",
+      "classification": "Likely high-risk (healthcare AI) if deployed as clinical tool"
+    },
+    "eu_mdr": {
+      "status": "Not yet applicable. Would require conformity assessment if deployed as medical device.",
+      "classification": "Potentially Software as Medical Device (SaMD)"
+    },
+    "gdpr": {
+      "status": "Compliant. UB as independent controller; institutional ethics approval obtained.",
+      "classification": "Health data (special category under Article 9)"
+    }
   },
 
   "environmental_impact": {
     "tracking_tool": "CodeCarbon",
-    "note": "Emissions tracked during training runs on Sauron server. Full carbon footprint to be reported in D6.2."
+    "note": "Carbon emissions tracked per pipeline phase (feature selection, tuning, training, evaluation, SHAP, fairness).",
+    "architecture_rationale": "LightGBM/XGBoost chosen over deep learning architectures. Tree-based models train faster and require no GPU, minimising computational cost and environmental footprint."
   },
 
   "data_governance": {
     "ukb_application": "295277",
-    "ub_controller_status": "Independent controller under GDPR (not processor)",
-    "data_sharing_constraints": "Per-sample SHAP matrices cannot be shared with SRDC under Application 295277. Synthetic distribution approach (binned conditional summaries with PCHIP inverse-CDF) used instead.",
-    "nfbc_dta": "Signed DTA (University of Oulu → UB/BCN-AIM) in place for NFBC1966 validation.",
-    "withdrawn_participants": "Handled natively on DNAnexus; gracefully optional in shared code."
+    "ub_controller_status": "Universitat de Barcelona is independent data controller under GDPR (not data processor)",
+    "data_sharing_constraints": "Per-sample SHAP matrices cannot be shared externally under the UK Biobank MTA. Aggregate synthetic summaries are used instead for CDS integration.",
+    "nfbc_validation": "Data transfer agreement in place for NFBC1966 external validation."
   },
 
   "co_creation": {
@@ -154,21 +271,19 @@
       "Fairness auditing across demographic subgroups",
       "EHR integration via standards-based CDS Hooks"
     ],
-    "documentation": "STAGE co-creation paper (WP2/WP3 methodology); Álvaro co-author"
+    "documentation": "STAGE co-creation methodology paper (in preparation)"
   },
 
   "references": {
     "future_ai_guideline": "Lekadir et al., BMJ 2025",
-    "chai_model_card_template": "CHAI Applied Model Card v0.1 (November 2024)",
-    "convergence_table": "STAGE Paper 2 — Design Decision Trail (targeting JRT, September 2026)",
-    "chai_future_ai_mapping": "STAGE Paper 5 — FUTURE-AI × CHAI mapping (targeting npj Digital Medicine, October 2026)",
-    "ukb_mdrmf_comparator": "Jiang et al., Nature Communications 2025 (UKB-MDRMF)"
+    "chai_model_card_template": "CHAI Applied Model Card v0.2",
+    "tripod_reporting": "Collins et al., Annals of Internal Medicine 2015"
   },
 
   "funding": "European Union's Horizon Europe research and innovation programme under Grant Agreement No. 101137146 (STAGE).",
 
   "tier_display_mapping": {
-    "_description": "Maps fields to CDS Hooks display tiers as agreed with SRDC (July 2026). SRDC reads this to decide what surfaces where.",
+    "_description": "Maps fields to CDS Hooks display tiers as agreed with SRDC (July 2026). SRDC reads this to determine what surfaces where in the interface.",
     "tier_1_always_visible": [
       "summary",
       "imdrf_risk_classification",
@@ -186,7 +301,9 @@
       "training_data.n_participants_total",
       "training_data.healthy_volunteer_bias",
       "training_data.ethnic_composition",
-      "bias_mitigation.fairness_audit",
+      "fairness.audit_design",
+      "fairness.attributes_considered",
+      "fairness.attributes_not_considered",
       "per_disease.calibration.brier_score",
       "per_disease.calibration.calibration_slope",
       "known_limitations",
@@ -194,10 +311,16 @@
     ],
     "tier_3_reference_link": [
       "training_data (full)",
-      "fairness (full per-subgroup tables)",
+      "fairness (full per-subgroup tables from pipeline JSON)",
       "validation_status (full detail)",
+      "model_architecture",
+      "robustness",
+      "standards_interoperability",
+      "regulatory_landscape",
       "environmental_impact",
       "co_creation",
+      "ongoing_maintenance",
+      "security_compliance",
       "references",
       "funding",
       "data_governance"
