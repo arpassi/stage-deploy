@@ -1,0 +1,18 @@
+disease_j,disease_k,n_valid,n_joint_events,pair_prevalence,auc_joint,auc_ci_lo,auc_ci_hi,auc_age_only,auc_gain_over_age,beats_age_baseline,brier_joint,O,E,OE_ratio,OE_ci_lo,OE_ci_hi,OE_excludes_1
+Osteoarthritis,Osteoporosis,9423,37,0.00393,0.7713,0.704,0.8335,0.6564,0.1149,True,0.00393,37,69.78,0.53,0.371,0.708,below_1
+Heart Failure,Atrial Fibrillation,12100,79,0.00653,0.7533,0.7003,0.8022,0.6433,0.11,True,0.00646,79,24.18,3.267,2.605,4.011,above_1
+Stroke Cerebrovascular,Atrial Fibrillation,11784,54,0.00458,0.7236,0.66,0.7845,0.6315,0.0921,True,0.00456,54,23.41,2.306,1.729,2.925,above_1
+Hypertension,Atrial Fibrillation,5241,30,0.00572,0.7113,0.6279,0.7897,0.63,0.0813,True,0.0057,30,26.75,1.122,0.741,1.541,includes_1
+Hypertension,Osteoarthritis,4463,35,0.00784,0.7079,0.6102,0.7938,0.5609,0.147,True,0.00789,35,65.68,0.533,0.363,0.72,below_1
+Atrial Fibrillation,Osteoarthritis,9948,56,0.00563,0.7056,0.643,0.7697,0.5484,0.1572,True,0.00564,56,94.4,0.593,0.439,0.755,below_1
+Coronary Heart Disease,Heart Failure,11516,57,0.00495,0.6994,0.6223,0.7682,0.6046,0.0948,True,0.00492,57,24.17,2.359,1.761,3.008,above_1
+Coronary Heart Disease,Osteoarthritis,9490,43,0.00453,0.6895,0.6119,0.7671,0.5802,0.1093,True,0.0046,43,99.24,0.433,0.312,0.566,below_1
+Atrial Fibrillation,Cancer Other,11281,40,0.00355,0.6892,0.5972,0.775,0.5839,0.1053,True,0.00352,40,29.24,1.368,0.967,1.807,includes_1
+Coronary Heart Disease,Atrial Fibrillation,11401,70,0.00614,0.6756,0.6203,0.7312,0.6184,0.0572,True,0.00611,70,44.13,1.586,1.224,1.959,above_1
+Stroke Cerebrovascular,Osteoarthritis,9798,35,0.00357,0.6687,0.5866,0.7449,0.612,0.0567,True,0.00357,35,51.21,0.683,0.473,0.915,below_1
+Hypertension,Coronary Heart Disease,5138,38,0.0074,0.6614,0.5692,0.7433,0.5345,0.1269,True,0.00734,38,29.86,1.273,0.886,1.678,includes_1
+Osteoarthritis,Cancer Other,9385,49,0.00522,0.656,0.5801,0.7287,0.5732,0.0828,True,0.00519,49,71.23,0.688,0.511,0.893,below_1
+Hyperlipidemia,Osteoarthritis,6770,30,0.00443,0.6476,0.5489,0.7449,0.5423,0.1053,True,0.00457,30,83.68,0.359,0.236,0.492,below_1
+Hyperlipidemia,Atrial Fibrillation,8047,30,0.00373,0.6426,0.5539,0.7229,0.4873,0.1553,True,0.00374,30,35.29,0.85,0.552,1.163,includes_1
+Hyperlipidemia,Coronary Heart Disease,7961,64,0.00804,0.5908,0.5169,0.6615,0.5224,0.0684,True,0.00799,64,40.98,1.562,1.198,1.96,above_1
+Osteoarthritis,Cancer Breast,9474,37,0.00391,0.5868,0.4974,0.6853,0.5194,0.0674,True,0.00389,37,55.31,0.669,0.454,0.884,below_1

@@ -1,0 +1,23 @@
+{
+  "tree": "c4_survey_excl_tuned",
+  "strata": [
+    "Female_under60_abacus_poc",
+    "Female_under60_srdc_poc",
+    "Female_60plus_abacus_poc",
+    "Female_60plus_srdc_poc",
+    "Male_under60_abacus_poc",
+    "Male_under60_srdc_poc",
+    "Male_60plus_abacus_poc",
+    "Male_60plus_srdc_poc"
+  ],
+  "top_k": 10,
+  "registry_ascertained": [
+    "Cancer Breast",
+    "Cancer Colorectal",
+    "Cancer Lung",
+    "Cancer Other",
+    "Cancer Prostate"
+  ],
+  "timestamp": "2026-09-08T11:33:18",
+  "notes": "O/E interpretation: values near 1.0 mean the pair is fully explained by shared risk factors captured in the singleton predictions. Values well above 1.0 indicate residual co-occurrence beyond shared features. Values well BELOW 1.0 in the both_hospital tier are ascertainment artifacts (Deviation 7), not evidence of independence. The both_registry tier is the interpretable slice."
+}

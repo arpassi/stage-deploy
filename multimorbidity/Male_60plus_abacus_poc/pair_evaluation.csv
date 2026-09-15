@@ -1,0 +1,29 @@
+disease_j,disease_k,n_valid,n_joint_events,pair_prevalence,auc_joint,auc_ci_lo,auc_ci_hi,auc_age_only,auc_gain_over_age,beats_age_baseline,brier_joint,O,E,OE_ratio,OE_ci_lo,OE_ci_hi,OE_excludes_1
+Diabetes Mellitus,Atrial Fibrillation,9172,35,0.00382,0.8492,0.7917,0.8944,0.6213,0.2279,True,0.00379,35,52.69,0.664,0.454,0.895,below_1
+Heart Failure,Peripheral Vascular Disease,10378,30,0.00289,0.8242,0.7554,0.8832,0.6334,0.1908,True,0.00287,30,20.14,1.49,0.998,2.024,includes_1
+Atrial Fibrillation,Chronic Kidney Disease,9391,35,0.00373,0.8156,0.7473,0.8814,0.6419,0.1737,True,0.00366,35,41.77,0.838,0.57,1.123,includes_1
+Atrial Fibrillation,COPD,7923,33,0.00417,0.8153,0.736,0.8832,0.6147,0.2006,True,0.00413,33,39.15,0.843,0.561,1.14,includes_1
+Coronary Heart Disease,COPD,7104,35,0.00493,0.8126,0.7319,0.8891,0.5342,0.2784,True,0.00485,35,35.48,0.987,0.664,1.314,includes_1
+Atrial Fibrillation,Substance Use Disorder,10155,35,0.00345,0.8108,0.7307,0.8848,0.5383,0.2725,True,0.00343,35,28.1,1.246,0.861,1.674,includes_1
+Diabetes Mellitus,Coronary Heart Disease,8327,44,0.00528,0.8039,0.7379,0.8663,0.5535,0.2504,True,0.00518,44,50.13,0.878,0.64,1.141,includes_1
+Heart Failure,Chronic Kidney Disease,9593,33,0.00344,0.7708,0.6809,0.8518,0.6214,0.1494,True,0.00341,33,24.47,1.349,0.892,1.829,includes_1
+Atrial Fibrillation,Peripheral Vascular Disease,10143,48,0.00473,0.7462,0.6838,0.8058,0.6189,0.1273,True,0.0047,48,32.15,1.493,1.091,1.951,above_1
+Coronary Heart Disease,Peripheral Vascular Disease,9104,44,0.00483,0.7373,0.6677,0.807,0.6168,0.1205,True,0.00479,44,29.22,1.506,1.092,1.957,above_1
+Hyperlipidemia,Osteoarthritis,5766,34,0.0059,0.7184,0.6287,0.8028,0.5027,0.2157,True,0.00596,34,87.4,0.389,0.265,0.516,below_1
+Heart Failure,Atrial Fibrillation,10191,132,0.01295,0.7043,0.6582,0.7523,0.6002,0.1041,True,0.01272,132,63.9,2.066,1.715,2.429,above_1
+Atrial Fibrillation,Osteoarthritis,8992,82,0.00912,0.7037,0.6515,0.758,0.5483,0.1554,True,0.00903,82,126.01,0.651,0.517,0.791,below_1
+Coronary Heart Disease,Heart Failure,9147,101,0.01104,0.6958,0.642,0.7468,0.5992,0.0966,True,0.01088,101,56.39,1.791,1.451,2.14,above_1
+Coronary Heart Disease,Osteoarthritis,8063,75,0.0093,0.6826,0.6222,0.7414,0.5325,0.1501,True,0.00923,75,121.45,0.618,0.481,0.758,below_1
+Coronary Heart Disease,Cancer Other,8604,47,0.00546,0.6605,0.5831,0.7388,0.6575,0.003,True,0.00542,47,63.85,0.736,0.544,0.946,below_1
+Coronary Heart Disease,Stroke Cerebrovascular,8811,62,0.00704,0.6513,0.5824,0.7164,0.59,0.0613,True,0.00696,62,48.78,1.271,0.953,1.584,includes_1
+Coronary Heart Disease,Atrial Fibrillation,8938,143,0.016,0.6452,0.599,0.6896,0.5719,0.0733,True,0.01568,143,106.83,1.339,1.123,1.552,above_1
+Osteoarthritis,Cancer Other,8754,41,0.00468,0.6419,0.5535,0.7238,0.5631,0.0788,True,0.00468,41,75.63,0.542,0.384,0.712,below_1
+Hyperlipidemia,Coronary Heart Disease,6346,119,0.01875,0.6378,0.5904,0.6851,0.4915,0.1463,True,0.01838,119,87.33,1.363,1.123,1.608,above_1
+Stroke Cerebrovascular,Atrial Fibrillation,9831,81,0.00824,0.6286,0.5678,0.6903,0.6006,0.028,True,0.00816,81,52.19,1.552,1.227,1.883,above_1
+Hypertension,Coronary Heart Disease,3433,55,0.01602,0.6282,0.5629,0.7012,0.4755,0.1527,True,0.01581,55,48.64,1.131,0.837,1.44,includes_1
+Stroke Cerebrovascular,Cancer Other,9545,39,0.00409,0.6258,0.5316,0.7159,0.6002,0.0256,True,0.00406,39,30.59,1.275,0.902,1.688,includes_1
+Atrial Fibrillation,Cancer Prostate,9976,35,0.00351,0.6078,0.5141,0.7034,0.5598,0.048,True,0.0035,35,57.78,0.606,0.402,0.815,below_1
+Cancer Prostate,Cancer Other,9725,37,0.0038,0.5825,0.5024,0.6597,0.6216,-0.0391,False,0.00379,37,36.27,1.02,0.69,1.349,includes_1
+Osteoarthritis,Cancer Prostate,9049,42,0.00464,0.5756,0.4858,0.6606,0.5919,-0.0163,False,0.00463,42,67.51,0.622,0.439,0.815,below_1
+Atrial Fibrillation,Cancer Other,9664,55,0.00569,0.5648,0.4868,0.6428,0.5327,0.0321,True,0.00567,55,67.04,0.82,0.614,1.042,includes_1
+Hyperlipidemia,Atrial Fibrillation,6403,44,0.00687,0.5281,0.4415,0.6124,0.4965,0.0316,True,0.00696,44,77.18,0.57,0.413,0.745,below_1

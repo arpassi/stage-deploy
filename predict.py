@@ -20,9 +20,9 @@ training modules (c4_helpers / preprocessing):
   outputs/c4_production/feature_selection/{stem}/feature_masks.json
   outputs/c4_production/train/{stem}/models/{disease}.joblib
   outputs/c4_production/train/{stem}/calibrators/{disease}.joblib
-  outputs/c4_production/sud_augmentation/{stem}/models/{Substance_Use_Disorder.joblib,
+  outputs/c4_production/sud_augmentation/{stem}/models/{Substance Use Disorder.joblib,
         deployment_metadata.json}
-  outputs/c4_production/sud_augmentation/{stem}/calibrators/Substance_Use_Disorder.joblib
+  outputs/c4_production/sud_augmentation/{stem}/calibrators/Substance Use Disorder.joblib
 
 Transform chain (mirrors preprocessing steps 4–7 exactly, applied not fitted):
   capper (clip) → missingness indicators + MICE impute → OHE encode → scale.
@@ -66,12 +66,15 @@ from scipy.special import logit as _logit
 # Optional — only loaded when --explain is used
 _shap = None
 
+
 def _get_shap():
     global _shap
     if _shap is None:
         import shap
+
         _shap = shap
     return _shap
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # §1  DEFAULT LOCAL PATHS  (overridable; no server paths)
@@ -83,6 +86,11 @@ _SUD_NAME = "Substance Use Disorder"
 # Deployment-scope exclusions (distinct from training-level exclusions such as
 # Asthma/Epilepsy/Anxiety). These are withheld in deployment outputs by
 # default, but can be re-enabled via include_excluded for research runs.
+# Canonical definition is c4_helpers.DEPLOY_EXCLUDED_DISEASES. Duplicated here
+# on purpose: deploy/ must run from a bare clone with no pipeline/ present, so
+# this file imports nothing from the pipeline. prep_deploy/test_deploy.py
+# asserts the two lists agree whenever pipeline/ IS available, which is where
+# drift gets caught.
 DEPLOY_EXCLUDED_DISEASES: frozenset[str] = frozenset(
     {
         "Dementia (ICD10)",
@@ -92,7 +100,22 @@ DEPLOY_EXCLUDED_DISEASES: frozenset[str] = frozenset(
         "Severe Mental Illness",
     }
 )
+_DEPLOYED_SUFFIX = "_survey_excl"
 _CLIP_EPS = 1e-7
+
+
+def _base_label(label: str) -> str:
+    """Strip the prevalent-exclusion tier suffix from a pipeline label.
+
+    Model files and feature masks are keyed on the full label
+    ("Hypertension_survey_excl"); output columns and the SUD comparison use
+    the clinical name ("Hypertension").
+    """
+    if label.endswith(_DEPLOYED_SUFFIX):
+        return label[: -len(_DEPLOYED_SUFFIX)]
+    return label
+
+
 _ID_CANDIDATES = ("persona_id", "persona", "name", "id", "eid")
 _STRATUM_COLS = ("stratum", "STRATA", "strata")
 _VALID_FEATURE_SETS = ("srdc_poc", "abacus_poc")
@@ -170,11 +193,11 @@ class StagePredictor:
         )
         # tuned singletons
         self.train_dir = (
-            Path(train_dir) if train_dir else root / "outputs" / "c4_production_tuned"
+            Path(train_dir) if train_dir else root / "outputs" / "c4_survey_excl_tuned"
         )
         # feature masks + SUD augmentation chain (baseline tree only)
         self.models_dir = (
-            Path(models_dir) if models_dir else root / "outputs" / "c4_production"
+            Path(models_dir) if models_dir else root / "outputs" / "c4_survey_excl"
         )
 
         self._load_preprocessing_artifacts()
@@ -182,9 +205,7 @@ class StagePredictor:
         self._discover_models()
 
         self._log(f"{self.stratum} | artifacts: {self.artifacts_dir}")
-        self._log(
-            f"  singletons (TUNED)   : {self.train_dir / 'train' / self.stratum}"
-        )
+        self._log(f"  singletons (TUNED)   : {self.train_dir / 'train' / self.stratum}")
         self._log(
             f"  feature masks        : "
             f"{self.models_dir / 'feature_selection' / self.stratum}"
@@ -192,8 +213,7 @@ class StagePredictor:
         if _SUD_NAME not in self.excluded:
             sud_chain = self.models_dir / "sud_augmentation" / self.stratum
             self._log(
-                f"  SUD chain (TUNED XGB): {sud_chain}  "
-                f"arm=augmented_depfeatures_k50"
+                f"  SUD chain (TUNED XGB): {sud_chain}  arm=augmented_depfeatures_k50"
             )
 
     # ── logging ──────────────────────────────────────────────────────────────
@@ -249,14 +269,28 @@ class StagePredictor:
                 f"falling back to the baseline tree is not permitted."
             )
 
-        all_singletons = sorted(p.stem for p in self.train_models_dir.glob("*.joblib"))
-        self.singleton_diseases = [d for d in all_singletons if d not in self.excluded]
-        n_skipped = len(all_singletons) - len(self.singleton_diseases)
+        # The train tree carries all three prevalent-exclusion tiers
+        # (bare = ICD-only, _med_excl, _survey_excl). Only survey_excl is
+        # deployable: the other two score higher solely because self-reported
+        # prevalent cases leak in as positives. Matching DEPLOY_EXCLUDED_
+        # DISEASES against the raw stem also fails on suffixed labels, so
+        # "Dementia (ICD10)_survey_excl" would slip through the exclusion.
+        all_stems = sorted(p.stem for p in self.train_models_dir.glob("*.joblib"))
+        deployed = [s for s in all_stems if s.endswith(_DEPLOYED_SUFFIX)]
+        if not deployed:
+            raise FileNotFoundError(
+                f"No {_DEPLOYED_SUFFIX} models in {self.train_models_dir}. "
+                f"This tree is not a deployable survey-exclusion run."
+            )
+        self.singleton_diseases = [
+            s for s in deployed if s[: -len(_DEPLOYED_SUFFIX)] not in self.excluded
+        ]
+        n_skipped = len(deployed) - len(self.singleton_diseases)
 
         # Augmented production SUD chain (mandatory unless SUD is excluded).
         sud_dir = self.models_dir / "sud_augmentation" / self.stratum
-        self.sud_model_path = sud_dir / "models" / "Substance_Use_Disorder.joblib"
-        self.sud_cal_path = sud_dir / "calibrators" / "Substance_Use_Disorder.joblib"
+        self.sud_model_path = sud_dir / "models" / "Substance Use Disorder.joblib"
+        self.sud_cal_path = sud_dir / "calibrators" / "Substance Use Disorder.joblib"
         sud_meta_p = sud_dir / "models" / "deployment_metadata.json"
         self.sud_feature_names: list[str] | None = None
         if _SUD_NAME not in self.excluded:
@@ -429,23 +463,29 @@ class StagePredictor:
         out: dict[str, np.ndarray] = {"persona": ids}
         self.calibration_status: dict[str, bool] = {}
 
-        for disease in self.singleton_diseases:
+        for label in self.singleton_diseases:
+            # `label` addresses files and feature masks; `disease` is the
+            # clinical name used for output columns and the SUD comparison.
+            # Comparing the suffixed label against _SUD_NAME never matched,
+            # so the plain LightGBM SUD singleton was scored alongside the
+            # augmented XGBoost chain and both reached the output.
+            disease = _base_label(label)
             if disease == _SUD_NAME:
                 continue  # served by the augmented chain below
-            used = self.feature_masks.get(disease)
+            used = self.feature_masks.get(label)
             if used is None:
-                self._log(f"  {disease}: no feature mask — skipped")
+                self._log(f"  {label}: no feature mask — skipped")
                 continue
             try:
                 vals, calibrated = self._score_model(
-                    self.train_models_dir / f"{disease}.joblib",
-                    self.train_cal_dir / f"{disease}.joblib",
+                    self.train_models_dir / f"{label}.joblib",
+                    self.train_cal_dir / f"{label}.joblib",
                     used,
                     X_model,
                     disease,
                 )
             except Exception as exc:
-                self._log(f"  ERROR {disease}: {exc}")
+                self._log(f"  ERROR {label}: {exc}")
                 continue
             out[disease] = vals
             if emit_raw and not calibrated:
@@ -494,14 +534,15 @@ class StagePredictor:
         results: dict[str, dict] = {}
 
         # Singleton diseases
-        for disease in self.singleton_diseases:
+        for label in self.singleton_diseases:
+            disease = _base_label(label)
             if disease == _SUD_NAME:
                 continue
-            used = self.feature_masks.get(disease)
+            used = self.feature_masks.get(label)
             if used is None:
                 continue
 
-            model_path = self.train_models_dir / f"{disease}.joblib"
+            model_path = self.train_models_dir / f"{label}.joblib"
             if not model_path.exists():
                 continue
 
@@ -576,8 +617,10 @@ class StagePredictor:
             for disease, data in results.items():
                 tag = disease.replace(" ", "_")
                 np.save(str(shap_dir / f"{tag}_shap_values.npy"), data["shap_values"])
-                np.save(str(shap_dir / f"{tag}_expected_value.npy"),
-                        np.array(data["expected_value"]))
+                np.save(
+                    str(shap_dir / f"{tag}_expected_value.npy"),
+                    np.array(data["expected_value"]),
+                )
                 with open(shap_dir / f"{tag}_feature_names.json", "w") as fh:
                     json.dump(data["feature_names"], fh, indent=2)
             self._log(f"  SHAP saved: {len(results)} diseases → {shap_dir}")
@@ -659,8 +702,10 @@ def predict_personas(
         frames.append(preds)
 
         if explain:
-            shap_out = explain_dir if explain_dir else (
-                (out_path.parent if out_path else personas_csv.parent) / stem
+            shap_out = (
+                explain_dir
+                if explain_dir
+                else ((out_path.parent if out_path else personas_csv.parent) / stem)
             )
             cache[stem].explain(block, out_dir=shap_out)
 

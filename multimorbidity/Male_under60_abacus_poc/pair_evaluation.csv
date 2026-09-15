@@ -1,0 +1,7 @@
+disease_j,disease_k,n_valid,n_joint_events,pair_prevalence,auc_joint,auc_ci_lo,auc_ci_hi,auc_age_only,auc_gain_over_age,beats_age_baseline,brier_joint,O,E,OE_ratio,OE_ci_lo,OE_ci_hi,OE_excludes_1
+Diabetes Mellitus,Coronary Heart Disease,13360,36,0.00269,0.7829,0.7115,0.8494,0.5749,0.208,True,0.00269,36,28.77,1.251,0.855,1.705,includes_1
+Heart Failure,Atrial Fibrillation,14501,44,0.00303,0.7319,0.6529,0.7973,0.627,0.1049,True,0.00302,44,10.63,4.141,2.974,5.441,above_1
+Hypertension,Coronary Heart Disease,7942,44,0.00554,0.7078,0.63,0.7786,0.5802,0.1276,True,0.00551,44,23.74,1.854,1.34,2.43,above_1
+Coronary Heart Disease,Atrial Fibrillation,13951,50,0.00358,0.7019,0.6332,0.7657,0.6351,0.0668,True,0.00357,50,28.32,1.766,1.325,2.298,above_1
+Hyperlipidemia,Coronary Heart Disease,11565,116,0.01003,0.6909,0.6438,0.7348,0.6535,0.0374,True,0.00996,116,36.9,3.143,2.592,3.728,above_1
+Coronary Heart Disease,Heart Failure,14030,53,0.00378,0.6752,0.6023,0.75,0.6178,0.0574,True,0.00377,53,15.68,3.381,2.482,4.396,above_1
