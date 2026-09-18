@@ -14,7 +14,12 @@ Disease sets match deploy/model_card_pipeline.json: 23 diseases for the Female
 strata and Male_60plus, 21 for Male_under60. Substance Use Disorder is scored
 through the augmented XGBoost chain, all others through LightGBM singletons.
 
-Risk output is rank-only. The probabilities are not validated for absolute-risk
-display; see the model card's deployment_policy.risk_output_rationale.
+Risk output is rates_indicative: the calibrated probabilities are displayed and
+flagged as indicative, not withheld. They are not yet validated for absolute-risk
+interpretation — observed-to-expected runs ~0.5-0.6 for hospital-ascertained
+conditions on the test partition, an ascertainment deficit rather than model
+miscalibration. Multimorbidity counts and pair scores remain rank_only, because
+the error compounds across conditions. See the model card's
+deployment_policy.risk_output_rationale and multimorbidity.risk_output_rationale.
 
 This package contains NO real UK Biobank participants.

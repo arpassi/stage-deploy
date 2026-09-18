@@ -11,6 +11,13 @@
     "Male_60plus_srdc_poc"
   ],
   "top_k": 10,
+  "n_boot": 1000,
+  "evidence_tiers": {
+    "suppressed": "< 5 co-events",
+    "low_n": "5-29 co-events",
+    "validated": ">= 30 co-events",
+    "min_valid_persons": 100
+  },
   "registry_ascertained": [
     "Cancer Breast",
     "Cancer Colorectal",
@@ -18,6 +25,6 @@
     "Cancer Other",
     "Cancer Prostate"
   ],
-  "timestamp": "2026-09-08T11:33:18",
+  "timestamp": "2026-09-17T11:54:44",
   "notes": "O/E interpretation: values near 1.0 mean the pair is fully explained by shared risk factors captured in the singleton predictions. Values well above 1.0 indicate residual co-occurrence beyond shared features. Values well BELOW 1.0 in the both_hospital tier are ascertainment artifacts (Deviation 7), not evidence of independence. The both_registry tier is the interpretable slice."
 }

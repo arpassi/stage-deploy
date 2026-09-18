@@ -1,29 +1,254 @@
-disease_j,disease_k,n_valid,n_joint_events,pair_prevalence,auc_joint,auc_ci_lo,auc_ci_hi,auc_age_only,auc_gain_over_age,beats_age_baseline,brier_joint,O,E,OE_ratio,OE_ci_lo,OE_ci_hi,OE_excludes_1
-Diabetes Mellitus,Atrial Fibrillation,9172,35,0.00382,0.8492,0.7917,0.8944,0.6213,0.2279,True,0.00379,35,52.69,0.664,0.454,0.895,below_1
-Heart Failure,Peripheral Vascular Disease,10378,30,0.00289,0.8242,0.7554,0.8832,0.6334,0.1908,True,0.00287,30,20.14,1.49,0.998,2.024,includes_1
-Atrial Fibrillation,Chronic Kidney Disease,9391,35,0.00373,0.8156,0.7473,0.8814,0.6419,0.1737,True,0.00366,35,41.77,0.838,0.57,1.123,includes_1
-Atrial Fibrillation,COPD,7923,33,0.00417,0.8153,0.736,0.8832,0.6147,0.2006,True,0.00413,33,39.15,0.843,0.561,1.14,includes_1
-Coronary Heart Disease,COPD,7104,35,0.00493,0.8126,0.7319,0.8891,0.5342,0.2784,True,0.00485,35,35.48,0.987,0.664,1.314,includes_1
-Atrial Fibrillation,Substance Use Disorder,10155,35,0.00345,0.8108,0.7307,0.8848,0.5383,0.2725,True,0.00343,35,28.1,1.246,0.861,1.674,includes_1
-Diabetes Mellitus,Coronary Heart Disease,8327,44,0.00528,0.8039,0.7379,0.8663,0.5535,0.2504,True,0.00518,44,50.13,0.878,0.64,1.141,includes_1
-Heart Failure,Chronic Kidney Disease,9593,33,0.00344,0.7708,0.6809,0.8518,0.6214,0.1494,True,0.00341,33,24.47,1.349,0.892,1.829,includes_1
-Atrial Fibrillation,Peripheral Vascular Disease,10143,48,0.00473,0.7462,0.6838,0.8058,0.6189,0.1273,True,0.0047,48,32.15,1.493,1.091,1.951,above_1
-Coronary Heart Disease,Peripheral Vascular Disease,9104,44,0.00483,0.7373,0.6677,0.807,0.6168,0.1205,True,0.00479,44,29.22,1.506,1.092,1.957,above_1
-Hyperlipidemia,Osteoarthritis,5766,34,0.0059,0.7184,0.6287,0.8028,0.5027,0.2157,True,0.00596,34,87.4,0.389,0.265,0.516,below_1
-Heart Failure,Atrial Fibrillation,10191,132,0.01295,0.7043,0.6582,0.7523,0.6002,0.1041,True,0.01272,132,63.9,2.066,1.715,2.429,above_1
-Atrial Fibrillation,Osteoarthritis,8992,82,0.00912,0.7037,0.6515,0.758,0.5483,0.1554,True,0.00903,82,126.01,0.651,0.517,0.791,below_1
-Coronary Heart Disease,Heart Failure,9147,101,0.01104,0.6958,0.642,0.7468,0.5992,0.0966,True,0.01088,101,56.39,1.791,1.451,2.14,above_1
-Coronary Heart Disease,Osteoarthritis,8063,75,0.0093,0.6826,0.6222,0.7414,0.5325,0.1501,True,0.00923,75,121.45,0.618,0.481,0.758,below_1
-Coronary Heart Disease,Cancer Other,8604,47,0.00546,0.6605,0.5831,0.7388,0.6575,0.003,True,0.00542,47,63.85,0.736,0.544,0.946,below_1
-Coronary Heart Disease,Stroke Cerebrovascular,8811,62,0.00704,0.6513,0.5824,0.7164,0.59,0.0613,True,0.00696,62,48.78,1.271,0.953,1.584,includes_1
-Coronary Heart Disease,Atrial Fibrillation,8938,143,0.016,0.6452,0.599,0.6896,0.5719,0.0733,True,0.01568,143,106.83,1.339,1.123,1.552,above_1
-Osteoarthritis,Cancer Other,8754,41,0.00468,0.6419,0.5535,0.7238,0.5631,0.0788,True,0.00468,41,75.63,0.542,0.384,0.712,below_1
-Hyperlipidemia,Coronary Heart Disease,6346,119,0.01875,0.6378,0.5904,0.6851,0.4915,0.1463,True,0.01838,119,87.33,1.363,1.123,1.608,above_1
-Stroke Cerebrovascular,Atrial Fibrillation,9831,81,0.00824,0.6286,0.5678,0.6903,0.6006,0.028,True,0.00816,81,52.19,1.552,1.227,1.883,above_1
-Hypertension,Coronary Heart Disease,3433,55,0.01602,0.6282,0.5629,0.7012,0.4755,0.1527,True,0.01581,55,48.64,1.131,0.837,1.44,includes_1
-Stroke Cerebrovascular,Cancer Other,9545,39,0.00409,0.6258,0.5316,0.7159,0.6002,0.0256,True,0.00406,39,30.59,1.275,0.902,1.688,includes_1
-Atrial Fibrillation,Cancer Prostate,9976,35,0.00351,0.6078,0.5141,0.7034,0.5598,0.048,True,0.0035,35,57.78,0.606,0.402,0.815,below_1
-Cancer Prostate,Cancer Other,9725,37,0.0038,0.5825,0.5024,0.6597,0.6216,-0.0391,False,0.00379,37,36.27,1.02,0.69,1.349,includes_1
-Osteoarthritis,Cancer Prostate,9049,42,0.00464,0.5756,0.4858,0.6606,0.5919,-0.0163,False,0.00463,42,67.51,0.622,0.439,0.815,below_1
-Atrial Fibrillation,Cancer Other,9664,55,0.00569,0.5648,0.4868,0.6428,0.5327,0.0321,True,0.00567,55,67.04,0.82,0.614,1.042,includes_1
-Hyperlipidemia,Atrial Fibrillation,6403,44,0.00687,0.5281,0.4415,0.6124,0.4965,0.0316,True,0.00696,44,77.18,0.57,0.413,0.745,below_1
+disease_j,disease_k,evidence_tier,n_valid,n_joint_events,pair_prevalence,O,E,OE_ratio,OE_ci_lo,OE_ci_hi,OE_ci_method,OE_excludes_1,auc_joint,auc_ci_lo,auc_ci_hi,auc_age_only,auc_gain_over_age,beats_age_baseline,brier_joint
+Diabetes Mellitus,Atrial Fibrillation,validated,9172,35,0.00382,35,52.69,0.664,0.454,0.888,bootstrap,below_1,0.8492,0.7902,0.8976,0.6213,0.2279,True,0.003789
+Heart Failure,Peripheral Vascular Disease,validated,10378,30,0.00289,30,20.14,1.49,1.005,2.042,bootstrap,above_1,0.8242,0.7566,0.885,0.6334,0.1908,True,0.002873
+Atrial Fibrillation,Chronic Kidney Disease,validated,9391,35,0.00373,35,41.77,0.838,0.574,1.111,bootstrap,includes_1,0.8156,0.7416,0.8795,0.6419,0.1737,True,0.003655
+Atrial Fibrillation,COPD,validated,7923,33,0.00417,33,39.15,0.843,0.552,1.138,bootstrap,includes_1,0.8153,0.7352,0.8825,0.6147,0.2006,True,0.004134
+Coronary Heart Disease,COPD,validated,7104,35,0.00493,35,35.48,0.987,0.67,1.314,bootstrap,includes_1,0.8126,0.7332,0.8839,0.5342,0.2784,True,0.00485
+Atrial Fibrillation,Substance Use Disorder,validated,10155,35,0.00345,35,28.1,1.246,0.861,1.671,bootstrap,includes_1,0.8108,0.7301,0.8795,0.5383,0.2725,True,0.003426
+Diabetes Mellitus,Coronary Heart Disease,validated,8327,44,0.00528,44,50.13,0.878,0.643,1.154,bootstrap,includes_1,0.8039,0.7373,0.8663,0.5535,0.2504,True,0.005184
+Heart Failure,Chronic Kidney Disease,validated,9593,33,0.00344,33,24.47,1.349,0.927,1.824,bootstrap,includes_1,0.7708,0.6809,0.8494,0.6214,0.1494,True,0.003405
+Atrial Fibrillation,Peripheral Vascular Disease,validated,10143,48,0.00473,48,32.15,1.493,1.103,1.956,bootstrap,above_1,0.7462,0.6863,0.8054,0.6189,0.1273,True,0.004701
+Coronary Heart Disease,Peripheral Vascular Disease,validated,9104,44,0.00483,44,29.22,1.506,1.077,1.975,bootstrap,above_1,0.7373,0.6677,0.8038,0.6168,0.1205,True,0.004794
+Hyperlipidemia,Osteoarthritis,validated,5766,34,0.0059,34,87.4,0.389,0.263,0.511,bootstrap,below_1,0.7184,0.6354,0.8039,0.5027,0.2157,True,0.00596
+Heart Failure,Atrial Fibrillation,validated,10191,132,0.01295,132,63.9,2.066,1.713,2.423,bootstrap,above_1,0.7043,0.6568,0.7523,0.6002,0.1041,True,0.012717
+Atrial Fibrillation,Osteoarthritis,validated,8992,82,0.00912,82,126.01,0.651,0.517,0.801,bootstrap,below_1,0.7037,0.6518,0.7584,0.5483,0.1554,True,0.009034
+Coronary Heart Disease,Heart Failure,validated,9147,101,0.01104,101,56.39,1.791,1.449,2.132,bootstrap,above_1,0.6958,0.6428,0.7459,0.5992,0.0966,True,0.010878
+Coronary Heart Disease,Osteoarthritis,validated,8063,75,0.0093,75,121.45,0.618,0.482,0.753,bootstrap,below_1,0.6826,0.6224,0.7449,0.5325,0.1501,True,0.009227
+Coronary Heart Disease,Cancer Other,validated,8604,47,0.00546,47,63.85,0.736,0.554,0.928,bootstrap,below_1,0.6605,0.5812,0.7364,0.6575,0.003,True,0.005423
+Coronary Heart Disease,Stroke Cerebrovascular,validated,8811,62,0.00704,62,48.78,1.271,0.952,1.584,bootstrap,includes_1,0.6513,0.5814,0.7171,0.59,0.0613,True,0.006961
+Coronary Heart Disease,Atrial Fibrillation,validated,8938,143,0.016,143,106.83,1.339,1.119,1.543,bootstrap,above_1,0.6452,0.5962,0.6912,0.5719,0.0733,True,0.015684
+Osteoarthritis,Cancer Other,validated,8754,41,0.00468,41,75.63,0.542,0.393,0.701,bootstrap,below_1,0.6419,0.5527,0.7267,0.5631,0.0788,True,0.004677
+Hyperlipidemia,Coronary Heart Disease,validated,6346,119,0.01875,119,87.33,1.363,1.123,1.608,bootstrap,above_1,0.6378,0.5938,0.685,0.4915,0.1463,True,0.018375
+Stroke Cerebrovascular,Atrial Fibrillation,validated,9831,81,0.00824,81,52.19,1.552,1.227,1.883,bootstrap,above_1,0.6286,0.5703,0.6931,0.6006,0.028,True,0.008163
+Hypertension,Coronary Heart Disease,validated,3433,55,0.01602,55,48.64,1.131,0.836,1.418,bootstrap,includes_1,0.6282,0.563,0.7028,0.4755,0.1527,True,0.015808
+Stroke Cerebrovascular,Cancer Other,validated,9545,39,0.00409,39,30.59,1.275,0.914,1.704,bootstrap,includes_1,0.6258,0.5345,0.7143,0.6002,0.0256,True,0.004063
+Atrial Fibrillation,Cancer Prostate,validated,9976,35,0.00351,35,57.78,0.606,0.398,0.827,bootstrap,below_1,0.6078,0.5127,0.7071,0.5598,0.048,True,0.003501
+Cancer Prostate,Cancer Other,validated,9725,37,0.0038,37,36.27,1.02,0.689,1.348,bootstrap,includes_1,0.5825,0.5024,0.6639,0.6216,-0.0391,False,0.003789
+Osteoarthritis,Cancer Prostate,validated,9049,42,0.00464,42,67.51,0.622,0.443,0.814,bootstrap,below_1,0.5756,0.4877,0.6594,0.5919,-0.0163,False,0.00463
+Atrial Fibrillation,Cancer Other,validated,9664,55,0.00569,55,67.04,0.82,0.613,1.035,bootstrap,includes_1,0.5648,0.486,0.6488,0.5327,0.0321,True,0.005665
+Hyperlipidemia,Atrial Fibrillation,validated,6403,44,0.00687,44,77.18,0.57,0.413,0.733,bootstrap,below_1,0.5281,0.4444,0.6109,0.4965,0.0316,True,0.006955
+Stroke Cerebrovascular,Substance Use Disorder,low_n,10038,29,0.00289,29,13.11,2.211,1.481,3.176,poisson_exact,above_1,,,,,,,
+Diabetes Mellitus,Cancer Other,low_n,8912,28,0.00314,28,30.48,0.919,0.61,1.328,poisson_exact,includes_1,,,,,,,
+Coronary Heart Disease,Cancer Prostate,low_n,8886,28,0.00315,28,57.66,0.486,0.323,0.702,poisson_exact,below_1,,,,,,,
+Hypertension,Atrial Fibrillation,low_n,3497,27,0.00772,27,43.26,0.624,0.411,0.908,poisson_exact,below_1,,,,,,,
+Coronary Heart Disease,Chronic Kidney Disease,low_n,8462,27,0.00319,27,38.55,0.7,0.462,1.019,poisson_exact,includes_1,,,,,,,
+Stroke Cerebrovascular,Heart Failure,low_n,10028,27,0.00269,27,28.72,0.94,0.62,1.368,poisson_exact,includes_1,,,,,,,
+Heart Failure,Osteoarthritis,low_n,9197,27,0.00294,27,65.83,0.41,0.27,0.597,poisson_exact,below_1,,,,,,,
+Diabetes Mellitus,Osteoarthritis,low_n,8311,26,0.00313,26,58.48,0.445,0.29,0.651,poisson_exact,below_1,,,,,,,
+Hyperlipidemia,Stroke Cerebrovascular,low_n,6424,26,0.00405,26,36.46,0.713,0.466,1.045,poisson_exact,includes_1,,,,,,,
+Hypertension,Stroke Cerebrovascular,low_n,3477,25,0.00719,25,20.86,1.199,0.776,1.769,poisson_exact,includes_1,,,,,,,
+Heart Failure,COPD,low_n,8097,25,0.00309,25,24.65,1.014,0.656,1.497,poisson_exact,includes_1,,,,,,,
+Hypertension,Osteoarthritis,low_n,3187,24,0.00753,24,48.42,0.496,0.318,0.737,poisson_exact,below_1,,,,,,,
+Stroke Cerebrovascular,Osteoarthritis,low_n,8888,24,0.0027,24,56.88,0.422,0.27,0.628,poisson_exact,below_1,,,,,,,
+Atrial Fibrillation,Cancer Lung,low_n,10281,24,0.00233,24,17.83,1.346,0.863,2.003,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Heart Failure,low_n,6526,23,0.00352,23,38.76,0.593,0.376,0.89,poisson_exact,below_1,,,,,,,
+Substance Use Disorder,Cancer Other,low_n,9892,23,0.00233,23,15.46,1.488,0.943,2.233,poisson_exact,includes_1,,,,,,,
+Stroke Cerebrovascular,Peripheral Vascular Disease,low_n,10032,22,0.00219,22,15.56,1.414,0.886,2.141,poisson_exact,includes_1,,,,,,,
+Diabetes Mellitus,Heart Failure,low_n,9382,21,0.00224,21,31.23,0.672,0.416,1.028,poisson_exact,includes_1,,,,,,,
+Heart Failure,Cancer Other,low_n,9875,21,0.00213,21,34.75,0.604,0.374,0.924,poisson_exact,below_1,,,,,,,
+Diabetes Mellitus,Stroke Cerebrovascular,low_n,9075,19,0.00209,19,23.55,0.807,0.486,1.26,poisson_exact,includes_1,,,,,,,
+Diabetes Mellitus,Cancer Prostate,low_n,9200,19,0.00207,19,25.01,0.76,0.457,1.186,poisson_exact,includes_1,,,,,,,
+Coronary Heart Disease,Substance Use Disorder,low_n,9063,19,0.0021,19,23.95,0.793,0.478,1.239,poisson_exact,includes_1,,,,,,,
+Peripheral Vascular Disease,Osteoarthritis,low_n,9192,19,0.00207,19,33.92,0.56,0.337,0.875,poisson_exact,below_1,,,,,,,
+COPD,Cancer Lung,low_n,8209,19,0.00231,19,7.27,2.612,1.573,4.08,poisson_exact,above_1,,,,,,,
+COPD,Cancer Other,low_n,7722,19,0.00246,19,22.07,0.861,0.518,1.344,poisson_exact,includes_1,,,,,,,
+Substance Use Disorder,Osteoarthritis,low_n,9199,18,0.00196,18,28.81,0.625,0.37,0.987,poisson_exact,below_1,,,,,,,
+Cancer Colorectal,Cancer Other,low_n,9929,18,0.00181,18,13.66,1.318,0.781,2.083,poisson_exact,includes_1,,,,,,,
+Coronary Heart Disease,Anxiety,low_n,9102,17,0.00187,17,26.05,0.652,0.38,1.045,poisson_exact,includes_1,,,,,,,
+Chronic Kidney Disease,Cancer Other,low_n,9144,17,0.00186,17,24.09,0.706,0.411,1.13,poisson_exact,includes_1,,,,,,,
+Hypertension,Cancer Prostate,low_n,3453,16,0.00463,16,24.57,0.651,0.372,1.057,poisson_exact,includes_1,,,,,,,
+Diabetes Mellitus,Hyperlipidemia,low_n,6276,16,0.00255,16,39.03,0.41,0.234,0.666,poisson_exact,below_1,,,,,,,
+Coronary Heart Disease,Cancer Lung,low_n,9170,16,0.00174,16,16.86,0.949,0.543,1.541,poisson_exact,includes_1,,,,,,,
+Stroke Cerebrovascular,Cancer Prostate,low_n,9848,16,0.00162,16,26.68,0.6,0.343,0.974,poisson_exact,below_1,,,,,,,
+Diabetes Mellitus,Chronic Kidney Disease,low_n,8727,15,0.00172,15,20.25,0.741,0.415,1.222,poisson_exact,includes_1,,,,,,,
+Stroke Cerebrovascular,Cancer Lung,low_n,10158,15,0.00148,15,8.78,1.709,0.956,2.818,poisson_exact,includes_1,,,,,,,
+COPD,Substance Use Disorder,low_n,8134,15,0.00184,15,10.59,1.417,0.793,2.337,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Cancer Other,low_n,6136,14,0.00228,14,46.77,0.299,0.164,0.502,poisson_exact,below_1,,,,,,,
+Stroke Cerebrovascular,COPD,low_n,7849,14,0.00178,14,18.58,0.753,0.412,1.264,poisson_exact,includes_1,,,,,,,
+Stroke Cerebrovascular,Depression,low_n,9593,14,0.00146,14,11.16,1.255,0.686,2.105,poisson_exact,includes_1,,,,,,,
+Atrial Fibrillation,Sleep Apnea,low_n,10180,14,0.00138,14,24.54,0.571,0.312,0.957,poisson_exact,below_1,,,,,,,
+Peripheral Vascular Disease,COPD,low_n,8106,14,0.00173,14,13.11,1.068,0.584,1.791,poisson_exact,includes_1,,,,,,,
+Peripheral Vascular Disease,Cancer Other,low_n,9881,14,0.00142,14,18.05,0.776,0.424,1.301,poisson_exact,includes_1,,,,,,,
+Osteoarthritis,Cancer Lung,low_n,9318,14,0.0015,14,19.24,0.727,0.398,1.221,poisson_exact,includes_1,,,,,,,
+Hypertension,Cancer Other,low_n,3330,13,0.0039,13,26.34,0.494,0.263,0.844,poisson_exact,below_1,,,,,,,
+Diabetes Mellitus,Peripheral Vascular Disease,low_n,9379,13,0.00139,13,15.48,0.84,0.447,1.436,poisson_exact,includes_1,,,,,,,
+Atrial Fibrillation,Depression,low_n,9686,13,0.00134,13,23.09,0.563,0.3,0.963,poisson_exact,below_1,,,,,,,
+Peripheral Vascular Disease,Cancer Lung,low_n,10518,13,0.00124,13,6.24,2.083,1.109,3.562,poisson_exact,above_1,,,,,,,
+COPD,Osteoarthritis,low_n,7167,13,0.00181,13,42.82,0.304,0.162,0.519,poisson_exact,below_1,,,,,,,
+Osteoarthritis,Sleep Apnea,low_n,9238,13,0.00141,13,26.29,0.495,0.263,0.846,poisson_exact,below_1,,,,,,,
+Hypertension,Hyperlipidemia,low_n,2880,12,0.00417,12,42.84,0.28,0.145,0.489,poisson_exact,below_1,,,,,,,
+Hypertension,Heart Failure,low_n,3548,12,0.00338,12,21.61,0.555,0.287,0.97,poisson_exact,below_1,,,,,,,
+Hypertension,Substance Use Disorder,low_n,3507,12,0.00342,12,10.04,1.195,0.618,2.088,poisson_exact,includes_1,,,,,,,
+Diabetes Mellitus,COPD,low_n,7303,12,0.00164,12,19.51,0.615,0.318,1.075,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Peripheral Vascular Disease,low_n,6529,12,0.00184,12,21.0,0.571,0.295,0.998,poisson_exact,below_1,,,,,,,
+Coronary Heart Disease,Depression,low_n,8664,12,0.00139,12,21.64,0.555,0.287,0.969,poisson_exact,below_1,,,,,,,
+Coronary Heart Disease,Sleep Apnea,low_n,9089,12,0.00132,12,21.32,0.563,0.291,0.983,poisson_exact,below_1,,,,,,,
+Stroke Cerebrovascular,Chronic Kidney Disease,low_n,9291,12,0.00129,12,19.26,0.623,0.322,1.088,poisson_exact,includes_1,,,,,,,
+Heart Failure,Substance Use Disorder,low_n,10388,12,0.00116,12,14.89,0.806,0.417,1.408,poisson_exact,includes_1,,,,,,,
+Heart Failure,Cancer Prostate,low_n,10201,12,0.00118,12,28.01,0.428,0.221,0.748,poisson_exact,below_1,,,,,,,
+Atrial Fibrillation,Chronic Liver Disease,low_n,9815,12,0.00122,12,14.1,0.851,0.44,1.486,poisson_exact,includes_1,,,,,,,
+Chronic Kidney Disease,Osteoarthritis,low_n,8528,12,0.00141,12,45.7,0.263,0.136,0.459,poisson_exact,below_1,,,,,,,
+Chronic Liver Disease,Substance Use Disorder,low_n,10056,12,0.00119,12,4.16,2.883,1.49,5.037,poisson_exact,above_1,,,,,,,
+Cancer Colorectal,Cancer Prostate,low_n,10228,12,0.00117,12,12.29,0.976,0.504,1.705,poisson_exact,includes_1,,,,,,,
+Hypertension,Diabetes Mellitus,low_n,3415,11,0.00322,11,21.07,0.522,0.261,0.934,poisson_exact,below_1,,,,,,,
+Hypertension,COPD,low_n,2752,11,0.004,11,13.93,0.79,0.394,1.413,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Cancer Prostate,low_n,6351,11,0.00173,11,42.79,0.257,0.128,0.46,poisson_exact,below_1,,,,,,,
+Coronary Heart Disease,Cancer Colorectal,low_n,9062,11,0.00121,11,21.51,0.511,0.255,0.915,poisson_exact,below_1,,,,,,,
+Atrial Fibrillation,Cancer Colorectal,low_n,10161,11,0.00108,11,22.57,0.487,0.243,0.872,poisson_exact,below_1,,,,,,,
+Substance Use Disorder,Cancer Lung,low_n,10532,11,0.00104,11,5.49,2.003,1.0,3.584,poisson_exact,includes_1,,,,,,,
+Osteoarthritis,Cancer Colorectal,low_n,9207,11,0.00119,11,25.39,0.433,0.216,0.775,poisson_exact,below_1,,,,,,,
+Diabetes Mellitus,Substance Use Disorder,low_n,9370,10,0.00107,10,12.23,0.818,0.392,1.504,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,COPD,low_n,5078,10,0.00197,10,24.7,0.405,0.194,0.744,poisson_exact,below_1,,,,,,,
+Heart Failure,Cancer Lung,low_n,10517,10,0.00095,10,10.36,0.965,0.463,1.775,poisson_exact,includes_1,,,,,,,
+COPD,Cancer Prostate,low_n,7960,10,0.00126,10,17.86,0.56,0.269,1.03,poisson_exact,includes_1,,,,,,,
+Substance Use Disorder,Cancer Prostate,low_n,10210,10,0.00098,10,12.55,0.797,0.382,1.466,poisson_exact,includes_1,,,,,,,
+Cancer Lung,Cancer Other,low_n,10024,10,0.001,10,10.45,0.957,0.459,1.759,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Cancer Lung,low_n,6545,9,0.00138,9,12.65,0.711,0.325,1.35,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Anxiety,low_n,6501,9,0.00138,9,18.88,0.477,0.218,0.905,poisson_exact,below_1,,,,,,,
+Coronary Heart Disease,Osteoporosis,low_n,9052,9,0.00099,9,11.55,0.779,0.356,1.48,poisson_exact,includes_1,,,,,,,
+Stroke Cerebrovascular,Osteoporosis,low_n,10022,9,0.0009,9,6.11,1.473,0.673,2.796,poisson_exact,includes_1,,,,,,,
+Stroke Cerebrovascular,Cancer Colorectal,low_n,10033,9,0.0009,9,10.24,0.879,0.402,1.669,poisson_exact,includes_1,,,,,,,
+Peripheral Vascular Disease,Chronic Kidney Disease,low_n,9575,9,0.00094,9,12.3,0.732,0.335,1.389,poisson_exact,includes_1,,,,,,,
+Peripheral Vascular Disease,Substance Use Disorder,low_n,10382,9,0.00087,9,8.72,1.032,0.472,1.959,poisson_exact,includes_1,,,,,,,
+COPD,Sleep Apnea,low_n,8120,9,0.00111,9,10.03,0.897,0.41,1.703,poisson_exact,includes_1,,,,,,,
+Chronic Kidney Disease,Substance Use Disorder,low_n,9574,9,0.00094,9,9.26,0.972,0.444,1.845,poisson_exact,includes_1,,,,,,,
+Chronic Kidney Disease,Cancer Colorectal,low_n,9584,9,0.00094,9,7.91,1.138,0.521,2.161,poisson_exact,includes_1,,,,,,,
+Depression,Osteoarthritis,low_n,8804,9,0.00102,9,25.81,0.349,0.159,0.662,poisson_exact,below_1,,,,,,,
+Hyperlipidemia,Depression,low_n,6215,8,0.00129,8,15.85,0.505,0.218,0.995,poisson_exact,below_1,,,,,,,
+Coronary Heart Disease,Chronic Liver Disease,low_n,8737,8,0.00092,8,12.54,0.638,0.275,1.257,poisson_exact,includes_1,,,,,,,
+Heart Failure,Chronic Liver Disease,low_n,10019,8,0.0008,8,8.86,0.903,0.39,1.778,poisson_exact,includes_1,,,,,,,
+Atrial Fibrillation,Anxiety,low_n,10193,8,0.00078,8,27.04,0.296,0.128,0.583,poisson_exact,below_1,,,,,,,
+Chronic Liver Disease,Cancer Other,low_n,9554,8,0.00084,8,7.97,1.004,0.434,1.979,poisson_exact,includes_1,,,,,,,
+Osteoarthritis,Anxiety,low_n,9243,8,0.00087,8,30.73,0.26,0.112,0.513,poisson_exact,below_1,,,,,,,
+Diabetes Mellitus,Chronic Liver Disease,low_n,9063,7,0.00077,7,7.45,0.939,0.378,1.935,poisson_exact,includes_1,,,,,,,
+Diabetes Mellitus,Cancer Lung,low_n,9493,7,0.00074,7,8.46,0.828,0.333,1.705,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Chronic Kidney Disease,low_n,6098,7,0.00115,7,27.24,0.257,0.103,0.53,poisson_exact,below_1,,,,,,,
+Hyperlipidemia,Sleep Apnea,low_n,6505,7,0.00108,7,14.31,0.489,0.197,1.008,poisson_exact,includes_1,,,,,,,
+Heart Failure,Anxiety,low_n,10429,7,0.00067,7,15.94,0.439,0.177,0.905,poisson_exact,below_1,,,,,,,
+Atrial Fibrillation,Hypothyroidism,low_n,10034,7,0.0007,7,13.43,0.521,0.21,1.074,poisson_exact,includes_1,,,,,,,
+COPD,Chronic Kidney Disease,low_n,7549,7,0.00093,7,15.39,0.455,0.183,0.937,poisson_exact,below_1,,,,,,,
+Depression,Substance Use Disorder,low_n,9936,7,0.0007,7,6.39,1.096,0.441,2.258,poisson_exact,includes_1,,,,,,,
+Osteoarthritis,Rheumatoid Arthritis,low_n,9203,7,0.00076,7,10.96,0.639,0.257,1.316,poisson_exact,includes_1,,,,,,,
+Hypertension,Chronic Kidney Disease,low_n,3410,6,0.00176,6,15.91,0.377,0.138,0.821,poisson_exact,below_1,,,,,,,
+Hypertension,Cancer Lung,low_n,3551,6,0.00169,6,7.27,0.825,0.303,1.795,poisson_exact,includes_1,,,,,,,
+Diabetes Mellitus,Cancer Colorectal,low_n,9381,6,0.00064,6,9.96,0.603,0.221,1.312,poisson_exact,includes_1,,,,,,,
+Coronary Heart Disease,Rheumatoid Arthritis,low_n,9045,6,0.00066,6,9.32,0.644,0.236,1.402,poisson_exact,includes_1,,,,,,,
+Coronary Heart Disease,Hypothyroidism,low_n,8955,6,0.00067,6,13.06,0.459,0.169,1.0,poisson_exact,includes_1,,,,,,,
+Heart Failure,Sleep Apnea,low_n,10416,6,0.00058,6,16.1,0.373,0.137,0.811,poisson_exact,below_1,,,,,,,
+Heart Failure,Cancer Colorectal,low_n,10392,6,0.00058,6,11.34,0.529,0.194,1.152,poisson_exact,includes_1,,,,,,,
+Atrial Fibrillation,Rheumatoid Arthritis,low_n,10128,6,0.00059,6,9.68,0.62,0.228,1.35,poisson_exact,includes_1,,,,,,,
+Peripheral Vascular Disease,Cancer Colorectal,low_n,10394,6,0.00058,6,5.95,1.009,0.37,2.195,poisson_exact,includes_1,,,,,,,
+Chronic Kidney Disease,Cancer Lung,low_n,9694,6,0.00062,6,6.7,0.895,0.329,1.949,poisson_exact,includes_1,,,,,,,
+Chronic Kidney Disease,Cancer Prostate,low_n,9409,6,0.00064,6,20.34,0.295,0.108,0.642,poisson_exact,below_1,,,,,,,
+Chronic Liver Disease,Cancer Prostate,low_n,9854,6,0.00061,6,6.3,0.953,0.35,2.073,poisson_exact,includes_1,,,,,,,
+Depression,Anxiety,low_n,10019,6,0.0006,6,7.23,0.829,0.304,1.805,poisson_exact,includes_1,,,,,,,
+Sleep Apnea,Cancer Prostate,low_n,10246,6,0.00059,6,10.01,0.599,0.22,1.305,poisson_exact,includes_1,,,,,,,
+Cancer Lung,Cancer Prostate,low_n,10353,6,0.00058,6,8.77,0.685,0.251,1.49,poisson_exact,includes_1,,,,,,,
+Hypertension,Cancer Colorectal,low_n,3507,5,0.00143,5,8.86,0.565,0.183,1.318,poisson_exact,includes_1,,,,,,,
+Hyperlipidemia,Cancer Colorectal,low_n,6463,5,0.00077,5,15.81,0.316,0.103,0.738,poisson_exact,below_1,,,,,,,
+Stroke Cerebrovascular,Sleep Apnea,low_n,10057,5,0.0005,5,10.18,0.491,0.159,1.146,poisson_exact,includes_1,,,,,,,
+Heart Failure,Hypothyroidism,low_n,10254,5,0.00049,5,7.19,0.695,0.226,1.622,poisson_exact,includes_1,,,,,,,
+Atrial Fibrillation,Osteoporosis,low_n,10147,5,0.00049,5,12.29,0.407,0.132,0.949,poisson_exact,below_1,,,,,,,
+Peripheral Vascular Disease,Chronic Liver Disease,low_n,10018,5,0.0005,5,4.36,1.147,0.373,2.677,poisson_exact,includes_1,,,,,,,
+COPD,Cancer Colorectal,low_n,8114,5,0.00062,5,7.2,0.695,0.226,1.621,poisson_exact,includes_1,,,,,,,
+COPD,Anxiety,low_n,8142,5,0.00061,5,10.8,0.463,0.15,1.081,poisson_exact,includes_1,,,,,,,
+Substance Use Disorder,Cancer Colorectal,low_n,10405,5,0.00048,5,5.6,0.893,0.29,2.084,poisson_exact,includes_1,,,,,,,
+Osteoarthritis,Osteoporosis,low_n,9208,5,0.00054,5,13.23,0.378,0.123,0.882,poisson_exact,below_1,,,,,,,
+Sleep Apnea,Cancer Other,low_n,9923,5,0.0005,5,13.09,0.382,0.124,0.892,poisson_exact,below_1,,,,,,,
+Cancer Other,Anxiety,low_n,9940,5,0.0005,5,15.99,0.313,0.102,0.73,poisson_exact,below_1,,,,,,,
+Hypertension,Peripheral Vascular Disease,suppressed,3539,,,,11.96,,,,,,,,,,,,
+Hypertension,Chronic Liver Disease,suppressed,3394,,,,4.8,,,,,,,,,,,,
+Hypertension,Depression,suppressed,3373,,,,9.15,,,,,,,,,,,,
+Hypertension,Rheumatoid Arthritis,suppressed,3522,,,,3.89,,,,,,,,,,,,
+Hypertension,Osteoporosis,suppressed,3509,,,,5.03,,,,,,,,,,,,
+Hypertension,Hypothyroidism,suppressed,3475,,,,5.4,,,,,,,,,,,,
+Hypertension,Sleep Apnea,suppressed,3537,,,,7.51,,,,,,,,,,,,
+Hypertension,Anxiety,suppressed,3524,,,,11.17,,,,,,,,,,,,
+Diabetes Mellitus,Depression,suppressed,8986,,,,11.45,,,,,,,,,,,,
+Diabetes Mellitus,Rheumatoid Arthritis,suppressed,9361,,,,4.58,,,,,,,,,,,,
+Diabetes Mellitus,Osteoporosis,suppressed,9372,,,,5.67,,,,,,,,,,,,
+Diabetes Mellitus,Hypothyroidism,suppressed,9277,,,,6.34,,,,,,,,,,,,
+Diabetes Mellitus,Sleep Apnea,suppressed,9414,,,,13.69,,,,,,,,,,,,
+Diabetes Mellitus,Anxiety,suppressed,9412,,,,13.34,,,,,,,,,,,,
+Hyperlipidemia,Chronic Liver Disease,suppressed,6234,,,,8.74,,,,,,,,,,,,
+Hyperlipidemia,Substance Use Disorder,suppressed,6464,,,,18.52,,,,,,,,,,,,
+Hyperlipidemia,Rheumatoid Arthritis,suppressed,6467,,,,6.79,,,,,,,,,,,,
+Hyperlipidemia,Osteoporosis,suppressed,6471,,,,8.45,,,,,,,,,,,,
+Hyperlipidemia,Hypothyroidism,suppressed,6420,,,,9.52,,,,,,,,,,,,
+Stroke Cerebrovascular,Chronic Liver Disease,suppressed,9681,,,,6.27,,,,,,,,,,,,
+Stroke Cerebrovascular,Rheumatoid Arthritis,suppressed,10010,,,,4.53,,,,,,,,,,,,
+Stroke Cerebrovascular,Hypothyroidism,suppressed,9905,,,,6.16,,,,,,,,,,,,
+Stroke Cerebrovascular,Anxiety,suppressed,10079,,,,13.08,,,,,,,,,,,,
+Heart Failure,Depression,suppressed,9913,,,,13.81,,,,,,,,,,,,
+Heart Failure,Rheumatoid Arthritis,suppressed,10362,,,,5.36,,,,,,,,,,,,
+Heart Failure,Osteoporosis,suppressed,10377,,,,7.28,,,,,,,,,,,,
+Peripheral Vascular Disease,Depression,suppressed,9916,,,,7.61,,,,,,,,,,,,
+Peripheral Vascular Disease,Rheumatoid Arthritis,suppressed,10367,,,,2.85,,,,,,,,,,,,
+Peripheral Vascular Disease,Osteoporosis,suppressed,10381,,,,4.25,,,,,,,,,,,,
+Peripheral Vascular Disease,Hypothyroidism,suppressed,10257,,,,3.73,,,,,,,,,,,,
+Peripheral Vascular Disease,Sleep Apnea,suppressed,10414,,,,7.35,,,,,,,,,,,,
+Peripheral Vascular Disease,Cancer Prostate,suppressed,10200,,,,14.89,,,,,,,,,,,,
+Peripheral Vascular Disease,Anxiety,suppressed,10432,,,,8.68,,,,,,,,,,,,
+COPD,Chronic Liver Disease,suppressed,7823,,,,5.73,,,,,,,,,,,,
+COPD,Depression,suppressed,7763,,,,9.45,,,,,,,,,,,,
+COPD,Rheumatoid Arthritis,suppressed,8095,,,,3.5,,,,,,,,,,,,
+COPD,Osteoporosis,suppressed,8111,,,,4.94,,,,,,,,,,,,
+COPD,Hypothyroidism,suppressed,7992,,,,4.65,,,,,,,,,,,,
+Chronic Kidney Disease,Chronic Liver Disease,suppressed,9266,,,,5.43,,,,,,,,,,,,
+Chronic Kidney Disease,Depression,suppressed,9157,,,,8.7,,,,,,,,,,,,
+Chronic Kidney Disease,Rheumatoid Arthritis,suppressed,9566,,,,3.58,,,,,,,,,,,,
+Chronic Kidney Disease,Osteoporosis,suppressed,9580,,,,4.65,,,,,,,,,,,,
+Chronic Kidney Disease,Hypothyroidism,suppressed,9467,,,,4.9,,,,,,,,,,,,
+Chronic Kidney Disease,Sleep Apnea,suppressed,9599,,,,9.27,,,,,,,,,,,,
+Chronic Kidney Disease,Anxiety,suppressed,9612,,,,10.32,,,,,,,,,,,,
+Chronic Liver Disease,Depression,suppressed,9582,,,,3.15,,,,,,,,,,,,
+Chronic Liver Disease,Osteoarthritis,suppressed,8877,,,,15.34,,,,,,,,,,,,
+Chronic Liver Disease,Rheumatoid Arthritis,suppressed,10014,,,,1.23,,,,,,,,,,,,
+Chronic Liver Disease,Osteoporosis,suppressed,10028,,,,1.57,,,,,,,,,,,,
+Chronic Liver Disease,Hypothyroidism,suppressed,9914,,,,1.64,,,,,,,,,,,,
+Chronic Liver Disease,Sleep Apnea,suppressed,10063,,,,4.14,,,,,,,,,,,,
+Chronic Liver Disease,Cancer Lung,suppressed,10163,,,,2.28,,,,,,,,,,,,
+Chronic Liver Disease,Cancer Colorectal,suppressed,10048,,,,2.57,,,,,,,,,,,,
+Chronic Liver Disease,Anxiety,suppressed,10078,,,,3.7,,,,,,,,,,,,
+Depression,Rheumatoid Arthritis,suppressed,9919,,,,2.12,,,,,,,,,,,,
+Depression,Osteoporosis,suppressed,9924,,,,2.99,,,,,,,,,,,,
+Depression,Hypothyroidism,suppressed,9811,,,,2.82,,,,,,,,,,,,
+Depression,Sleep Apnea,suppressed,9966,,,,5.2,,,,,,,,,,,,
+Depression,Cancer Lung,suppressed,10054,,,,4.24,,,,,,,,,,,,
+Depression,Cancer Colorectal,suppressed,9931,,,,4.38,,,,,,,,,,,,
+Depression,Cancer Prostate,suppressed,9756,,,,11.51,,,,,,,,,,,,
+Depression,Cancer Other,suppressed,9442,,,,13.45,,,,,,,,,,,,
+Substance Use Disorder,Rheumatoid Arthritis,suppressed,10373,,,,2.36,,,,,,,,,,,,
+Substance Use Disorder,Osteoporosis,suppressed,10391,,,,3.36,,,,,,,,,,,,
+Substance Use Disorder,Hypothyroidism,suppressed,10266,,,,2.84,,,,,,,,,,,,
+Substance Use Disorder,Sleep Apnea,suppressed,10423,,,,5.35,,,,,,,,,,,,
+Substance Use Disorder,Anxiety,suppressed,10444,,,,6.96,,,,,,,,,,,,
+Osteoarthritis,Hypothyroidism,suppressed,9084,,,,15.31,,,,,,,,,,,,
+Rheumatoid Arthritis,Osteoporosis,suppressed,10383,,,,1.13,,,,,,,,,,,,
+Rheumatoid Arthritis,Hypothyroidism,suppressed,10259,,,,1.19,,,,,,,,,,,,
+Rheumatoid Arthritis,Sleep Apnea,suppressed,10407,,,,2.02,,,,,,,,,,,,
+Rheumatoid Arthritis,Cancer Lung,suppressed,10512,,,,1.61,,,,,,,,,,,,
+Rheumatoid Arthritis,Cancer Colorectal,suppressed,10389,,,,1.93,,,,,,,,,,,,
+Rheumatoid Arthritis,Cancer Prostate,suppressed,10197,,,,5.14,,,,,,,,,,,,
+Rheumatoid Arthritis,Cancer Other,suppressed,9873,,,,5.82,,,,,,,,,,,,
+Rheumatoid Arthritis,Anxiety,suppressed,10424,,,,2.54,,,,,,,,,,,,
+Osteoporosis,Hypothyroidism,suppressed,10270,,,,1.49,,,,,,,,,,,,
+Osteoporosis,Sleep Apnea,suppressed,10426,,,,2.45,,,,,,,,,,,,
+Osteoporosis,Cancer Lung,suppressed,10530,,,,2.42,,,,,,,,,,,,
+Osteoporosis,Cancer Colorectal,suppressed,10405,,,,2.38,,,,,,,,,,,,
+Osteoporosis,Cancer Prostate,suppressed,10225,,,,6.3,,,,,,,,,,,,
+Osteoporosis,Cancer Other,suppressed,9895,,,,7.2,,,,,,,,,,,,
+Osteoporosis,Anxiety,suppressed,10441,,,,3.49,,,,,,,,,,,,
+Hypothyroidism,Sleep Apnea,suppressed,10302,,,,2.81,,,,,,,,,,,,
+Hypothyroidism,Cancer Lung,suppressed,10405,,,,2.12,,,,,,,,,,,,
+Hypothyroidism,Cancer Colorectal,suppressed,10278,,,,2.68,,,,,,,,,,,,
+Hypothyroidism,Cancer Prostate,suppressed,10095,,,,7.28,,,,,,,,,,,,
+Hypothyroidism,Cancer Other,suppressed,9771,,,,8.12,,,,,,,,,,,,
+Hypothyroidism,Anxiety,suppressed,10319,,,,3.39,,,,,,,,,,,,
+Sleep Apnea,Cancer Lung,suppressed,10564,,,,3.36,,,,,,,,,,,,
+Sleep Apnea,Cancer Colorectal,suppressed,10436,,,,4.18,,,,,,,,,,,,
+Sleep Apnea,Anxiety,suppressed,10480,,,,6.08,,,,,,,,,,,,
+Cancer Lung,Cancer Colorectal,suppressed,10546,,,,3.49,,,,,,,,,,,,
+Cancer Lung,Anxiety,suppressed,10583,,,,4.81,,,,,,,,,,,,
+Cancer Colorectal,Anxiety,suppressed,10456,,,,5.21,,,,,,,,,,,,
+Cancer Prostate,Anxiety,suppressed,10267,,,,13.97,,,,,,,,,,,,

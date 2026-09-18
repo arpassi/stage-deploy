@@ -224,5 +224,4 @@ derived,Ethnic_recode,Ethnic_recode,demographics,categorical,z-score,White_Briti
 30000-0.0,White blood cell count,White blood cell count 0.0,blood_marker,continuous,10^9/L,,False,True,False,2.6203,15.3795,,True
 23100-0.0,Whole body fat mass,Whole body fat mass 0.0,clinical_measurement,continuous,kg,,False,True,False,,,,False
 1060-0.0,Winter time outdoors,Winter time outdoors 0.0,lifestyle,continuous,hours/day,,False,True,True,0.0,10.0,,True
-derived,age_at_baseline,age_at_baseline,demographics,continuous,years,,False,True,True,,,Duplicate of Age 0.0 (UKB 21003). Both required — models trained with both. To be deduplicated.,True
 derived,imd_standardized,imd_standardized,socioeconomic_index,continuous,z-score,,False,True,False,,,Composite z-score of 7 country-specific IMD fields,False

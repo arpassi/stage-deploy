@@ -16,23 +16,34 @@ Design decisions worth knowing before integrating
    absolute singleton risk, not more. Every output here carries
    risk_output_validated = "rank_only". Do not render percentages.
 
-2. EVIDENCE TIERS ON PAIRS. A pair probability is reported as
-   "validated" only if that specific pair cleared the >= 30 co-event
-   floor in the D6.2 test-set evaluation (pair_evaluation.csv) for the
-   patient's stratum. Everything else is "unvalidated" — the arithmetic
-   is identical but no empirical discrimination was measurable, so the
-   consumer must not present it with the same confidence. Coverage is
-   uneven by design: 28 evaluable pairs in Male 60+, 2 in Female <60.
+2. EVIDENCE TIERS ON PAIRS AND TRIPLETS. Every pair and triplet of
+   eligible conditions is scored and returned; nothing is filtered on
+   evidence. evidence_tier records what the D6.2 test set
+   (pair_evaluation.csv / triplet_evaluation.csv) supports for that
+   specific combination in the patient's stratum:
+     validated  >= 30 co-events: O, prevalence, O/E with bootstrap CI,
+                AUC with bootstrap CI and the age-only comparison.
+     low_n      5-29 co-events: O, prevalence and O/E with an exact
+                Poisson CI. No AUC.
+     suppressed < 5 co-events: no counts (UK Biobank output rule).
+     not_evaluated  no row, e.g. valid cohort under 100 persons.
+   evidence is "validated" for the first tier and "unvalidated" for the
+   rest — the arithmetic is identical but no discrimination was
+   measurable, so the consumer must not present it with the same
+   confidence. Coverage is uneven by design: 28 validated pairs in
+   Male 60+, 2 in Female <60; for triplets, at most CHD+HF+AF in
+   Male 60+.
 
 3. NO CONDITION IS WITHHELD BY DEFAULT. Earlier versions withheld four
    cancers on the grounds that national screening programmes govern
    their detection. That reasoning rested on a UK screening context,
    and STAGE deploys across health systems whose programmes differ, so
    the judgement did not belong hardcoded in this file. The empirical
-   equivalent ships instead: pair_evaluation.csv carries an age-only
-   baseline auc per pair and a beats_age_baseline flag, which applies
-   in any health system. in male 60+ the two pairs that fail it are
-   both cancer prostate pairs, so the signal survives the change.
+   equivalent ships instead: each validated pair or triplet carries
+   auc_gain_over_age and beats_age_baseline in evidence_detail. It is a
+   flag, not a filter — a validated item that ranks worse than age alone
+   is still returned, marked as such. In Male 60+ the two pairs that fail
+   it are both Cancer Prostate pairs, so the signal survives the change.
 
 4. CAUSAL SEQUENCE IS NOT CO-OCCURRENCE. Stroke -> Dementia and
    AF -> Heart Failure are cascades, not simultaneous events, and a
@@ -131,34 +142,87 @@ def load_reference(
     risk_output = any_stratum.get("deployment_policy", {}).get(
         "risk_output_validated", RISK_OUTPUT_VALIDATED
     )
+    # Evidence tables hold every evaluated combination with its tier. The
+    # reference keys keep their historical names; filter on
+    # ev["evidence_tier"] == "validated" for the >= 30 co-event subset.
     validated: dict[str, dict[frozenset, dict]] = {}
+    validated_triplets: dict[str, dict[frozenset, dict]] = {}
     if pair_eval_dir is not None:
         pair_eval_dir = Path(pair_eval_dir)
         for csv_path in pair_eval_dir.glob("*/pair_evaluation.csv"):
-            stratum = csv_path.parent.name
-            rows: dict[frozenset, dict] = {}
-            with open(csv_path) as fh:
-                header = fh.readline().strip().split(",")
-                for line in fh:
-                    if not line.strip():
-                        continue
-                    vals = _split_csv_line(line.strip(), len(header))
-                    rec = dict(zip(header, vals))
-                    key = frozenset({rec["disease_j"], rec["disease_k"]})
-                    rows[key] = {
-                        "auc": _maybe_float(rec.get("auc_joint")),
-                        "auc_ci_lo": _maybe_float(rec.get("auc_ci_lo")),
-                        "auc_ci_hi": _maybe_float(rec.get("auc_ci_hi")),
-                        "oe_ratio": _maybe_float(rec.get("OE_ratio")),
-                        "n_joint_events": _maybe_int(rec.get("n_joint_events")),
-                    }
-            validated[stratum] = rows
+            validated[csv_path.parent.name] = _load_evidence(csv_path, 2)
+        # A stratum with no triplet_evaluation.csv reports every triplet
+        # as not_evaluated.
+        for csv_path in pair_eval_dir.glob("*/triplet_evaluation.csv"):
+            validated_triplets[csv_path.parent.name] = _load_evidence(csv_path, 3)
 
     return {
         "deployed": deployed,
         "validated_pairs": validated,
+        "validated_triplets": validated_triplets,
         "risk_output_validated": risk_output,
     }
+
+
+def _load_evidence(csv_path: Path, n_members: int) -> dict[frozenset, dict]:
+    """One stratum's pair (2) or triplet (3) evidence table, keyed by the
+    frozenset of disease names. Pre-tier files held only >= 30-event rows,
+    so a missing evidence_tier column means validated."""
+    members = ["disease_j", "disease_k", "disease_l"][:n_members]
+    prev_col = "pair_prevalence" if n_members == 2 else "triplet_prevalence"
+    rows: dict[frozenset, dict] = {}
+    with open(csv_path) as fh:
+        header = fh.readline().strip().split(",")
+        for line in fh:
+            if not line.strip():
+                continue
+            rec = dict(zip(header, _split_csv_line(line.strip(), len(header))))
+            key = frozenset(rec[m] for m in members)
+            rows[key] = {
+                "evidence_tier": rec.get("evidence_tier") or "validated",
+                "auc": _maybe_float(rec.get("auc_joint")),
+                "auc_ci_lo": _maybe_float(rec.get("auc_ci_lo")),
+                "auc_ci_hi": _maybe_float(rec.get("auc_ci_hi")),
+                "oe_ratio": _maybe_float(rec.get("OE_ratio")),
+                "oe_ci_lo": _maybe_float(rec.get("OE_ci_lo")),
+                "oe_ci_hi": _maybe_float(rec.get("OE_ci_hi")),
+                "oe_ci_method": rec.get("OE_ci_method") or None,
+                "n_joint_events": _maybe_int(rec.get("n_joint_events")),
+                "prevalence": _maybe_float(rec.get(prev_col)),
+                "auc_gain_over_age": _maybe_float(rec.get("auc_gain_over_age")),
+                "beats_age_baseline": _maybe_bool(rec.get("beats_age_baseline")),
+            }
+    return rows
+
+
+def _evidence_fields(ev: dict | None) -> dict:
+    """evidence / evidence_tier / evidence_detail for one pair or triplet.
+
+    validated -> full detail; low_n -> descriptive detail only (no AUC);
+    suppressed and not_evaluated -> no detail.
+    """
+    tier = ev["evidence_tier"] if ev else "not_evaluated"
+    out = {
+        "evidence": "validated" if tier == "validated" else "unvalidated",
+        "evidence_tier": tier,
+    }
+    if tier in ("validated", "low_n"):
+        detail = {
+            "n_joint_events_observed": ev["n_joint_events"],
+            "test_set_prevalence": ev["prevalence"],
+            "observed_expected_ratio": ev["oe_ratio"],
+            "oe_ci_95": [ev["oe_ci_lo"], ev["oe_ci_hi"]],
+            "oe_ci_method": ev["oe_ci_method"],
+        }
+        if tier == "validated":
+            detail.update(
+                test_set_auc=ev["auc"],
+                auc_ci_95=[ev["auc_ci_lo"], ev["auc_ci_hi"]],
+                auc_gain_over_age=ev["auc_gain_over_age"],
+                beats_age_baseline=ev["beats_age_baseline"],
+            )
+        out["evidence_detail"] = detail
+    return out
 
 
 def _split_csv_line(line: str, n: int) -> list[str]:
@@ -175,6 +239,11 @@ def _maybe_float(v) -> float | None:
         return float(v)
     except (TypeError, ValueError):
         return None
+
+
+def _maybe_bool(v) -> bool | None:
+    """'True'/'False' as pandas writes them; blank (not estimable) -> None."""
+    return {"True": True, "False": False}.get(v)
 
 
 def _maybe_int(v) -> int | None:
@@ -213,6 +282,8 @@ def multimorbidity_from_singletons(
     reference: dict | None = None,
     top_k: int = 5,
     validated_pairs_only: bool = False,
+    top_k_triplets: int = 5,
+    validated_triplets_only: bool = False,
 ) -> dict:
     """Derive multimorbidity quantities from per-disease singleton probabilities.
 
@@ -227,8 +298,10 @@ def multimorbidity_from_singletons(
     Every condition deployed in the stratum enters the count. Whether a
     given pair is worth surfacing is an empirical question answered by
     beats_age_baseline in pair_evaluation.csv, not a fixed exclusion list.
-    validated_pairs_only — if True, drop pairs with no empirical evidence
-        rather than returning them flagged.
+    validated_pairs_only — if True, drop pairs outside the validated tier
+        rather than returning them flagged. Default False: shown, flagged.
+    top_k_triplets — how many triplets to return.
+    validated_triplets_only — as validated_pairs_only, for triplets.
 
     Returns a dict ready to serialise to the CDS Hooks response.
     """
@@ -278,8 +351,8 @@ def multimorbidity_from_singletons(
     pair_rows = []
     for a, b in combinations(names, 2):
         key = frozenset({a, b})
-        ev = validated.get(key)
-        if ev is None and validated_pairs_only:
+        fields = _evidence_fields(validated.get(key))
+        if validated_pairs_only and fields["evidence"] != "validated":
             continue
         joint = eligible[a] * eligible[b]
         row = {
@@ -289,15 +362,8 @@ def multimorbidity_from_singletons(
                 round(eligible[a], 6),
                 round(eligible[b], 6),
             ],
-            "evidence": "validated" if ev else "unvalidated",
+            **fields,
         }
-        if ev:
-            row["evidence_detail"] = {
-                "test_set_auc": ev["auc"],
-                "auc_ci_95": [ev["auc_ci_lo"], ev["auc_ci_hi"]],
-                "observed_expected_ratio": ev["oe_ratio"],
-                "n_joint_events_observed": ev["n_joint_events"],
-            }
         note = CAUSAL_SEQUENCE_PAIRS.get(key)
         if note:
             row["sequence_note"] = note
@@ -305,6 +371,31 @@ def multimorbidity_from_singletons(
 
     pair_rows.sort(key=lambda r: r["joint_score"], reverse=True)
     top_pairs = pair_rows[:top_k]
+
+    # ── Triplet ranking (same tiers as pairs) ────────────────────────────────
+    validated_tri = reference.get("validated_triplets", {}).get(stratum or "", {})
+    triplet_rows = []
+    for a, b, c in combinations(names, 3):
+        key = frozenset({a, b, c})
+        fields = _evidence_fields(validated_tri.get(key))
+        if validated_triplets_only and fields["evidence"] != "validated":
+            continue
+        row = {
+            "conditions": [a, b, c],
+            "joint_score": round(eligible[a] * eligible[b] * eligible[c], 8),
+            "individual_scores": [round(eligible[d], 6) for d in (a, b, c)],
+            **fields,
+        }
+        notes = [
+            CAUSAL_SEQUENCE_PAIRS[frozenset(p)]
+            for p in combinations((a, b, c), 2)
+            if frozenset(p) in CAUSAL_SEQUENCE_PAIRS
+        ]
+        if notes:
+            row["sequence_notes"] = notes
+        triplet_rows.append(row)
+
+    triplet_rows.sort(key=lambda r: r["joint_score"], reverse=True)
 
     return {
         "risk_output_validated": RISK_OUTPUT_VALIDATED,
@@ -321,13 +412,25 @@ def multimorbidity_from_singletons(
         "top_pairs": top_pairs,
         "n_pairs_validated": sum(1 for r in pair_rows if r["evidence"] == "validated"),
         "n_pairs_total": len(pair_rows),
+        "top_triplets": triplet_rows[:top_k_triplets],
+        "n_triplets_validated": sum(
+            1 for r in triplet_rows if r["evidence"] == "validated"
+        ),
+        "n_triplets_total": len(triplet_rows),
         "excluded": excluded,
         "caveats": [
             "Absolute joint risk compounds singleton calibration error "
-            "(2-3x for singletons becomes 4-9x for pairs). Rank only.",
-            "Pair evidence coverage varies by stratum: pairs marked "
-            "unvalidated had too few observed co-events (<30) in the D6.2 "
-            "test set to measure discrimination.",
+            "(2-3x for singletons becomes 4-9x for pairs and 8-27x for "
+            "triplets). Rank only.",
+            "Pair and triplet evidence coverage varies by stratum: items "
+            "marked unvalidated had too few observed co-events (<30) in the "
+            "D6.2 test set to measure discrimination. evidence_tier low_n "
+            "(5-29 co-events) still carries the observed count, prevalence "
+            "and O/E; suppressed (<5) carries no counts. Validated triplets "
+            "are rare (at most CHD+HF+AF in Male 60+).",
+            "beats_age_baseline = false means that item ranked patients no "
+            "better than age alone in the D6.2 test set. It is shown, not "
+            "hidden.",
             "Competing mortality is not modelled; counts are risk-of-event "
             "counts, not expected disease burden among survivors.",
             "Counts are unweighted — two conditions may differ greatly in "
